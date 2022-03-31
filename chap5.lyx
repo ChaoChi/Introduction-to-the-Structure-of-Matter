@@ -1,0 +1,9393 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\setCJKmainfont[ItalicFont={楷体}, BoldFont={黑体}]{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\renewcommand{\contentsname}{目录}
+\renewcommand\abstractname{摘要}
+\renewcommand\listfigurename{插图目录}
+\renewcommand\listtablename{表格目录}
+%\renewcommand\nomname{术语}
+\renewcommand\proofname{证明}
+\renewcommand\bibname{参考文献}
+\renewcommand\appendixname{附录}
+%\renewcommand\appendixpagename{附录}
+%\renewcommand\appendixtocname{附录}
+\usepackage{chemfig}
+\usetikzlibrary{decorations}
+\pgfdeclaredecoration{ddbond}{initial}{
+  \state{initial}[width=4pt]{
+    \pgfpathlineto{\pgfpoint{4pt}{0pt}}
+    \pgfpathmoveto{\pgfpoint{2pt}{2pt}}
+    \pgfpathlineto{\pgfpoint{4pt}{2pt}}
+    \pgfpathmoveto{\pgfpoint{4pt}{0pt}}
+  }
+  \state{final}{
+    \pgfpathlineto{\pgfpointdecoratedpathlast}
+  }
+}
+\tikzset{lddbond/.style={decorate, decoration=ddbond}}
+\tikzset{rddbond/.style={decorate, decoration={ddbond, mirror}}}
+\newcommand\namebond[4][5pt]{\chemmove{\path(#2)--(#3)node[midway,sloped,yshift=#1]{#4};}}
+\end_preamble
+\use_default_options true
+\begin_modules
+subequations
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+多原子分子
+\end_layout
+
+\begin_layout Standard
+适用于研究多原子分子电子结构的理论分为分子轨道理论和价键理论。本章先讨论分子轨道理论的各种计算方法, 然后简单介绍价键理论。
+\end_layout
+
+\begin_layout Section
+从头计算法(ab initio)
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:5-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+用分子轨道理论处理分子电子结构问题的精确方法当推为从头计算法(
+\emph on
+ab initio
+\emph default
+)。从头计算法一般采用下面四个基本近似: (1) Born-Oppenheimer近似, (2) 非相对论近似, (3) 单电子近似, (4)
+ LCAO-MO近似。在这些近似的基础上, 用自治场方法精确求解哈特利-福克-罗汤(Hartree-Fock-Roothaan)方程, 即为从头计算法。
+\end_layout
+
+\begin_layout Subsection
+哈特利-福克-罗汤(Hartree-Fock-Roothaan)方程(HFR方程)
+\end_layout
+
+\begin_layout Standard
+从头计算法采用LCAO-MO近似, 即把分子轨道表示为原子轨道的线性组合: 
+\begin_inset Formula 
+\begin{equation}
+\psi_{i}=\sum_{\mu}c_{\mu i}\phi_{\mu}\label{eq:5-1}
+\end{equation}
+
+\end_inset
+
+其中
+\begin_inset Formula $\{\phi_{\mu}\}$
+\end_inset
+
+常选为实的基函数组, 一般
+\begin_inset Formula $ϕ_{\mu}$
+\end_inset
+
+是归一化的, 但不正交, 对于多电子原子体系中的单电子波函数, 我们在 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:2-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 节曾推导出, 它们各满足一个单电子方程——Hartree-Fock方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2-69"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)。按照完全相同的方法, 同样能推导出分子体系的单电子波函数
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+也满足Hartree-Fock方程
+\begin_inset Formula 
+\begin{equation}
+\hat{F}_{i}(1)\psi_{i}(1)=\epsilon_{i}\psi_{i}(1)\label{eq:5-2}
+\end{equation}
+
+\end_inset
+
+其中Fock算符
+\begin_inset Formula 
+\begin{equation}
+{\hat{F}}_{i}(1)={\hat{H}}_{1}+[{\hat{J}}_{j}(1)-{\hat{K}}_{j}(1)]\label{eq:5-3}
+\end{equation}
+
+\end_inset
+
+只是在分子体系中有多个原子核, 且单电子波函数是分子轨道
+\begin_inset Formula $ψ$
+\end_inset
+
+, 所以。
+\begin_inset Formula $\hat{H}_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{J}_{j}(1)$
+\end_inset
+
+和
+\begin_inset Formula $\hat{K}_{j}(1)$
+\end_inset
+
+的定义应该是: 
+\begin_inset Formula 
+\begin{align}
+\hat{H}_{1} & =-\frac{1}{2}\nabla_{1}^{2}-\sum_{m}\frac{Z_{m}}{r_{m1}}\label{eq:5-4}\\
+\hat{J}_{j}(1)\psi_{i}(1) & =\left[∫\psi_{i}^{*}(2)\frac{1}{r_{12}}ψ_{j}(2)dv_{2}\right]\psi_{i}(1)\label{eq:5-5}\\
+\hat{K}_{j}(1)\psi_{i}(1) & =\left[∫ψ_{j}^{*}(2)\frac{1}{r_{12}}\psi_{i}(2)dv_{2}\right]\psi_{i}(1)\label{eq:5-6}
+\end{align}
+
+\end_inset
+
+式中
+\begin_inset Formula $m$
+\end_inset
+
+为原子核的标号。
+\end_layout
+
+\begin_layout Standard
+为了确定分子的电子结构, 需要计算分子轨道
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+和轨道能量
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+, 在LCAO-MO近似下, 分子轨道
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+是由原子轨道的组合系数
+\begin_inset Formula $c_{\mu i}$
+\end_inset
+
+决定的, 需要解含有
+\begin_inset Formula $c_{\mu i}$
+\end_inset
+
+的HFR方程。HFR方程的精确推导, 需要把
+\begin_inset Formula $\psi_{i}=\sum_{\mu}c_{\mu i}\phi_{\mu}$
+\end_inset
+
+代入到分子总能量
+\begin_inset Formula $E$
+\end_inset
+
+的表达式, 将
+\begin_inset Formula $E$
+\end_inset
+
+对
+\begin_inset Formula $c_{\mu i}$
+\end_inset
+
+变分, 利用分子轨道的正变归一化条件, 由E取极小值即可得到HFR方程。这种推导方法比较繁锁, 可以采用简单的但不太严格的方法得到HFR方程,
+ 
+\end_layout
+
+\begin_layout Standard
+把(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 得
+\begin_inset Formula 
+\begin{equation}
+{\hat{F}}_{i}(1)\sum_{\mu}c_{\mu i}\phi_{\mu}=\epsilon_{i}\sum_{\mu}c_{\mu i}\phi_{\mu}\label{eq:5-7}
+\end{equation}
+
+\end_inset
+
+用
+\begin_inset Formula $ϕ_{v}^{*}$
+\end_inset
+
+左乘上式两边, 并对电子坐标变量积分, 得
+\begin_inset Formula 
+\begin{equation}
+\sum_{\mu}c_{\mu i}\left[∫\phi_{v}^{*}(1){\hat{F}}_{i}(1)\phi_{\mu}(1)dv_{1}-\epsilon_{i}∫\phi_{v}^{*}(1)\phi_{\mu}(1)dv_{1}\right]=0\label{eq:5-8}
+\end{equation}
+
+\end_inset
+
+令
+\begin_inset Formula 
+\begin{align}
+F_{vμ} & =∫\phi_{v}^{*}(1){\hat{F}}_{i}(1)\phi_{\mu}(1)dv_{1}\label{eq:5-9}\\
+S_{\mu v} & =∫\phi_{v}^{*}(1)\phi_{\mu}(1)dv_{1}\label{5-10}
+\end{align}
+
+\end_inset
+
+利用这两个定义式可简化(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 即
+\begin_inset Formula 
+\begin{equation}
+\sum_{\mu}c_{\mu i}F_{vμ}-\epsilon_{i}S_{\mu v}=0\qquad(μ=1,2,\cdots,N;v=1,2,\cdots,N)\label{eq:5-11}
+\end{equation}
+
+\end_inset
+
+这就是Hartre-Fock-Roothaan方程(HFR方程), 或简称为Roothaan方程。其中
+\begin_inset Formula $N$
+\end_inset
+
+为(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式中基函数
+\begin_inset Formula $ϕ_{\mu}$
+\end_inset
+
+的个数。HFR方程是由
+\begin_inset Formula $N$
+\end_inset
+
+个方程所构成的方程组, 这种推导HFR方程的方法之所以不严格, 是因为我们没有证明由该方程所确定的
+\begin_inset Formula $c_{\mu i}$
+\end_inset
+
+能保证总能量取极小值。
+\end_layout
+
+\begin_layout Standard
+利用
+\begin_inset Formula $\hat{F}_{i}(1)$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{J}_{j}(1)$
+\end_inset
+
+和
+\begin_inset Formula $\hat{K}_{j}(1)$
+\end_inset
+
+的定义式, 可用原子轨道或基函数来表示
+\begin_inset Formula $F_{vμ}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline*}
+F_{v\mu}=∫\phi_{v}^{*}(1)\left[\hat{H}_{1}+(\hat{J}_{j}(1)-\hat{K}_{j}(1))\right]\phi_{\mu}(1)dv_{1}\\
+=∫\phi_{v}^{*}(1)\hat{H}_{11}\phi_{\mu}(1)dv_{1}+\sum_{i}∫\phi_{v}^{*}(1)\left[∫\sum_{\lambda}c_{\lambda j}^{*}ϕ_{\lambda}^{*}(2)\frac{1}{r_{12}}\sum_{\sigma}c_{\sigma j}ϕ_{\sigma}(2)dv_{2}\right]\phi_{\mu}(1)dv_{1}\\
+-∫\sum_{j}\phi_{v}^{*}(1)\left[∫\sum_{\lambda}c_{\lambda j}^{*}ϕ_{\lambda}^{*}(2)\frac{1}{r_{12}}\phi_{\mu}(2)dv_{2}\right]\sum_{\sigma}c_{\sigma j}ϕ_{\sigma}(1)dv_{1}
+\end{multline*}
+
+\end_inset
+
+令
+\begin_inset Formula 
+\begin{align}
+h_{vμ} & =∫\phi_{v}^{*}(1)\hat{H}_{1}\phi_{\mu}(1)dv_{1}\label{eq:5-12}\\
+(vμ|λσ) & =∫\phi_{v}^{*}(1)\phi_{\mu}(1)\frac{1}{r_{12}}ϕ_{\lambda}^{*}(2)ϕ_{\sigma}(2)dv_{1}dv_{2}\label{eq:5-13}
+\end{align}
+
+\end_inset
+
+则
+\begin_inset Formula 
+\begin{equation}
+F_{v\mu}=h_{vμ}+\sum_{\lambda}\sum_{\sigma}\left[\sum_{j}c_{\lambda j}^{*}c_{\sigma j}\right]\left[(vμ|λσ)-(vσ|λμ)\right]\label{eq:5-14}
+\end{equation}
+
+\end_inset
+
+令
+\begin_inset Formula 
+\begin{equation}
+P_{\sigma\lambda}=\sum_{j}^{\text{占据}}c_{\lambda j}^{*}c_{\sigma j}\label{eq:5-15}
+\end{equation}
+
+\end_inset
+
+所有这些下标
+\begin_inset Formula $v$
+\end_inset
+
+, 
+\begin_inset Formula $μ$
+\end_inset
+
+, 
+\begin_inset Formula $σ$
+\end_inset
+
+, 
+\begin_inset Formula $λ$
+\end_inset
+
+的取值都是从1到
+\begin_inset Formula $N$
+\end_inset
+
+, 所以
+\begin_inset Formula $F_{vμ}$
+\end_inset
+
+, 
+\begin_inset Formula $h_{vμ}$
+\end_inset
+
+, 
+\begin_inset Formula $P_{\sigma\lambda}$
+\end_inset
+
+都可构成矩阵。由矩阵元
+\begin_inset Formula $F_{vμ}$
+\end_inset
+
+所构成的矩阵为Fock矩阵, 
+\begin_inset Formula $h_{vμ}$
+\end_inset
+
+一构成的为Hamilton矩阵, 
+\begin_inset Formula $P_{\sigma\lambda}$
+\end_inset
+
+构成的为密度矩阵。
+\end_layout
+
+\begin_layout Standard
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可知, 
+\begin_inset Formula $F_{vμ}$
+\end_inset
+
+中含有待定的系数
+\begin_inset Formula $c_{\sigma j}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{\lambda j}^{*}$
+\end_inset
+
+, 故Roothaan方程也须用自冶场方法求解。 
+\end_layout
+
+\begin_layout Subsection
+从头计算法
+\end_layout
+
+\begin_layout Standard
+在Born-Oppenheimer近似、非相对论近似和单电子近似的基础上, 把分子轨道表示成原予轨道或基函数的线性组合, 则分子体系的Schr
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{o}
+\end_layout
+
+\end_inset
+
+dinger方程演变为Roothaan方程, 如果不再引入新的简化或近以, 精确求解Roothaan方程, 这种计算方法则称为从头计算法。从头计算法在理论和方法
+上都比较严格, 是目前最精确的量子化学计算方法。
+\end_layout
+
+\begin_layout Standard
+对于分子的计算, 由于从头计算法采用了单电子近似(轨道近似), 所以从头计算法是一种分子轨道法, 用从头计算法可以解出分子轨道能量
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+, 分子轨道
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+, 由
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+可以得到分子的总波函数
+\begin_inset Formula $\varPsi$
+\end_inset
+
+, 由
+\begin_inset Formula $\varPsi$
+\end_inset
+
+可以计算分子的各种力学量的平均值, 即得到分子的各种性质, 例如, 从分子的占据轨道可以直接利用下式计算分子各点的电子密度
+\begin_inset Formula $ρ(\boldsymbol{r})$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+ρ(\boldsymbol{r})=\sum_{i}n_{i}\psi_{i}(\boldsymbol{r})^{*}\psi_{i}(\boldsymbol{r})\label{eq:5-15-1}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $n_{i}$
+\end_inset
+
+为轨道
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+的电子占据数。电子密度对于了解分子的成键情况和化学性质都是重要的, 再例如, 假定在电子电离和激发跃迁的过程中, 其它电子状态保持不变(这称为冻结近似),
+ 则电子的电离能
+\begin_inset Formula $I_{i}$
+\end_inset
+
+和跃迁能
+\begin_inset Formula $Δ\epsilon$
+\end_inset
+
+ 分别为
+\begin_inset Formula 
+\begin{align}
+I_{i} & =-\epsilon_{i}\label{eq:5-15-2}\\
+\Delta\epsilon & =\epsilon_{j}-\epsilon_{i}\label{eq:5-16}
+\end{align}
+
+\end_inset
+
+即电离能近似为轨道能量的负值, 跃迁能近似为轨道能量之差。这就是Koopmans定理。
+\end_layout
+
+\begin_layout Standard
+在分子各种力学量平均值的计算中, 分子总能量的计算具有基本的意义。由总能量最小值可以确定分子的键长和键角, 即确定分子的几何构型; 对于化学反应的研究,
+ 可以计算由反应物向产物转变过程中各原子坐标不同位置的总能量, 并得到总能量曲面(习惯上称为势能面), 由这张曲面可以了解反应路径, 活化能、过渡态等信息。
+\end_layout
+
+\begin_layout Subsection
+基函数的选择
+\end_layout
+
+\begin_layout Standard
+基函数组(简称基组)是分子轨道展开的基础, 基组选择的好坏对于SCF计算结果至关重要, 为了得到精确的计算结果, 一般需要选择较大的基组。若基函数的数目为N,
+ 则计算量与N 4成正比。在实际计算中, 常根据需要来确定基组, 不能一味追求精确度而招致过大的计算量。现在, 最常用的是Slater函数基组和Gauss函数基
+组。
+\end_layout
+
+\begin_layout Standard
+1) Slater函数基组
+\end_layout
+
+\begin_layout Standard
+Slater函数基组即Slater型轨道(STO)[见(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2-79"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式]。
+\begin_inset Formula 
+\begin{equation}
+ϕ_{nlm}=N_{s}r^{n-1}e^{-ζr}Y_{lm}(θ,φ)\label{eq:5-18}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $N_{s}$
+\end_inset
+
+为归一化常数
+\begin_inset Formula 
+\begin{equation}
+N_{s}=(2ζ)(2n+1)/2/\sqrt{2n!}\label{eq:5-19}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $ζ$
+\end_inset
+
+为轨道指数, 可用Slater函数作原子的SCF计算, 根据使总能量最低的原则确定各原子轨道的
+\begin_inset Formula $ζ$
+\end_inset
+
+。
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $l$
+\end_inset
+
+, 
+\begin_inset Formula $m$
+\end_inset
+
+对应于原子轨道的三个量子数。Slater基组可分为下列几种: 
+\end_layout
+
+\begin_layout Standard
+(1) 极小基组: 分子中原子的每个价轨道和每个内层轨道各用一个STO代表的基组, 例如碳原子的极小基组是
+\begin_inset Formula $ϕ_{1s}$
+\end_inset
+
+(5.6727)、
+\begin_inset Formula $ϕ_{2s}$
+\end_inset
+
+(1.6083)、
+\begin_inset Formula $ϕ_{2p_{x}}$
+\end_inset
+
+(1.2107)、
+\begin_inset Formula $ϕ_{2p_{y}}$
+\end_inset
+
+(1.
+ 2107)、
+\begin_inset Formula $ϕ_{2p_{z}}$
+\end_inset
+
+(1.2107)。其中括号内数字为
+\begin_inset Formula $\zeta$
+\end_inset
+
+值。极小基组的计算结果可给出分子的正确几何构型, 定性地研究分子的性质, 用极小基组一般不能得出有定量意义的结果。
+\end_layout
+
+\begin_layout Standard
+(2) 双
+\begin_inset Formula $ζ$
+\end_inset
+
+基组: 每个原子轨道用两卟不同
+\begin_inset Formula $ζ$
+\end_inset
+
+的STO代表的基组, 它比极小基组大了一倍, 可大为改善极小基组的SCF计算结果。
+\end_layout
+
+\begin_layout Standard
+(3) 扩展基组: 任何大于双
+\begin_inset Formula $\zeta$
+\end_inset
+
+基组的基组, 扩展基组中一最重要的是加“极化函数”的基组。极化函数是指角量子数比价轨道角量子数大1或2的STO。例如, 第二周期原子的极化函数是5个
+\begin_inset Formula $3d$
+\end_inset
+
+ STO。极化函数的作用是能描述在形成分子过程中原子轨道的变型, 可给出相当精确的SCF计算结果。
+\end_layout
+
+\begin_layout Standard
+对于非线性多原子分子的计算, 若采用STO基组, 则(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式中的双电子积分
+\begin_inset Formula $(vμ|λσ)$
+\end_inset
+
+和
+\begin_inset Formula $(vσ|λμ)$
+\end_inset
+
+中含有大量的三中心和四中心积分, 对这些多中心积分的计算比较困难, 一般STO基组只用来计算双原子分子或线型分子。
+\end_layout
+
+\begin_layout Standard
+2) Gauss函数基组
+\end_layout
+
+\begin_layout Standard
+对于多原子分子的计算, 为了避免计算多中心积分的困难, 常用Gauss函数基组(GTO)。在直角坐标系中, 以
+\begin_inset Formula $A$
+\end_inset
+
+为中心的广义Gauss函数定义为
+\begin_inset Formula 
+\begin{equation}
+G_{A}=Nx_{A}^{l}y_{A}^{m}z_{A}^{n}e^{-arA^{2}}\label{eq:5-20}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $N$
+\end_inset
+
+为归一化常数, 
+\begin_inset Formula $a$
+\end_inset
+
+为参数, 而且
+\begin_inset Formula 
+\begin{align}
+N & =\left(\frac{2a}{\pi}\right)^{\frac{3}{4}}\left[\frac{4a^{l+m+n}}{(2l+1)‼(2m+1)‼(2n-1)‼}\right]^{\frac{1}{2}}\label{eq:5-21}\\
+r_{A}^{2} & =x_{A}^{2}+y_{A}^{2}+z_{A}^{2}\label{eq:5-22}
+\end{align}
+
+\end_inset
+
+Gauss函数有一个重要性质: 两个不同中心的Gauss函数的乘积, 可用另一个中心的Gauss函数的线性组合来表示。因此, 以Gauss函数作为基组,
+ 可把计算多中心积分简化为计算单中心积分, 从而解决了计算多中心积分的函数。但Gauss函数不如Slater函数符合实际的原子轨道, 为克服Gauss函数的这一
+缺点, 常用多个GTO的线性组合来拟合STO。这种用GTO线性组合而形成的基组称为简缩Gauss基组(contracted gaussian type
+ orbitals,CGTO).
+\end_layout
+
+\begin_layout Standard
+一组常用的方法是用
+\begin_inset Formula $k$
+\end_inset
+
+个GTO的线性组合逼近一个STO, 这种基组称为STO-kG基组, 例如STO-3G, STO-4G等。对于一般的应用, STO-4G的精确度就可以了。
+\end_layout
+
+\begin_layout Standard
+比STO-kG更好一些的基组是所谓“分裂价基”, 其中每个内层轨道用一个STO-kG逼近, 而每个价轨道用两个STO-kG逼近。这是考虑到形成分子时,
+ 原子的内层轨道变化较小, 而价轨道变化较大, 常用的这类基组是4-31G基组, 它是用一个STO-4G逼近内层轨道, 用一个STO-3G和一个STO-1G逼近
+价轨道。
+\end_layout
+
+\begin_layout Standard
+更精确的基组是
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+双
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\text{\ensuremath{\zeta}}$
+\end_inset
+
+型的简缩Gauss基组, 即每个轨道用两个STO-kG逼近, 其中内层轨道取较大的
+\begin_inset Formula $k$
+\end_inset
+
+值, 以逼近歧点的性质, 外层轨道取较小的
+\begin_inset Formula $k$
+\end_inset
+
+值, 这种
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+双
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\text{\ensuremath{\zeta}}$
+\end_inset
+
+型简缩Gauss基组, 可在总的GTO数目增加不多的情况下, 使计算结果有较大的改进。
+\end_layout
+
+\begin_layout Section
+分子轨道的近似计算方法
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:5-2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从头计算法是一种精确的计算方法, 其缺点是计算量大, 以致在计算机条件不完备的情况下, 其应用范围受到了限制, 人们不得不寻找一些分子轨道的近似计算方法,
+ 或称为半经验的分子轨道方法, 借助经验参数来简化从头计算, 分子轨道的近似计算方法有很多种, 对这些方法的详细讨论远远超出了本书的范围, 在这里只介绍其中常用
+的两种: CNDO法和EHMO法。
+\end_layout
+
+\begin_layout Subsection
+CNDO法
+\end_layout
+
+\begin_layout Standard
+在LCAO自治场分子轨道的计算中, 计算量最大的是对大量的双电子排斥积分(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式的计算, 其实许多这类双电子积分的数值接近于零, 特别是那些包含
+\begin_inset Formula $μ≠v$
+\end_inset
+
+的微分重迭
+\begin_inset Formula $ϕ_{\mu}^{*}(1)ϕ_{v}(1)dv_{1}$
+\end_inset
+
+, 忽略这些数值非常小的微分重迭, 保留电子间排斥的主要特征的基本理论是Pople, Santry和Segal引进的CNDO法(complete
+ neglect of diffcrential overlap method,即全略微分重迭法)。
+\end_layout
+
+\begin_layout Standard
+CNDO法只处理价电子。把内层电子和原子核合在一起作为原子实。于是, 原子轨道基集合是一个价基集合, 例如, 对于碳原子为
+\begin_inset Formula $2s$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+和从头计算法一样, CNDO法也须解Roothaan方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 只是在解方程的过程中采用了大量的近似。
+\end_layout
+
+\begin_layout Standard
+在分子轨道的归一化中, 忽略相应的重迭积分
+\begin_inset Formula 
+\begin{equation}
+S_{\mu v}=∫ϕ_{\mu}^{*}(1)ϕ_{v}(1)dv_{1}=δ_{\mu v}\label{eq:5-23}
+\end{equation}
+
+\end_inset
+
+对双电子排斥积分采用较强的近似, 令(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式
+\begin_inset Formula 
+\begin{equation}
+(μ_{a}v_{c}|λ_{b}σ_{d})=γ_{ab}δ_{ac}δ_{bd}δ_{\mu v}δ_{λσ}\label{eq:5-24}
+\end{equation}
+
+\end_inset
+
+式中下标
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $b$
+\end_inset
+
+, 
+\begin_inset Formula $c$
+\end_inset
+
+, 
+\begin_inset Formula $d$
+\end_inset
+
+表示该原子轨道所属于的原子, 在这个近似下, 忽略了全部的三中心和四中心双电子积分, 只保留了双中心积分和单中心积分
+\begin_inset Formula 
+\begin{align}
+(μ_{a}μ_{a}|λ_{b}λ_{b}) & =γ_{ab}\label{eq:5-25}\\
+(μ_{a}μ_{a}|λ_{a}λ_{a}) & =γ_{aa}\label{eq:5-26}
+\end{align}
+
+\end_inset
+
+而且
+\begin_inset Formula $γ_{ab}$
+\end_inset
+
+和
+\begin_inset Formula $γ_{aa}$
+\end_inset
+
+只与原子的本质有关, 并不依赖于轨道
+\begin_inset Formula $μ$
+\end_inset
+
+和
+\begin_inset Formula $λ$
+\end_inset
+
+的实际类型, 其中
+\begin_inset Formula $γ_{ab}$
+\end_inset
+
+和
+\begin_inset Formula $γ_{aa}$
+\end_inset
+
+或用小的基组计算或用经验参数代替。
+\end_layout
+
+\begin_layout Standard
+在CNDO法中, 对矩阵元
+\begin_inset Formula 
+\[
+h_{v\mu}=∫ϕ_{v}^{*}(1){\hat{H}}_{1}ϕ_{\mu}(1)dv_{1}
+\]
+
+\end_inset
+
+也采用了近似, 在价电子近似下, 
+\begin_inset Formula ${\hat{H}}_{1}$
+\end_inset
+
+包括了核与内层电子的贡献。
+\begin_inset Formula 
+\begin{equation}
+h_{\mu v}=\beta_{ab}^{0}S_{v\mu}\label{eq:5-27}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $S_{v\mu}$
+\end_inset
+
+为重迭积分; 
+\begin_inset Formula $\beta_{ab}^{0}$
+\end_inset
+
+为成键参量, 用经验参数代替。
+\end_layout
+
+\begin_layout Standard
+CNDO法可用于计算分子的几何构型, 电荷分布、能级等, 是一种常用的半经验计算方法。
+\end_layout
+
+\begin_layout Subsection
+EHMO法
+\end_layout
+
+\begin_layout Standard
+EHMO (extended Huckel molecular orbital)法, 或称推广的Huckel法, 是另一种应用较为广泛的半经验分子轨道法。EHM
+O法与CNDO法一样, 只处理价电子, 即也采用价电子近似, 与CNDO法不同的是, EHMO法不明确定义单电子的Hamilton算符
+\begin_inset Formula ${\hat{F}}_{i}(1)$
+\end_inset
+
+, 所以(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式的
+\begin_inset Formula $F_{v\mu}$
+\end_inset
+
+就没有明确的表达式, 而由经验参数确定。
+\end_layout
+
+\begin_layout Standard
+虽然在形式上EHMO法也是解Roothaan方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 但由于
+\begin_inset Formula $F_{v\mu}$
+\end_inset
+
+没有明确的表达式, 所以并不处理双电子积分(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 在这个意义上, EHMO法是一种单电子理论, 而CNDO法则是双电子理论。
+\end_layout
+
+\begin_layout Standard
+在EHMO法中, 矩阵元
+\begin_inset Formula $F_{vv}$
+\end_inset
+
+用原子轨道
+\begin_inset Formula $ϕ_{v}$
+\end_inset
+
+上电子电离势的负值来近似, 即
+\begin_inset Formula 
+\begin{equation}
+F_{vv}=∫ϕ_{v}^{*}(1){\hat{F}}_{i}(1)ϕ_{v}(1)dv_{1}≈-I_{v}\label{eq:5-28}
+\end{equation}
+
+\end_inset
+
+例如, 对于氢原子轨道
+\begin_inset Formula $ϕ_{1s}$
+\end_inset
+
+, 则
+\begin_inset Formula $F_{1s1s}$
+\end_inset
+
+可取为
+\begin_inset Formula $-13.6$
+\end_inset
+
+ eV; 对于碳原子轨道
+\begin_inset Formula $ϕ_{2p}$
+\end_inset
+
+, 则
+\begin_inset Formula $F_{2p2p}$
+\end_inset
+
+可取为
+\begin_inset Formula $-11.4$
+\end_inset
+
+ eV。而
+\begin_inset Formula 
+\begin{equation}
+F_{v\mu}=0.5k(F_{vv}+F_{\mu\mu})S_{v\mu}\label{eq:5-29}
+\end{equation}
+
+\end_inset
+
+其中
+\begin_inset Formula $k$
+\end_inset
+
+为经验参数, 取值范围是1–3;重迭积分
+\begin_inset Formula $S_{v\mu}$
+\end_inset
+
+可由选定能原子轨道和核间距直接计算出来。
+\end_layout
+
+\begin_layout Standard
+用这种经验的方法所确定的, 显然并不含有待计算的原子轨道组合系数
+\begin_inset Formula $c_{\mu i}$
+\end_inset
+
+, 所以用EHMO法解Roothaan方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)可以不用SCF方法计算。一般直接求解方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)所对应的久期方程
+\begin_inset Formula 
+\[
+\det|F_{v\mu}-\epsilon_{i}S_{v\mu}|=0
+\]
+
+\end_inset
+
+式中左边的符号表示行列式。由上式可解出
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+, 将
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+代回到方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)可确定
+\begin_inset Formula $c_{\mu i}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+由于EHMO法的
+\begin_inset Formula ${\hat{F}}_{i}(1)$
+\end_inset
+
+没有明确定义, 且
+\begin_inset Formula $F_{v\mu}$
+\end_inset
+
+直接取自电于的电离势, 所以体系价电于的总能量
+\begin_inset Formula $E_{{\rm val}}$
+\end_inset
+
+可表示为各个价电子能量之和: 
+\begin_inset Formula 
+\begin{equation}
+E_{{\rm val}}=\epsilon_{i}\label{eq:5-31}
+\end{equation}
+
+\end_inset
+
+在一般的分子轨道法中, 须明确考虑双电子积分, 在这种情况下, 总能量不等于各个电子能量之和: 因电子间排斥能被计算两次, 所以总能量为各单电子能量之和再减掉电
+子间总排斥能。
+\end_layout
+
+\begin_layout Standard
+EHMO法看起来很粗糙, 但由于其矩阵元的数值直接取自实验数据, 因而增加了计算结果的可靠性。EHMO法的优点是计算量小, 可用来计算较为复杂的体系,
+ 特别是含有重原子的体系。EHMO法可用来计算分子轨道的能级顺序, 分于的电荷分布, 分子的几何构型等参数, 对于低极性分子, EHMO法的计算结果尚比较可靠。
+\end_layout
+
+\begin_layout Section
+H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{u}
+\end_layout
+
+\end_inset
+
+ckel分子轨道法
+\end_layout
+
+\begin_layout Standard
+H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{u}
+\end_layout
+
+\end_inset
+
+ckel分子轨道法简称为HMO法。这一方法是用来定性地处理含有大
+\begin_inset Formula $π$
+\end_inset
+
+键的简单共轭分子, 把共轭分子的诸原子核、内层电子以及
+\begin_inset Formula $σ$
+\end_inset
+
+键上的电子看成是分子实, 而只处理
+\begin_inset Formula $π$
+\end_inset
+
+电子, 下面以丁二烯分子为例来讨论HMO方法。
+\end_layout
+
+\begin_layout Subsection
+H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{u}
+\end_layout
+
+\end_inset
+
+ckel近似
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-1.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+丁二烯分子的
+\begin_inset Formula $σ$
+\end_inset
+
+键和
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有机共轭分子, 如丁二烯, 是平面分子。其中每个碳原子的
+\begin_inset Formula $2s$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{y}$
+\end_inset
+
+轨道采用
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+杂化, 形成
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{C-C}$
+\end_inset
+
+ 
+\begin_inset Formula $σ$
+\end_inset
+
+键, 余下的四个C原子的
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道互相平行, 且每个
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道上有一个电子, 这些
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道可以互相重选而形成
+\begin_inset Formula $π$
+\end_inset
+
+型分子轨道。图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 是丁二烯分子
+\begin_inset Formula $σ$
+\end_inset
+
+键和
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道的示意图, 容易看出, 丁二烯的
+\begin_inset Formula $σ$
+\end_inset
+
+型原子轨道
+\begin_inset Formula $2s$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{y}$
+\end_inset
+
+对于分子平面(xy平面)的反映是对称的, 而
+\begin_inset Formula $π$
+\end_inset
+
+型原子轨道
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+对该平面的反映则是反对称的, 这两种类型的轨道由于对称性不匹配, 所以不能有效地形成分子轨道, 这样就可以把这两类原子轨道分开处理: 碳的
+\begin_inset Formula $2s$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{y}$
+\end_inset
+
+和氢的
+\begin_inset Formula $1s$
+\end_inset
+
+轨道相互组合成
+\begin_inset Formula $σ$
+\end_inset
+
+型分子轨道, 可由前两节讨论的各种分子轨道方法计算其组合系数和轨道能量, 这里不再讨论, 碳的
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道也可相互组合而形成
+\begin_inset Formula $π$
+\end_inset
+
+型分子轨道(也可以用较精确的分子轨道法计算
+\begin_inset Formula $π$
+\end_inset
+
+型分子轨道及其轨道能量), 下面我们介绍用HMO法对丁二烯
+\begin_inset Formula $π$
+\end_inset
+
+型分子轨道的处理。 
+\end_layout
+
+\begin_layout Standard
+丁二烯中四个碳原子的每一个
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+电子(称为
+\begin_inset Formula $π$
+\end_inset
+
+电子)在诸原子核和其它电子的势场中运动, 其单电子的Hamilton算符记为
+\begin_inset Formula $\hat{h}$
+\end_inset
+
+, 
+\begin_inset Formula $π$
+\end_inset
+
+电子的分子轨道记为
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+, 则
+\begin_inset Formula $π$
+\end_inset
+
+电子的单电子Schr
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{o}
+\end_layout
+
+\end_inset
+
+dinger方程为
+\begin_inset Formula 
+\begin{equation}
+\hat{h}\psi_{i}=\epsilon_{i}\psi_{i}\label{eq:5-32}
+\end{equation}
+
+\end_inset
+
+在HMO方法中。
+\begin_inset Formula $\hat{h}$
+\end_inset
+
+没有明确定义。
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+和
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+可由线性变分法确定, 即
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+用四个
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+原子轨道的线性组合表示
+\begin_inset Formula 
+\begin{equation}
+\psi_{i}=c_{1}\phi_{1}+c_{2}ϕ_{2}+c_{3}ϕ_{3}+c_{4}ϕ_{4}\label{eq:5-33}
+\end{equation}
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-33"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+其
+\begin_inset Formula $ϕ_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{4}$
+\end_inset
+
+分别为四个
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道, 按变分法, 应先写出
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+的表达式: 
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{i}=\frac{\int\psi_{i}\hat{h}\psi_{i}dv}{\int\psi_{i}^{2}dv}=\frac{\sum_{m=1}^{4}\sum_{n=1}^{4}c_{m}c_{n}\int\phi_{m}\hat{h}\phi_{n}dv}{\sum_{m=1}^{4}\sum_{n=1}^{4}c_{m}c_{n}\int\phi_{m}\phi_{n}dv}\label{eq:5-34}
+\end{equation}
+
+\end_inset
+
+在H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{u}
+\end_layout
+
+\end_inset
+
+ckel方法中采用H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{u}
+\end_layout
+
+\end_inset
+
+ckel近似:  
+\end_layout
+
+\begin_layout Standard
+(1) 令
+\begin_inset Formula 
+\begin{equation}
+H_{mm}=∫ϕ_{m}\hat{h}ϕ_{m}dv=α\label{eq:5-35}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $α$
+\end_inset
+
+为碳原子
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+电子的平均能量, 与碳原子的位置无关, 可由实验确定。
+\begin_inset Formula $α$
+\end_inset
+
+称为Coulomb积分。
+\end_layout
+
+\begin_layout Standard
+(2) 令
+\begin_inset Formula 
+\begin{equation}
+H_{mn}=∫ϕ_{m}\hat{h}ϕ_{n}dv=\begin{cases}
+0 & m,n\text{不相邻}\\
+\beta & m,n\text{相邻}
+\end{cases}\label{eq:5-36}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $β$
+\end_inset
+
+为交换积分, 所有相邻原子的
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+间的交换积分都为
+\begin_inset Formula $β$
+\end_inset
+
+, 
+\begin_inset Formula $β$
+\end_inset
+
+也可由实验确定。
+\begin_inset Formula $β$
+\end_inset
+
+的值决定了相邻原子
+\begin_inset Formula $π$
+\end_inset
+
+键的强度。
+\end_layout
+
+\begin_layout Standard
+(3)令
+\begin_inset Formula 
+\begin{equation}
+S=∫ϕ_{m}ϕ_{n}dv=n\begin{cases}
+0 & m≠n\\
+1 & m=n
+\end{cases}\label{eq:5-37}
+\end{equation}
+
+\end_inset
+
+即略去所有原子间的重迭, 且每个
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道都是归一化的。
+\end_layout
+
+\begin_layout Subsection
+丁二烯HMO久期方程的解
+\end_layout
+
+\begin_layout Standard
+在H
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{u}
+\end_layout
+
+\end_inset
+
+ckel近似下, 可得到
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+的表达式
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{i}=\frac{\left(c_{1}^{2}+c_{2}^{2}+c_{3}^{2}+c_{4}^{2}\right)\alpha+2\left(c_{1}c_{2}+c_{2}c_{3}+c_{3}c_{4}\right)\beta}{\left(c_{1}^{2}+c_{2}^{2}+c_{3}^{2}+c_{4}^{2}\right)}\label{eq:5-38}
+\end{equation}
+
+\end_inset
+
+为了求出
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+的极小值, 须计算
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\in_{i}}{\partial c_{1}}=\frac{\partial\in_{i}}{\partial c_{2}}=\frac{\partial\in_{i}}{\partial c_{3}}=\frac{\partial\in_{i}}{\partial c_{4}}\label{eq:5-39}
+\end{equation}
+
+\end_inset
+
+把(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-38"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式的
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+表达式代入上式, 得
+\begin_inset Formula $c_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{4}$
+\end_inset
+
+所应满足的方程: 
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}(α-\epsilon_{i})c_{1}+βc_{2} & =0\\
+βc_{1}+(α-\epsilon_{i})c_{2}+βc_{3} & =0\\
+βc_{2}+(α-\epsilon_{i})c_{3}+βc_{4} & =0\\
+βc_{3}+(α-\epsilon_{i})c_{4} & =0
+\end{split}
+\right\} \label{eq:5-40}
+\end{equation}
+
+\end_inset
+
+由该方程组所解出的
+\begin_inset Formula $c_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{4}$
+\end_inset
+
+即为
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+取极小值的组合系数。这是一个线性齐次方程组, 该方程组有非零解的条件是其系数行列式等于零
+\begin_inset Formula 
+\begin{equation}
+\left|\begin{array}{cccc}
+\alpha-\epsilon_{i} & \beta & 0 & 0\\
+\beta & \alpha-\epsilon_{i} & \beta & 0\\
+0 & \beta & \alpha-\epsilon_{i} & \beta\\
+0 & 0 & \beta & \alpha-\epsilon_{i}
+\end{array}\right|=0\label{eq:5-41}
+\end{equation}
+
+\end_inset
+
+这就是丁二烯的HMO久期方程。为方便计, 令 
+\begin_inset Formula 
+\begin{equation}
+x=\frac{\alpha-\epsilon_{i}}{\beta}\label{eq:5-42}
+\end{equation}
+
+\end_inset
+
+则久期方程为
+\begin_inset Formula 
+\begin{equation}
+\left|\begin{array}{cccc}
+x & 1 & 0 & 0\\
+1 & x & 1 & 0\\
+0 & 1 & x & 1\\
+0 & 0 & 1 & x
+\end{array}\right|=0\label{eq:5-43}
+\end{equation}
+
+\end_inset
+
+可把久期方程的这种形式推广到一般的链共轭多烯, 含有
+\begin_inset Formula $n$
+\end_inset
+
+个碳原子的链共轭多烯, 其久期方程为
+\begin_inset Formula $n$
+\end_inset
+
+阶行列式等于零, 其中行列式中主对角线上的元素为
+\begin_inset Formula $x$
+\end_inset
+
+, 与主对角线上的元素相邻的元素为1, 其余元素为零, 记住这个规则对用HMO法解链共轭多烯问题是方便的。
+\end_layout
+
+\begin_layout Standard
+方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-43"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)可化为双二次方程:  
+\begin_inset Formula 
+\[
+x^{4}+3x^{2}+1=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解之得
+\begin_inset Formula 
+\[
+x_{1}=1.618,x_{2}=0.618,x_{3}=-0.618,x_{4}=-1.618
+\]
+
+\end_inset
+
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-42"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式得
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\epsilon_{1} & =α+1.618β\\
+\epsilon_{2} & =α+0.618β\\
+\epsilon_{3} & =α-0.618β\\
+\epsilon_{4} & =α-1.618β
+\end{split}
+\right\} \label{eq:5-44}
+\end{equation}
+
+\end_inset
+
+把
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon_{4}$
+\end_inset
+
+分别代回到方程组(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-40"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), 并利用归一化条件
+\begin_inset Formula 
+\begin{equation}
+∫|\psi_{i}|2dv=c_{1}^{2}+c_{2}^{2}+c_{3}^{2}+c_{4}^{2}=1\label{eq:5-45}
+\end{equation}
+
+\end_inset
+
+对应于每个能量
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+, , 可得到一组系数
+\begin_inset Formula $c_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{4}$
+\end_inset
+
+, 由这组系数可得到
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+, 对应于
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon_{4}$
+\end_inset
+
+的四个
+\begin_inset Formula $π$
+\end_inset
+
+型分子轨道分别为
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\psi_{1} & =0.3717\phi_{1}+0.6015ϕ_{2}+0.6015ϕ_{3}+0.3717ϕ_{4}\\
+\psi_{2} & =0.6015\phi_{1}+0.3717ϕ_{2}-0.3717ϕ_{3}-0.6015ϕ_{4}\\
+\psi_{3} & =0.6015\phi_{1}-0.3717ϕ_{2}-0.3717ϕ_{3}+0.6015ϕ_{4}\\
+\psi_{4} & =0.3717\phi_{1}-0.6015ϕ_{2}+0.6015ϕ_{3}-0.3717ϕ_{4}
+\end{split}
+\right\} \label{eq:5-46}
+\end{equation}
+
+\end_inset
+
+交换积分
+\begin_inset Formula $β$
+\end_inset
+
+值总是负的, 四个
+\begin_inset Formula $π$
+\end_inset
+
+轨道的能级图如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-2.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+丁二烯
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道的能级图和电子排布
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+图中箭头表示电子的自旋方向。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-3.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+丁二烯的
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道和
+\begin_inset Formula $π$
+\end_inset
+
+分子轨道
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 是丁二烯的四个
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道图形及其所形成的四个
+\begin_inset Formula $π$
+\end_inset
+
+分子轨道图形。图中的虚线表示节面。
+\end_layout
+
+\begin_layout Standard
+从分子轨道的观点看来, 化学反应必然涉及到电子运动状态的变化。在分子中, 每个电子的状态都是用分子轨道来描述的, 电子状态的变化意味着电子从一个轨道转移到另一个
+轨道, 对于分子的各个占据轨道的电子, 其中最高占据轨道(HOMO)上的电子能量最高, 最活跃, 因而最容易转移到其它分子的最低空轨道(LUMO)上。这就是说,
+ 化学反应所涉及到的分子轨道往往是最高占据轨道和最低空轨道, 这两种轨道统称为前线轨道(FMO)。
+\end_layout
+
+\begin_layout Subsection
+离域能
+\end_layout
+
+\begin_layout Standard
+图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 表明, 丁二烯的四个
+\begin_inset Formula $π$
+\end_inset
+
+电子不是只定域在两个特定的碳原子之间, 而是非定域地运动在整个分子的碳骨架上, 这样的化学键为离域
+\begin_inset Formula $π$
+\end_inset
+
+键或大
+\begin_inset Formula $π$
+\end_inset
+
+键。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式和图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 可以算出这四个
+\begin_inset Formula $π$
+\end_inset
+
+电子的总能量
+\begin_inset Formula $E_{D\pi}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+E_{D\pi}=4α+4.472β\label{eq:5-47}
+\end{equation}
+
+\end_inset
+
+如果假定丁二烯中的两对
+\begin_inset Formula $π$
+\end_inset
+
+电子分别定域在1和2碳原子之间以及3和4碳原子之间, 即假定形成两个小
+\begin_inset Formula $π$
+\end_inset
+
+键: 
+\begin_inset Formula $\ce{C=C-C=C}$
+\end_inset
+
+。这时2和3碳原子间不形成丌键, 所以
+\begin_inset Formula $β_{23}=β_{32}=0$
+\end_inset
+
+, 久期方程(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-43"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)变为
+\begin_inset Formula 
+\begin{equation}
+\left|\begin{array}{cccc}
+x & 1 & 0 & 0\\
+1 & x & 0 & 0\\
+0 & 0 & x & 1\\
+0 & 0 & 1 & x
+\end{array}\right|=0\label{eq:5-48}
+\end{equation}
+
+\end_inset
+
+解之得
+\begin_inset Formula $x=±1$
+\end_inset
+
+, 由
+\begin_inset Formula $x=\frac{\alpha-\epsilon_{i}}{\beta}$
+\end_inset
+
+得
+\begin_inset Formula 
+\begin{equation}
+\begin{split}\epsilon_{1}=\epsilon_{2} & =α+β\\
+\epsilon_{3}=\epsilon_{4} & =α-β
+\end{split}
+\label{eq:5-49}
+\end{equation}
+
+\end_inset
+
+其能级如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-4.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+丁二烯定域
+\begin_inset Formula $π$
+\end_inset
+
+轨道的能级
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+这时四个定域
+\begin_inset Formula $π$
+\end_inset
+
+电子的总能量为
+\begin_inset Formula $E_{L\pi}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+E_{L\pi}=4α+4\label{eq:5-50}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+共轭分子的离域能(或称为共轭能, 记为
+\begin_inset Formula $DE_{\pi}$
+\end_inset
+
+)定义为
+\begin_inset Formula 
+\begin{equation}
+DE_{\pi}=E_{L\pi}-E_{D\pi}\label{eq:5-51}
+\end{equation}
+
+\end_inset
+
+对于丁二烯分子, 其离域能为
+\begin_inset Formula 
+\begin{equation}
+DE_{\pi}=-0.472β\label{eq:5-52}
+\end{equation}
+
+\end_inset
+
+其中
+\begin_inset Formula $\beta<0$
+\end_inset
+
+, 所以
+\begin_inset Formula $DE_{\pi}>0$
+\end_inset
+
+, 即丁二烯形成大
+\begin_inset Formula $π$
+\end_inset
+
+键比形成两个小
+\begin_inset Formula $π$
+\end_inset
+
+键具有更低的能量, 形成大
+\begin_inset Formula $π$
+\end_inset
+
+键就更稳定。
+\end_layout
+
+\begin_layout Standard
+由于丁二烯中存在这种共轭效应, 所以欲使丁二烯离解就比较困难, 从而可以解释丁二烯具有较高的热稳定性。另一方面, 丁二烯的HOMO比乙烯的高,
+ 放容易失去电子; 丁二烯的LUMO比乙烯的低, 故容易接受外来电子, 由此可以解释丁二烯的加成活性和
+\begin_inset Formula $π$
+\end_inset
+
+络合活性均比乙烯高。
+\end_layout
+
+\begin_layout Standard
+虽然可以用HMO方法的计算结果定性解释一些共轭分子的化学性质, 但HMO方法毕竟是很粗糙的近似方法, 不能指望用HMO的计算结果解释各种化学现象。当HMO方法不
+能胜任的时候, 应该应用其它更精确的计算方法。
+\end_layout
+
+\begin_layout Section
+HMO方法的应用
+\end_layout
+
+\begin_layout Subsection
+链共轭多烯和单环平面共轭多烯
+\end_layout
+
+\begin_layout Standard
+这类分子的
+\begin_inset Formula $\pi$
+\end_inset
+
+电子成键问题, 也可用HMO方法作定性讨论。设
+\begin_inset Formula $\pi$
+\end_inset
+
+型分子轨道
+\begin_inset Formula $ψ_{j}$
+\end_inset
+
+由
+\begin_inset Formula $\pi$
+\end_inset
+
+型原子轨道
+\begin_inset Formula $\text{ϕ_{r}}$
+\end_inset
+
+线性组合而成: 
+\begin_inset Formula 
+\begin{equation}
+\psi_{j}=\sum_{r}c_{jr}\text{\ensuremath{\phi_{r}}}\label{eq:5-53}
+\end{equation}
+
+\end_inset
+
+对于含有
+\begin_inset Formula $n$
+\end_inset
+
+个碳原子的链共轭多烯
+\begin_inset Formula 
+\[
+\ce{CH2=[CH-CH=]_{n/2-1}CH2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以仿照丁二烯的HMO处理方法, 解由
+\begin_inset Formula $n$
+\end_inset
+
+阶行列式构成的久期方程, 可得到轨道能量为
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{j}=α+2β\cos\frac{j\pi}{n+1},j=1,2,\cdots,n\label{eq:5-54}
+\end{equation}
+
+\end_inset
+
+组合系数为
+\begin_inset Formula 
+\begin{equation}
+c_{jr}=(\frac{2}{n+1})^{1/2}\sin\frac{jr\pi}{n+1},j,r=1,2,\cdots,n\label{eq:5-55}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+含有
+\begin_inset Formula $n$
+\end_inset
+
+个碳原子的单环平面共轭多烯
+\begin_inset Formula $\ce{CnHn}$
+\end_inset
+
+, 例如苯分子
+\begin_inset Formula $\ce{C6H6}$
+\end_inset
+
+, 可用上节介绍的方法直接写出其久期方程
+\begin_inset Formula 
+\begin{equation}
+\left|\begin{array}{cccccc}
+x & 1 & 0 & 0 & 0 & 1\\
+1 & x & 1 & 0 & 0 & 0\\
+0 & 1 & x & 1 & 0 & 0\\
+0 & 0 & 1 & x & 1 & 0\\
+0 & 0 & 0 & 1 & x & 1\\
+1 & 0 & 0 & 0 & 1 & x
+\end{array}\right|=0\label{eq:5-56}
+\end{equation}
+
+\end_inset
+
+其中
+\begin_inset Formula $x=(α-\epsilon)/β$
+\end_inset
+
+。对于一般的单环平面共轭多烯
+\begin_inset Formula $\ce{CnHn}$
+\end_inset
+
+, 可写出类似上式的久期方程, 并可解出轨道能量
+\begin_inset Formula $\epsilon_{j}$
+\end_inset
+
+和组合系数
+\begin_inset Formula $c_{jr}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{align}
+\epsilon_{j} & =α+2β\cos\frac{\left(j-1\right)2\pi}{n},j=1,2,\cdots,n\label{eq:5-57}\\
+c_{jr} & =\frac{1}{\sqrt{n}}e^{i2\pi(j-1)(r-1)/n},j,r=1,2,\cdots,n\label{eq:5-58}
+\end{align}
+
+\end_inset
+
+这类分子会出现简并轨道, 且两个简且轨道是互为复数共轭, 可把这两个轨道相加、相减而得到两个实的简并轨道。
+\end_layout
+
+\begin_layout Subsection
+无机共轭分子
+\end_layout
+
+\begin_layout Standard
+有些无机分子也具有离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键, 也可采用HMO方法处理。例如
+\begin_inset Formula $\ce{NO2}$
+\end_inset
+
+分子, 其中N原子轨道可形成
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+杂化轨道, 两个杂化轨道分别与两个O原子的
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道形成两个
+\begin_inset Formula $\sigma$
+\end_inset
+
+键, 另一个杂化轨道为N的孤对电子占据。N和O子的
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道各有一个电子且
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道相互平行, 可形成离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键。
+\begin_inset Formula $\ce{NO2}$
+\end_inset
+
+分子的结构示意图为图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+。
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-5.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{NO2}$
+\end_inset
+
+分子成键示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+用
+\begin_inset Formula $α_{N}$
+\end_inset
+
+和
+\begin_inset Formula $α_{O}$
+\end_inset
+
+分别表示N和O原子
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+轨道的Coulomb积分, 则其HMO久期方程为
+\begin_inset Formula 
+\begin{equation}
+\left|\begin{array}{ccc}
+\alpha_{O}-\epsilon & \beta & 0\\
+\beta & \alpha_{N}-\epsilon & \beta\\
+0 & \beta & \alpha_{O}-\epsilon
+\end{array}\right|=0\label{eq:5-59}
+\end{equation}
+
+\end_inset
+
+由此方程容易解出三个离域
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道的能量
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\epsilon_{1} & =\frac{1}{2}(\alpha_{N}+\alpha_{O})+β\sqrt{\left(\frac{\alpha_{N}-\alpha_{O}}{2\beta}\right)^{2}+2}\\
+\epsilon_{2} & =\alpha_{O}\\
+\epsilon_{3} & =\frac{1}{2}(\alpha_{N}+\alpha_{O})-β\sqrt{\left(\frac{\alpha_{N}-\alpha_{O}}{2\beta}\right)^{2}+2}
+\end{split}
+\right\} \label{eq:5-60}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\ce{NO2}$
+\end_inset
+
+分子的
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道能级图为图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+。
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-6.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{NO2}$
+\end_inset
+
+的
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道能级图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\ce{NO2}$
+\end_inset
+
+含有三个
+\begin_inset Formula $\pi$
+\end_inset
+
+电子(
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+电子), 其中两个电子占据成键
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+, 一个
+\begin_inset Formula $\pi$
+\end_inset
+
+电子占据非键
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道
+\begin_inset Formula $\epsilon_{2}$
+\end_inset
+
+, 形成了有三个中心(三个原子)和三个电子的离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键, 记为
+\begin_inset Formula ${\Pi}_{3}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-7.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{C\ce{O3}^{2-}}$
+\end_inset
+
+的结构图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-7"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+还有一些含有大
+\begin_inset Formula $\pi$
+\end_inset
+
+键的无机其轭分子。如
+\begin_inset Formula $\ce{O3}$
+\end_inset
+
+是三角形构型, 可形成三中心四电子的大
+\begin_inset Formula $\pi$
+\end_inset
+
+键
+\begin_inset Formula $\Pi_{3}^{4}$
+\end_inset
+
+; 
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{NO2+}$
+\end_inset
+
+都是线型分子, 如取键轴方向为z轴, 则每个分子的
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+电子可形成一个三中心四电子的大
+\begin_inset Formula $\pi$
+\end_inset
+
+键
+\begin_inset Formula ${\Pi}_{3}^{4}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+电子也可形成一个
+\begin_inset Formula ${\Pi}_{3}^{4}$
+\end_inset
+
+, 即每个分子有两个
+\begin_inset Formula $\Pi_{3}^{4}$
+\end_inset
+
+。类似的分子还有: 
+\begin_inset Formula $\ce{N2O}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{N3-}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{BeCl2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{HgCl2}$
+\end_inset
+
+等。碳酸根离子
+\begin_inset Formula $\ce{C\ce{O3}^{2-}}$
+\end_inset
+
+的结构为图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 能形成大
+\begin_inset Formula $\pi$
+\end_inset
+
+键
+\begin_inset Formula ${\Pi}_{4}^{6}$
+\end_inset
+
+, 类似的分子还有
+\begin_inset Formula $\ce{NO3-}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{SO3}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{BF3}$
+\end_inset
+
+等。
+\end_layout
+
+\begin_layout Subsection
+离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键形成的条件
+\end_layout
+
+\begin_layout Standard
+从以上这些例子可以看出, 离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键不仅仅限于单双键交错的共轭分子, 凡是满足下列条件部可形成离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键: 
+\end_layout
+
+\begin_layout Standard
+(1) 参与形成
+\begin_inset Formula $\pi$
+\end_inset
+
+键的原子在同一平面上, 每个原子可提供
+\begin_inset Formula $p$
+\end_inset
+
+轨道且这些
+\begin_inset Formula $p$
+\end_inset
+
+轨道互相平行, 以保证这些p轨道最大限度的重迭。
+\end_layout
+
+\begin_layout Standard
+(2) 总的
+\begin_inset Formula $\pi$
+\end_inset
+
+电子数小于参与形成
+\begin_inset Formula $\pi$
+\end_inset
+
+键的
+\begin_inset Formula $p$
+\end_inset
+
+轨道数目的二倍。
+\begin_inset Formula $n$
+\end_inset
+
+个
+\begin_inset Formula $p$
+\end_inset
+
+轨道可组合成
+\begin_inset Formula $n$
+\end_inset
+
+个
+\begin_inset Formula $\pi$
+\end_inset
+
+型分子轨道, 其中成键、反键轨道各占一半。如果
+\begin_inset Formula $\pi$
+\end_inset
+
+电子数
+\begin_inset Formula $m$
+\end_inset
+
+小于
+\begin_inset Formula $2n$
+\end_inset
+
+, 可保证成键电子数多于反键电子数, 因而有净的成键效应。
+\end_layout
+
+\begin_layout Standard
+由
+\begin_inset Formula $n$
+\end_inset
+
+个共轭原子、
+\begin_inset Formula $m$
+\end_inset
+
+个
+\begin_inset Formula $\pi$
+\end_inset
+
+电子所形成的离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键记为
+\begin_inset Formula ${\Pi}_{m}^{n}$
+\end_inset
+
+。当
+\begin_inset Formula $m=n$
+\end_inset
+
+时, 称为正常离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键, 如分子 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chemfig{  C(-[::90,,,,,rddbond]CH_3)(-[::210,,,,,rddbond]CH_3)-[::-30,,,,lddbond
+]CH_3 }
+\end_layout
+
+\end_inset
+
+为
+\begin_inset Formula $\Pi_{4}^{4}$
+\end_inset
+
+即形成四中心四电子离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键, 当
+\begin_inset Formula $m>n$
+\end_inset
+
+时, 称为多电子离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键。体系中含有O, N, Cl, S等带有孤对电子的原子时, 常形成这类离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键。如羧酸根
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chemfig{R-C(-[1,,,,rddbond]O)-[7,,,,lddbond]
+\backslash
+charge{45=$-$}{O}}
+\end_layout
+
+\end_inset
+
+所形成的离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键为
+\begin_inset Formula $\Pi_{3}^{4}$
+\end_inset
+
+, 当
+\begin_inset Formula $m<n$
+\end_inset
+
+时, 称为缺电子离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键。如丙烯基阳离子
+\begin_inset Formula $\ce{[CH2=CH-CH2]+}$
+\end_inset
+
+的离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键为
+\begin_inset Formula $\Pi_{3}^{2}$
+\end_inset
+
+。氯丙烯中的Cl比较活泼, 因其容易放出
+\begin_inset Formula $\ce{Cl-}$
+\end_inset
+
+而生成稳定的丙烯基阳离子: 
+\begin_inset Formula 
+\[
+\ce{CH2=CH-CH2Cl -> CH2=CH-CH2+ +Cl-}
+\]
+
+\end_inset
+
+从而可以解释氯丙烯常发生离子型反应的原因。
+\end_layout
+
+\begin_layout Subsection
+电荷密度
+\end_layout
+
+\begin_layout Standard
+电荷密度一般指电子密度
+\begin_inset Formula $ρ(\boldsymbol{r})$
+\end_inset
+
+, 但这里所讨论的电荷密度却是指各个原子上的电子集居数(或布居数, 英文为population)。 若
+\begin_inset Formula $\pi$
+\end_inset
+
+型分子轨道
+\begin_inset Formula 
+\begin{equation}
+\psi_{j}=\sum_{r=1}^{n}c_{jr}\text{\ensuremath{\phi_{r}}}\label{eq:5-61}
+\end{equation}
+
+\end_inset
+
+其中
+\begin_inset Formula $\text{ϕ_{r}}$
+\end_inset
+
+为原子
+\begin_inset Formula $r$
+\end_inset
+
+的形成
+\begin_inset Formula $\pi$
+\end_inset
+
+键的
+\begin_inset Formula $p$
+\end_inset
+
+轨道, 前面我们曾指出, 
+\begin_inset Formula $c_{jr}^{2}$
+\end_inset
+
+近似为电子在原子轨道
+\begin_inset Formula $\text{ϕ_{r}}$
+\end_inset
+
+的几率。若
+\begin_inset Formula $ψ_{j}$
+\end_inset
+
+占有
+\begin_inset Formula $n_{j}$
+\end_inset
+
+个电子, 则
+\begin_inset Formula $ψ_{j}$
+\end_inset
+
+上的电子在原子
+\begin_inset Formula $r$
+\end_inset
+
+的集居数为
+\begin_inset Formula 
+\begin{equation}
+q_{jr}=n_{j}c_{jr}^{2}\label{eq:5-62}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\pi$
+\end_inset
+
+电子在原子
+\begin_inset Formula $r$
+\end_inset
+
+的总的集居数
+\begin_inset Formula $q_{r}$
+\end_inset
+
+(即本节所指的电荷密度), 应该是对所有占据轨道
+\begin_inset Formula $ψ_{j}$
+\end_inset
+
+上的属于原子
+\begin_inset Formula $r$
+\end_inset
+
+的集居数求和: 
+\begin_inset Formula 
+\begin{equation}
+q_{r}=\sum_{j}n_{j}c_{jr}^{2}\label{eq:5-63}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如, 丁二烯分子, 占据
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道为(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-46"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式中的
+\begin_inset Formula $ψ_{1}$
+\end_inset
+
+和
+\begin_inset Formula $ψ_{2}$
+\end_inset
+
+, 由其中的组合系数和上式, 可算出碳原子1的电荷密度为
+\begin_inset Formula 
+\[
+q_{1}=2×0.3717^{2}+2×0.6015^{2}=1.0
+\]
+
+\end_inset
+
+同理可得
+\begin_inset Formula 
+\begin{equation}
+q_{2}=q_{3}=q_{4}=1.0\label{eq:5-64}
+\end{equation}
+
+\end_inset
+
+即丁二烯的
+\begin_inset Formula $\pi$
+\end_inset
+
+电子在四个碳原子上的电荷密度相等。
+\end_layout
+
+\begin_layout Subsection
+键级
+\end_layout
+
+\begin_layout Standard
+离域
+\begin_inset Formula $\pi$
+\end_inset
+
+电子在分子体系内诸共轭原子间运动, 对每对相邻共轭原子的成键作用都有贡献, 在实际应用中, 常用离域
+\begin_inset Formula $\pi$
+\end_inset
+
+电子的键级来表征这些
+\begin_inset Formula $\pi$
+\end_inset
+
+电子对成键作用的贡献大小。相邻共轭原子
+\begin_inset Formula $r$
+\end_inset
+
+和
+\begin_inset Formula $s$
+\end_inset
+
+间离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键的键级定义为 
+\begin_inset Formula 
+\begin{equation}
+p_{rs}=\sum_{j}n_{j}c_{jr}c_{js}\label{eq:5-65}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $n_{j}$
+\end_inset
+
+为
+\begin_inset Formula $ψ_{j}$
+\end_inset
+
+上的电子数。上式的求和仅遍及占据轨道, 不相邻共轭原子
+\begin_inset Formula $\pi$
+\end_inset
+
+键的键级定义为零。
+\end_layout
+
+\begin_layout Standard
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-46"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式的组合系数, 容易写出丁二烯分子离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键的键级: 
+\begin_inset Formula 
+\begin{align*}
+p_{12} & =2×0.3717×0.6015+2×0.6015×0.3717=0.894\\
+p_{23} & =0.447\\
+p_{43} & =0.894
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+具有离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键的分子中还存在着定域键, 如丁二烯分子各碳原子之间还有
+\begin_inset Formula $\sigma$
+\end_inset
+
+键, 这些定域键的键级仍可采用其定义式(3-64): 
+\begin_inset Formula 
+\begin{equation}
+p_{L}=(∑n-∑n^{*})/2\label{eq:5-66}
+\end{equation}
+
+\end_inset
+
+由这个定义式可知, 含有两个电子的定域键其键级是1。若令相邻共轭原子r和s间的定域键和离域键的总键级为
+\begin_inset Formula $P_{rs}$
+\end_inset
+
+, 则 
+\begin_inset Formula 
+\begin{equation}
+P_{rs}=1+p_{rs}\label{eq:5-67}
+\end{equation}
+
+\end_inset
+
+丁二烯分子碳原子间的总键级为
+\begin_inset Formula 
+\begin{align*}
+P_{12} & =P_{43}=1.894\\
+P_{23} & =1.447
+\end{align*}
+
+\end_inset
+
+一般说来, 键级越大, 键能越大, 而键长却越短。如丁二烯分子的
+\begin_inset Formula $\ce{C-C}$
+\end_inset
+
+键长
+\begin_inset Formula $R$
+\end_inset
+
+约为: 
+\begin_inset Formula $R_{12}=R_{43}=1.35\ \text{Å}$
+\end_inset
+
+, 
+\begin_inset Formula $R_{23}=1.46\ \text{Å}$
+\end_inset
+
+。用键级可以定性估计键的强度和键长的相对大小。
+\end_layout
+
+\begin_layout Subsection
+自由价
+\end_layout
+
+\begin_layout Standard
+分子中的原子
+\begin_inset Formula $r$
+\end_inset
+
+与周围其它原子间的键级总和
+\begin_inset Formula 
+\begin{equation}
+N_{r}=\sum_{s}P_{rs}\label{eq:5-68}
+\end{equation}
+
+\end_inset
+
+定义为该分子中原子
+\begin_inset Formula $r$
+\end_inset
+
+的成键度。成键度
+\begin_inset Formula $N_{r}$
+\end_inset
+
+表示了原子
+\begin_inset Formula $r$
+\end_inset
+
+的成键程度。同一种原子在不同的分子中, 其成键度可能不同, 既使在同一个分子中的同一种原子, 因原子位置的不同、环境不同, 成键度也可能不同,
+ 
+\end_layout
+
+\begin_layout Standard
+用
+\begin_inset Formula $N_{max}$
+\end_inset
+
+表示碳原子在不同分子和不同环境中的最大成键度则定义
+\begin_inset Formula 
+\begin{equation}
+F_{r}=N_{max}-N_{r}\label{eq:5-69}
+\end{equation}
+
+\end_inset
+
+为碳原子
+\begin_inset Formula $r$
+\end_inset
+
+在某一分子环境中的自由价, 自由价表示碳原子
+\begin_inset Formula $r$
+\end_inset
+
+在特定分子环境中的剩余成键能力。
+\end_layout
+
+\begin_layout Standard
+利用(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-68"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可以计算分子
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chemfig{C(-[::90]CH_3)(-[::210]CH_3)-[::-30]CH_3 }
+\end_layout
+
+\end_inset
+
+中的中心碳原子的成键度为 
+\begin_inset Formula 
+\[
+N_{\text{中心}}=4.732=N_{max}
+\]
+
+\end_inset
+
+碳原子在其它分子环境中的成键度都小于4.732。所以碳原子的最大成键度就取为4.732。碳原子在不同分子环境中的自由价为
+\begin_inset Formula 
+\begin{equation}
+F_{r}=4.732-\sum_{s}P_{rs}\label{eq:5-70}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如丁二烯分子的自由价为
+\begin_inset Formula 
+\[
+F_{1}=F_{4}=0.838\qquad F_{2}=F_{3}=0.391
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+分子图
+\end_layout
+
+\begin_layout Standard
+对任一个共轭分子, 可利用HMO方法计算出其
+\begin_inset Formula $\pi$
+\end_inset
+
+型分子轨道, 由其中的原子轨道组合系数, 容易算出各个碳原子的电荷密度、自由价及原子间的总键级。把这些数据标在分子的结构图上就形成了分子图, 丁二烯的分子图如下
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chemfig{@{1}
+\backslash
+charge{ 270:5pt=1.0, 90:5pt=1.0}{C}(-[3]H)(-[5]H)-[,1.5]@{2}
+\backslash
+charge{ 270:5pt=1.0, 90:5pt=1.0}{C}(-[1]H)-[,1.5]@{3}
+\backslash
+charge{ 90:5pt=$
+\backslash
+uparrow $, 90:12pt=0.391 }{C}(-[7]H)-[,1.5]
+\backslash
+charge{ 90:5pt=$
+\backslash
+uparrow $, 90:12pt=0.838 }{C}(-[1]H)-[7]H}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+namebond[7pt]{1}{2}{ 1.894}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+namebond[7pt]{2}{3}{ 1.477}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+其中箭头表示自由价, 碳原子下面的数值为电荷密度, 其余数据为键级。
+\end_layout
+
+\begin_layout Standard
+分子图定性地表示了分子结构的特征, 能反映分子的性质。例如由分子图可以大概判断化学反应发生的位置: 
+\end_layout
+
+\begin_layout Standard
+(1) 亲电子基团容易进攻电荷密度最大的原子。
+\end_layout
+
+\begin_layout Standard
+(2) 亲核基团容易进攻电荷密度最小的原子。
+\end_layout
+
+\begin_layout Standard
+(3) 自由基容易进攻自由价最大的原子。
+\end_layout
+
+\begin_layout Section
+杂化轨道理论
+\end_layout
+
+\begin_layout Standard
+杂化轨道的概念是1931年由Pauling首先提出的, 后经许多化学家的不断完善, 以致发展成现代化学键理论的重要内容。
+\end_layout
+
+\begin_layout Subsection
+杂化轨道
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ce{CH4}$
+\end_inset
+
+分子具有正四面体的构型, 四个
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+键的键角都是
+\begin_inset Formula $109°28'$
+\end_inset
+
+。C原子的基电子组态为
+\begin_inset Formula 
+\[
+{\rm C}:1s^{2}2s^{2}2p_{x}^{1}2p_{y}^{1}
+\]
+
+\end_inset
+
+按价键理论, C应有四个末配对的电子, 每个电子与H的1s电子配对形成
+\begin_inset Formula $σ$
+\end_inset
+
+键。
+\end_layout
+
+\begin_layout Standard
+C原子的
+\begin_inset Formula $2s$
+\end_inset
+
+轨道和
+\begin_inset Formula $2p$
+\end_inset
+
+轨道的能量差约8.8 eV(见表3.1)。C原子的
+\begin_inset Formula $2s$
+\end_inset
+
+电子容易激发到
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+空轨道而形成具有四个未配对电子的激发态:
+\begin_inset Formula 
+\[
+1s^{2}2s^{2}2p_{x}^{1}2p_{y}^{1}(\text{C基态})→1s^{2}2s^{1}2p_{x}^{1}2p_{y}^{1}2p_{z}^{1}(\text{C激发态})
+\]
+
+\end_inset
+
+在C原子的这种激发态下, 可形成四个
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+键, 每个
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+键的键能为4.28 eV。从能量的角度来看, 形成四个
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+键更为有利, 但这四个
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+键不能是等价的, 因为一个是
+\begin_inset Formula $\ce{C_{\ensuremath{2s}}-H_{\ensuremath{1s}}}$
+\end_inset
+
+键, 3个是
+\begin_inset Formula $\ce{C_{\ensuremath{2p}}-H_{\ensuremath{1s}}}$
+\end_inset
+
+键。实际上
+\begin_inset Formula $\ce{CH4}$
+\end_inset
+
+中的四个
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+键是等价的, 这可用杂化轨道理论来解释。
+\end_layout
+
+\begin_layout Standard
+所谓杂化, 是指同一原子的原子轨道的线性组合, 即假定在形成分子的过程中, 原子中某些能级相近的原子轨道可以互相混合, 从而产生新的原子轨道——杂化轨道:
+ 
+\begin_inset Formula 
+\begin{equation}
+\phi_{k}=\sum_{i}^{n}c_{ki}\phi_{i},k=1,2,\cdots,n\label{eq:5-71}
+\end{equation}
+
+\end_inset
+
+其中
+\begin_inset Formula $ϕ_{i}$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+个原子轨道, 
+\begin_inset Formula $ϕ_{k}$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+个杂化轨道。
+\end_layout
+
+\begin_layout Standard
+按照态选加原理, 
+\begin_inset Formula $\{\phi_{i}\}$
+\end_inset
+
+是原子中单电子的可能存在的状态。那末
+\begin_inset Formula $\{\phi_{i}\}$
+\end_inset
+
+的线性组合也是这些单电子可能存在的状态, 即电子可能在杂化轨道上与其它原子的电子形成化学键。
+\end_layout
+
+\begin_layout Standard
+杂化轨道理论主要用于解释分手的几何构型问题, 而影响分子几何构型的是原子轨道的角度部分, 所以可用原子轨道的角动部分来代替原子轨道, 对于
+\begin_inset Formula $s$
+\end_inset
+
+-
+\begin_inset Formula $p$
+\end_inset
+
+杂化, 其参加杂他的四个原子轨道的角度部分是
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}s & =\frac{1}{\sqrt{4\pi}}\\
+p_{x} & =\frac{1}{\sqrt{4\pi}}\sqrt{3}\cosθ\sinφ=\frac{1}{\sqrt{4\pi}}\sqrt{3}\frac{x'}{r}\equiv\frac{1}{\sqrt{4\pi}}\sqrt{3}x\\
+p_{y} & =\frac{1}{\sqrt{4\pi}}\sqrt{3}\sinθ\sinφ=\frac{1}{\sqrt{4\pi}}\sqrt{3}\frac{y'}{r}\equiv\frac{1}{\sqrt{4\pi}}\sqrt{3}y\\
+p_{z} & =\frac{1}{\sqrt{4\pi}}\sqrt{3}\cosφ=\frac{1}{\sqrt{4\pi}}\sqrt{3}\frac{z'}{r}\equiv\frac{1}{\sqrt{4\pi}}\sqrt{3}z
+\end{split}
+\right\} \label{eq:5-72}
+\end{equation}
+
+\end_inset
+
+显然
+\begin_inset Formula 
+\begin{equation}
+x^{2}+y^{2}+z^{2}=1\label{eq:5-73}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一个原子轨道
+\begin_inset Formula $ϕ$
+\end_inset
+
+的成键能力, 取决于
+\begin_inset Formula $ϕ$
+\end_inset
+
+与其它原子轨道的重选积分
+\begin_inset Formula $S$
+\end_inset
+
+。在核间距一定的情况下, 
+\begin_inset Formula $S$
+\end_inset
+
+则与
+\begin_inset Formula $ϕ$
+\end_inset
+
+在某一特定角度分布方向的极大值有关。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-72"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可知, 若定义
+\begin_inset Formula $s$
+\end_inset
+
+轨道的成键能力
+\begin_inset Formula $f_{s}$
+\end_inset
+
+为
+\begin_inset Formula $\frac{1}{2\sqrt{\pi}}$
+\end_inset
+
+, 则
+\begin_inset Formula $p$
+\end_inset
+
+轨道的成键能力
+\begin_inset Formula $f_{p}$
+\end_inset
+
+为
+\begin_inset Formula $\frac{\sqrt{3}}{2\sqrt{\pi}}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+杂化轨道中的系数
+\end_layout
+
+\begin_layout Standard
+考虑杂化轨道
+\begin_inset Formula 
+\begin{equation}
+ϕ=c_{1}s+c_{2}p_{x}+c_{3}p_{y}+c_{4}p_{z}=\frac{1}{2\sqrt{\pi}}(c_{1}+c_{2}\sqrt{3}x+c_{3}\sqrt{3}y+c_{4}\sqrt{3}z)\label{eq:5-74}
+\end{equation}
+
+\end_inset
+
+设在单位矢量
+\begin_inset Formula $\boldsymbol{a}(x_{1},y_{1},z_{1})$
+\end_inset
+
+的方向上杂化轨道
+\begin_inset Formula $ϕ$
+\end_inset
+
+取极大值。则由上式知
+\begin_inset Formula 
+\begin{equation}
+ϕ_{{\rm max}}=\frac{1}{2\sqrt{\pi}}(c_{1}+c_{2}\sqrt{3}x_{1}+c_{3}\sqrt{3}y_{1}+c_{4}\sqrt{3}z_{1})\label{eq:5-75}
+\end{equation}
+
+\end_inset
+
+在此方向上可适当调节系数
+\begin_inset Formula $c_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{4}$
+\end_inset
+
+, 以使
+\begin_inset Formula $ϕ_{{\rm max}}$
+\end_inset
+
+最大。
+\end_layout
+
+\begin_layout Standard
+对于等性杂化, 每个杂化轨道含有s轨道的成分相同, 在这种情况下, 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+是巳知的, 而且, 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{z}$
+\end_inset
+
+是正交归一化的, 若令杂化轨道也是归一化的, 则由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-74"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式的第一个等式得
+\begin_inset Formula 
+\begin{equation}
+1=∫ϕ^{2}dv=c_{1}^{2}+c_{2}^{2}+c_{3}^{2}+c_{4}^{2}\label{eq:5-76}
+\end{equation}
+
+\end_inset
+
+令
+\begin_inset Formula 
+\begin{equation}
+β=c_{2}^{2}+c_{3}^{2}+c_{4}^{2}\label{eq:5-77}
+\end{equation}
+
+\end_inset
+
+显然
+\begin_inset Formula 
+\begin{equation}
+β=1-c_{1}^{2}\label{eq:5-78}
+\end{equation}
+
+\end_inset
+
+在等性杂化
+\begin_inset Formula $c_{1}$
+\end_inset
+
+确定的情况下, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-77"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式即为
+\begin_inset Formula $ϕ_{{\rm max}}$
+\end_inset
+
+取极大值时
+\begin_inset Formula $c_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{4}$
+\end_inset
+
+所应满足的条件, 令
+\begin_inset Formula 
+\begin{equation}
+F=β-c_{2}^{2}-c_{3}^{2}-c_{4}^{2}=0\label{eq:5-79}
+\end{equation}
+
+\end_inset
+
+这是一个条件极值的问题, 可用Lagrange不定乘子法求此极值, 即
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\frac{\partial\phi_{{\rm max}}}{\partial c_{2}}+λ\frac{\partial F}{\partial c_{2}} & =0\\
+\frac{\partial\phi_{{\rm max}}}{\partial c_{3}}+λ\frac{\partial F}{\partial c_{3}} & =0\\
+\frac{\partial\phi_{{\rm max}}}{\partial c_{4}}+λ\frac{\partial F}{\partial c_{4}} & =0
+\end{split}
+\right\} \label{eq:5-80}
+\end{equation}
+
+\end_inset
+
+把(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-75"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-79"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式代入上式, 得
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}c_{2} & =\frac{\sqrt{3}}{4\sqrt{\pi}\lambda}x_{1}\\
+c_{3} & =\frac{\sqrt{3}}{4\sqrt{\pi}\lambda}y_{1}\\
+c_{4} & =\frac{\sqrt{3}}{4\sqrt{\pi}\lambda}z_{1}
+\end{split}
+\right\} \label{eq:5-81}
+\end{equation}
+
+\end_inset
+
+由上式得
+\begin_inset Formula 
+\begin{equation}
+β=c_{2}^{2}+c_{3}^{2}+c_{4}^{2}=\frac{3}{16\pi\lambda^{2}}(x_{1}^{2}+y_{1}^{2}+z_{1}^{2})=\frac{3}{16\pi\lambda^{2}}\label{eq:5-82}
+\end{equation}
+
+\end_inset
+
+上式用到了
+\begin_inset Formula $\boldsymbol{a}(x_{1},y_{1},z_{1})$
+\end_inset
+
+是单位矢量的假设。显然
+\begin_inset Formula 
+\begin{equation}
+\frac{\sqrt{3}}{4\sqrt{\pi}\lambda}=\sqrt{\beta}\label{eq:5-83}
+\end{equation}
+
+\end_inset
+
+把上式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-81"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 得到了等性杂化轨道的系数
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}c_{2} & =\sqrt{\beta}x_{1}\\
+c_{3} & =\sqrt{\beta}y_{1}\\
+c_{4} & =\sqrt{\beta}z_{1}
+\end{split}
+\right\} \label{eq:5-84}
+\end{equation}
+
+\end_inset
+
+把这些系数代回到(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-74"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式中的第一个等式, 就得到了极大值方向在
+\begin_inset Formula $\boldsymbol{a}(x_{1},y_{1},z_{1})$
+\end_inset
+
+的杂化轨道
+\begin_inset Formula $ϕ_{1}$
+\end_inset
+
+:  
+\begin_inset Formula 
+\begin{equation}
+ϕ_{1}=c_{1}s+\sqrt{\beta}x_{1}p_{x}+\sqrt{\beta}y_{1}p_{y}+\sqrt{\beta}z_{1}p_{z}\label{eq:5-85}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设另一个等性杂化轨道2的极大值方向在
+\begin_inset Formula $\boldsymbol{b}(x_{2},y_{2},z_{2})$
+\end_inset
+
+, 同理可得
+\begin_inset Formula 
+\begin{equation}
+ϕ_{2}=c_{1}s+\sqrt{\beta}x_{2}p_{x}+\sqrt{\beta}y_{2}p_{y}+\sqrt{\beta}z_{2}p_{z}\label{eq:5-86}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+杂化轨道之间必须尽可能满足最小排斥原理, 即重迭积分最小。这就要求杂化轨道也和原子轨道一样, 满足正交的条件:  
+\begin_inset Formula 
+\begin{equation}
+0=∫ϕ_{1}ϕ_{2}dv=c_{1}^{2}+β(x_{1}x_{2}+y_{1}y_{2}+z_{1}z_{2})\label{eq:5-87}
+\end{equation}
+
+\end_inset
+
+因为
+\begin_inset Formula $\boldsymbol{a}(x_{1},y_{1},z_{1})$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{b}(x_{2},y_{2},z_{2})$
+\end_inset
+
+都是单位矢量, 即
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{a} & =x_{1}\boldsymbol{i}+y_{1}\boldsymbol{j}+z_{1}\boldsymbol{k}\\
+\boldsymbol{b} & =x_{2}\boldsymbol{i}+y_{2}\boldsymbol{j}+z_{2}\boldsymbol{k}\\
+|\boldsymbol{a}| & =|\boldsymbol{b}|=1
+\end{align*}
+
+\end_inset
+
+令
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+之间的夹角为
+\begin_inset Formula $α$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{a}·\boldsymbol{b}=|\boldsymbol{a}||\boldsymbol{b}|\cosα=\cosα=x_{1}x_{2}+y_{1}y_{2}+z_{1}z_{2}\label{eq:5-88}
+\end{equation}
+
+\end_inset
+
+把上式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-87"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 得 
+\begin_inset Formula 
+\[
+c_{1}^{2}+β\cosα=0
+\]
+
+\end_inset
+
+两个等性杂化轨道极大值方向间的夹角为
+\begin_inset Formula 
+\begin{equation}
+\cosα=-\frac{c_{1}^{2}}{\beta}\label{eq:5-89}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $sp$
+\end_inset
+
+,
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+和
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+等性杂化轨道
+\end_layout
+
+\begin_layout Standard
+1) 
+\begin_inset Formula $sp$
+\end_inset
+
+等性杂化
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-8.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $sp$
+\end_inset
+
+杂化轨道的角度分布
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-8"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是由
+\begin_inset Formula $s$
+\end_inset
+
+轨道和
+\begin_inset Formula $p_{x}$
+\end_inset
+
+轨道等性杂化形成的两个杂化轨道, 在每个杂化轨道中, 
+\begin_inset Formula $s$
+\end_inset
+
+轨道的成分各占1/2, 即
+\begin_inset Formula 
+\[
+c_{1}^{2}=1/2,β=1-c_{1}^{2}=1/2
+\]
+
+\end_inset
+
+两个杂化轨道间的夹角为
+\begin_inset Formula 
+\begin{align*}
+\cosα & =-\frac{c_{1}^{2}}{\beta}=-1\\
+α & =180°
+\end{align*}
+
+\end_inset
+
+令一个杂化轨道的极大值方向为
+\begin_inset Formula $\boldsymbol{a}(1,0,0)$
+\end_inset
+
+, 则另一个杂化轨道的极大值方向为
+\begin_inset Formula $\boldsymbol{b}(-1,0,0)$
+\end_inset
+
+。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-85"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可写出两个杂化轨道
+\begin_inset Formula 
+\begin{align}
+ϕ_{1} & =c_{1}s+\sqrt{\beta}x_{1}p_{x}+\sqrt{\beta}y_{1}p_{y}+\sqrt{\beta}z_{1}p_{z}=\frac{1}{\sqrt{2}}(s+p_{x})\label{eq:5-90}\\
+ϕ_{2} & =c_{1}s+\sqrt{\beta}x_{2}p_{x}+\sqrt{\beta}y_{2}p_{y}+\sqrt{\beta}z_{2}p_{z}=\frac{1}{\sqrt{2}}(s-p_{x})\label{eq:5-91}
+\end{align}
+
+\end_inset
+
+图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 是
+\begin_inset Formula $sp$
+\end_inset
+
+杂化轨道的角度分布, 其中(a)为
+\begin_inset Formula $ϕ_{1}$
+\end_inset
+
+, (b)为
+\begin_inset Formula $ϕ_{2}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ce{C2H2}$
+\end_inset
+
+中的碳原子采用
+\begin_inset Formula $sp$
+\end_inset
+
+杂化轨道形成两个
+\begin_inset Formula $σ$
+\end_inset
+
+键, 其余两个
+\begin_inset Formula $2p$
+\end_inset
+
+轨道形成
+\begin_inset Formula $π$
+\end_inset
+
+双键: 
+\begin_inset Formula $\ce{H-C#C-H}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{R-CN}$
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chemfig{C(-[5]H)(-[3]H)=C(-[1]H)-[7]H}
+\end_layout
+
+\end_inset
+
+的中心碳原子也是形成
+\begin_inset Formula $sp$
+\end_inset
+
+杂化轨道, 而且后者的中心碳原子的其余两个
+\begin_inset Formula $p$
+\end_inset
+
+轨道不在同一平面上, 所以不能形成大
+\begin_inset Formula $π$
+\end_inset
+
+键, 这导致四个氢原子不在同一平面上的分子构型, 金属Be, Zn, Cd, Hg等的最外层电子组态为
+\begin_inset Formula $ns^{2}$
+\end_inset
+
+, 都可采用
+\begin_inset Formula $sp$
+\end_inset
+
+杂化轨道而形成线性分子, 如
+\begin_inset Formula $\ce{BeCl2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{BeH2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{HgCl2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{Zn(CH3)2}$
+\end_inset
+
+等。
+\end_layout
+
+\begin_layout Standard
+2) 
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+等性杂化
+\end_layout
+
+\begin_layout Standard
+在这种杂化轨道中, 有三个原子轨道
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+参加杂化, 共形成三个杂化轨道
+\begin_inset Formula $ϕ_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{3}$
+\end_inset
+
+, 在三个等性杂化轨道中, 
+\begin_inset Formula $s$
+\end_inset
+
+轨道所占的成分都是
+\begin_inset Formula $1/3$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+c_{1}^{2}=\frac{1}{3},β=\frac{2}{3},\cosα=-\frac{1}{2},α=120°
+\]
+
+\end_inset
+
+三个杂化轨道的极大值方向可选在
+\begin_inset Formula $xy$
+\end_inset
+
+平面的任意方向, 习惯上选取
+\begin_inset Formula $ϕ_{1}$
+\end_inset
+
+的极大值方向
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+为
+\begin_inset Formula $x$
+\end_inset
+
+轴的正向, 由三个杂化轨道间的夹角为
+\begin_inset Formula $120°$
+\end_inset
+
+容易算出
+\begin_inset Formula $ϕ_{2}$
+\end_inset
+
+和
+\begin_inset Formula $ϕ_{3}$
+\end_inset
+
+的极大值方向
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}ϕ_{1}: & \boldsymbol{a}(x_{1},y_{1},z_{1})=\boldsymbol{a}(1,0,0)\\
+ϕ_{2}: & \boldsymbol{b}(x_{2},y_{2},z_{2})=\boldsymbol{b}(-\frac{1}{2},\frac{\sqrt{3}}{2},0)\\
+ϕ_{3}: & \boldsymbol{c}(x_{3},y_{3},z_{3})=\boldsymbol{c}(-\frac{1}{2},-\frac{\sqrt{3}}{2},0)
+\end{split}
+\right\} \label{eq:5-92}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+等性杂化轨道的极大值方向如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-9.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+杂化轨道
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分别把(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-92"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式中的坐标数据代入到(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-85"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可得到三个杂化轨道
+\begin_inset Formula 
+\begin{align}
+ϕ_{1} & =\sqrt{\frac{1}{3}}s+\sqrt{\frac{2}{3}}p_{x}\label{eq:5-93}\\
+ϕ_{2} & =\sqrt{\frac{1}{3}}s-\sqrt{\frac{1}{6}}p_{x}+\sqrt{\frac{1}{2}}p_{y}\label{eq:5-94}\\
+ϕ_{3} & =\sqrt{\frac{1}{3}}s-\sqrt{\frac{1}{6}}p_{x}-\sqrt{\frac{1}{2}}p_{y}\label{eq:5-95}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ce{C2H4}$
+\end_inset
+
+中的碳原子采用
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+杂化轨道形成三个
+\begin_inset Formula $σ$
+\end_inset
+
+键, 剩下的
+\begin_inset Formula $p$
+\end_inset
+
+轨道形成
+\begin_inset Formula $π$
+\end_inset
+
+键: 。第三主族原子也可采用
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+杂化轨道形成分子, 如
+\begin_inset Formula $\ce{BF3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{BCl3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{BI3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{B(CH3)3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{GaI3}$
+\end_inset
+
+等。
+\end_layout
+
+\begin_layout Standard
+3) 
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+等性杂化
+\end_layout
+
+\begin_layout Standard
+这种杂化是由四个原子轨道
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{z}$
+\end_inset
+
+参与杂化, 形成四个杂化轨道
+\begin_inset Formula $ϕ_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{3}$
+\end_inset
+
+和
+\begin_inset Formula $ϕ_{4}$
+\end_inset
+
+每个等性杂化轨道的
+\begin_inset Formula $s$
+\end_inset
+
+轨道成分均为
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+c_{1}^{2}=\frac{1}{4},β=\frac{3}{4},\cosα=-\frac{1}{3},α=109°28'
+\]
+
+\end_inset
+
+可把(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-85"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式所表示的杂化轨道
+\begin_inset Formula $ϕ_{1}$
+\end_inset
+
+改记为
+\begin_inset Formula $ϕ_{i}$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\begin{equation}
+\phi_{i}=c_{1}s+\sqrt{\beta}x_{i}p_{x}+\sqrt{\beta}y_{i}p_{y}+\sqrt{\beta}z_{i}p_{z}=\frac{1}{2}s+\frac{\sqrt{3}}{2}(x_{i}p_{x}+y_{i}p_{y}+z_{i}p_{z})\label{eq:5-96}
+\end{equation}
+
+\end_inset
+
+式中的
+\begin_inset Formula $i=1,2,3,4$
+\end_inset
+
+, 对应于四个杂化轨道, 因为四个轨道极大值方向的夹角为
+\begin_inset Formula $109°28'$
+\end_inset
+
+, 恰是正四面体的体心指向其四个顶点的方向间的夹角, 所以四个杂化轨道极大值方向的单位矢量可选为
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\phi_{1}: & \left(\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}}\right)\\
+\phi_{2}: & \left(\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}}\right)\\
+\phi_{3}: & \left(-\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}}\right)\\
+\phi_{4}: & \left(-\frac{1}{\sqrt{3}},-\frac{1}{\sqrt{3}},\frac{1}{\sqrt{3}}\right)
+\end{split}
+\right\} \label{eq:5-97}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-10.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道图型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-10"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+把(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-97"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式的四组坐标分别代入到(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-96"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 可得四个杂化轨道: 
+\begin_inset Formula 
+\begin{align}
+\phi_{1} & =\frac{1}{2}(s+p_{x}+p_{y}+p_{z})\label{eq:5-98}\\
+\phi_{2} & =\frac{1}{2}(s+p_{x}-p_{y}-p_{z})\label{eq:5-99}\\
+\phi_{3} & =\frac{1}{2}(s-p_{x}+p_{y}-p_{z})\label{eq:5-100}\\
+\phi_{4} & =\frac{1}{2}(s-p_{x}-p_{y}+p_{z})\label{eq:5-101}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C原子可采用
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道形成四个
+\begin_inset Formula $σ$
+\end_inset
+
+键, 如
+\begin_inset Formula $\ce{CH4}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{C2H6}$
+\end_inset
+
+分子, B, O, N等原子也可以采用
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道形成分子, 如
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chemfig{O(-[5]CH_3)(-[3]CH_3)-BF_3}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{NH3}$
+\end_inset
+
+等分子。
+\end_layout
+
+\begin_layout Subsection
+不等性杂化轨道
+\end_layout
+
+\begin_layout Standard
+在前面这些杂化原子轨道所形成的分子中, 有些由
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+杂化轨道所形成的
+\begin_inset Formula $σ$
+\end_inset
+
+键的键角偏离
+\begin_inset Formula $120°$
+\end_inset
+
+。
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道所形成的键角偏离
+\begin_inset Formula $109°28'$
+\end_inset
+
+, 这些杂化轨道实际上是不等性杂化轨道。所谓不等性杂化, 是指参加杂化的角量子数
+\begin_inset Formula $l$
+\end_inset
+
+相同的原子轨道, 对各杂化轨道的贡献不等。
+\end_layout
+
+\begin_layout Standard
+例如
+\begin_inset Formula $\ce{NH3}$
+\end_inset
+
+分子, N原子的
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道中的三个轨道分别与三个H原子形成
+\begin_inset Formula $σ$
+\end_inset
+
+键, N原子的一对孤对电子占据另一个杂化轨道。在这四个杂化轨遭中, 由孤对电子占据的杂化轨道不参与成键, 其上的孤对电子只受N核的作用, 应比较密集地分布在N核
+周围。因此, 孤对电子所占据的杂化轨道应含有较多
+\begin_inset Formula $s$
+\end_inset
+
+轨道成分, 相应的
+\begin_inset Formula $p$
+\end_inset
+
+轨道成分较少; 而与H原子成键的三个杂他轨道刚含有较多的
+\begin_inset Formula $p$
+\end_inset
+
+轨道成分和较少的
+\begin_inset Formula $s$
+\end_inset
+
+轨道成分, 即其性质应更接近于
+\begin_inset Formula $p$
+\end_inset
+
+轨道, 因而其键角倾向于互相垂直。实际上, 
+\begin_inset Formula $\ce{NH3}$
+\end_inset
+
+中
+\begin_inset Formula $\ce{N-H}$
+\end_inset
+
+键的夹角为
+\begin_inset Formula $107°$
+\end_inset
+
+, 小于
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+等性杂他的键角
+\begin_inset Formula $109°28'$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+中的O原子也是
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化, 有两对弧对电子占据两个杂化轨道, 其不等性的程度大于
+\begin_inset Formula $\ce{NH3}$
+\end_inset
+
+分子, 两个成键的杂化轨道中
+\begin_inset Formula $p$
+\end_inset
+
+轨道的成分更多, 因而其键角比
+\begin_inset Formula $\ce{NH3}$
+\end_inset
+
+的更小, 为
+\begin_inset Formula $104.5°$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $d$
+\end_inset
+
+-
+\begin_inset Formula $s$
+\end_inset
+
+-
+\begin_inset Formula $p$
+\end_inset
+
+杂化
+\end_layout
+
+\begin_layout Standard
+有些原子的
+\begin_inset Formula $d$
+\end_inset
+
+轨道能量与
+\begin_inset Formula $s$
+\end_inset
+
+轨道和
+\begin_inset Formula $p$
+\end_inset
+
+轨道的能量相近, 可形成
+\begin_inset Formula $d$
+\end_inset
+
+-
+\begin_inset Formula $s$
+\end_inset
+
+-
+\begin_inset Formula $p$
+\end_inset
+
+杂化轨道, 例如过渡金属原子的
+\begin_inset Formula $3d$
+\end_inset
+
+轨道与
+\begin_inset Formula $4s$
+\end_inset
+
+和
+\begin_inset Formula $4p$
+\end_inset
+
+轨道杂化, 形成的杂化轨道与各种配位体结合成络合物。
+\begin_inset Formula $d$
+\end_inset
+
+-
+\begin_inset Formula $s$
+\end_inset
+
+-
+\begin_inset Formula $p$
+\end_inset
+
+杂化轨道的系数的推求比较繁锁, 在这里只给出
+\begin_inset Formula $dsp^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $dsp^{3}$
+\end_inset
+
+和
+\begin_inset Formula $d^{2}sp^{3}$
+\end_inset
+
+杂化轨道及其构型, 表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:5-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 列出了这些杂化轨道。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+氢原子和类氢原子的波函数
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:5-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="6em">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="7em">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+杂化类型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参加杂化的原子轨道
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+杂化轨道
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+杂化轨道构型和对称性
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $dsp^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+,
+\begin_inset Formula $s$
+\end_inset
+
+,
+\begin_inset Formula $p_{x}$
+\end_inset
+
+,
+\begin_inset Formula $p_{y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{1}=\frac{1}{2}(s+d_{x^{2}-y^{2}}+\sqrt{2}p_{x})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+正方形
+\begin_inset Formula $D_{4h}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{2}=\frac{1}{2}(s-d_{x^{2}-y^{2}}+\sqrt{2}p_{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{3}=\frac{1}{2}(s+d_{x^{2}-y^{2}}-\sqrt{2}p_{z})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{4}=\frac{1}{2}(s-d_{x^{2}-y^{2}}-\sqrt{2}p_{z})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $dsp^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{z}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{1}=\frac{1}{\sqrt{3}}(s+\sqrt{2}p_{x})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+对三棱锥形
+\begin_inset Formula $D_{3h}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{2}=\frac{1}{\sqrt{3}}(s-\frac{1}{\sqrt{2}}p_{x}+\sqrt{\frac{3}{2}}p_{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{3}=\frac{1}{\sqrt{3}}(s-\frac{1}{\sqrt{2}}p_{x}-\sqrt{\frac{3}{2}}p_{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{4}=\frac{1}{\sqrt{2}}(p_{z}+d_{z^{2}})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{5}=\frac{1}{\sqrt{2}}(p_{z}-d_{z^{2}})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d^{2}sp^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{z}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{1}=\frac{1}{\sqrt{6}}(s+\sqrt{2}d_{z^{2}}+\sqrt{3}p_{z})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+正八面体形
+\begin_inset Formula $O_{h}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{2}=\frac{1}{\sqrt{6}}(s-\frac{1}{\sqrt{2}}d_{z^{2}}+\sqrt{\frac{3}{2}}d_{x^{2}-y^{2}}+\sqrt{3}p_{x})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{3}=\frac{1}{\sqrt{6}}(s-\frac{1}{\sqrt{2}}d_{z^{2}}-\sqrt{\frac{3}{2}}d_{x^{2}-y^{2}}+\sqrt{3}p_{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{4}=\frac{1}{\sqrt{6}}(s-\frac{1}{\sqrt{2}}d_{z^{2}}+\sqrt{\frac{3}{2}}d_{x^{2}-y^{2}}-\sqrt{3}p_{x})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{5}=\frac{1}{\sqrt{6}}(s-\frac{1}{\sqrt{2}}d_{z^{2}}-\sqrt{\frac{3}{2}}d_{x^{2}-y^{2}}-\sqrt{3}p_{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi_{6}=\frac{1}{\sqrt{6}}(s+\sqrt{2}d_{z^{2}}-\sqrt{3}p_{z})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+离域分子轨道和定域分子轨道
+\end_layout
+
+\begin_layout Subsection
+两种分子轨道的特点
+\end_layout
+
+\begin_layout Standard
+在分子轨道理论中, 采用LCAO-MO近似, 即把分子轨道表示为各个原子轨道的线性组合: 
+\begin_inset Formula 
+\begin{equation}
+ψ=c_{a}ϕ_{a}+cϕ_{b}+c_{c}ϕ_{c}+\cdots\label{eq:5-102}
+\end{equation}
+
+\end_inset
+
+其中组合系数的平方
+\begin_inset Formula $c_{a}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{b}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{c}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\cdots$
+\end_inset
+
+ 近似为分子轨道
+\begin_inset Formula $ψ$
+\end_inset
+
+上的电子分别在原子轨道
+\begin_inset Formula $ϕ_{a}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{b}$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ_{c}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+ 上的几率。这就意味着每个分子轨道上的电子都是在分子的整体范围内运动, 或者说分子轨道是离域的, 即非定域在任何两个特定的原子之间而形成定域键。
+\end_layout
+
+\begin_layout Standard
+离域分子轨道模型是成功的, 用这种模型所计算出来的电离能、激发能、总能量、电荷密度、偶极矩等分子的各种性质与实验值符合得较好。另一方面, 按照化学家的传统观念,
+ 分子轨道应该是定域的, 例如, 两个原子之间可形成
+\begin_inset Formula $σ$
+\end_inset
+
+或
+\begin_inset Formula $π$
+\end_inset
+
+型的电子对键, 某些原子具有孤对电子, 按照这种观念, 成键电子或孤对电子只能定域在两个特定的原子之间或一个原子周围, 大量事实表明, 分子中的许多性质是与这种
+定域电子的模型相联系的。例如, 所有饱和烃中的
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+或
+\begin_inset Formula $\ce{C-C}$
+\end_inset
+
+键的键能都近似相等, 而分子的总键能则近似等于各键键能之和.
+ 
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+键的键矩在各种分子中近似相同, 分子的偶极矩近似为其键矩的矢量和。这说明
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+或
+\begin_inset Formula $\ce{C-C}$
+\end_inset
+
+等基团的成键电子在不同的分子中基本上仍定域在原来的原子间。这些事实说明, 用分布在分子某一局部区域的轨道(定域轨道)来描述这些性质更为合理。
+\end_layout
+
+\begin_layout Standard
+既然离域分子轨道模型和定域分子轨道模型都能成功地描述分子的状态, 这两种模型的差异就只能是表面上的, 两种轨道间必存在着某种变换关系, 下面以
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+分子为例来讨论这种变换关系。
+\end_layout
+
+\begin_layout Subsection
+两种分子轨道间的变换
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-11.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+分子的构型和坐标系, 其中
+\begin_inset Formula $x$
+\end_inset
+
+轴垂直纸面指向读者
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+原子轨道的对称类型
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:5-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2p_{y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+分子的几何构型和坐标轴的选取如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+一分子属于
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+点群, 它的分子轨道必须属于
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+的四种对称类型
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+之一, 具有相同对称类型的原子轨道才能组合成分子轨道。O的原子轨道
+\begin_inset Formula $1s$
+\end_inset
+
+, 
+\begin_inset Formula $2s$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+本身都属于
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+的某种对称类型, 即它们都是对称性匹配的轨道, H的原子轨道
+\begin_inset Formula $1s_{{\rm H1}}$
+\end_inset
+
+和
+\begin_inset Formula $1s_{{\rm H2}}$
+\end_inset
+
+, 不属于
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+的任何一种对称类型, 须将这两个轨道线性组合起来以构成
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+的对称性匹配轨道: 
+\begin_inset Formula 
+\begin{align}
+h_{1} & =\frac{1}{\sqrt{2}}(1s_{{\rm H1}}+1s_{{\rm H2}})\label{eq:5-102-1}\\
+h_{2} & =\frac{1}{\sqrt{2}}(1s_{{\rm H1}}-1s_{{\rm H2}})\label{eq:5-103}
+\end{align}
+
+\end_inset
+
+于是我们可以根据
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+的变换性质把所有这些对称性匹配的原子轨道分类, 表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:5-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 列出了各种原子轨道的对称类型, 其中
+\begin_inset Formula $a_{1}$
+\end_inset
+
+型轨道对于群的全部操作都是对称的, 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+在
+\begin_inset Formula ${\hat{C}}_{2}(z)$
+\end_inset
+
+和
+\begin_inset Formula ${\hat{\sigma}}'(yz)$
+\end_inset
+
+操作下是反对称的, 在
+\begin_inset Formula $\hat{\sigma}(xz)$
+\end_inset
+
+操作下是对称的, 
+\begin_inset Formula $b_{2}$
+\end_inset
+
+在
+\begin_inset Formula ${\hat{C}}_{2}(z)$
+\end_inset
+
+和
+\begin_inset Formula $\hat{\sigma}(xz)$
+\end_inset
+
+操作下是反对称的, 在
+\begin_inset Formula ${\hat{\sigma}}'(yz)$
+\end_inset
+
+操作下是对称的。在这些原子轨道中, 没有属于
+\begin_inset Formula $a_{2}$
+\end_inset
+
+的对称类型。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+的SCF计算结果
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:5-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="10">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+﻿对称类型
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+占据轨道
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+轨道能量(eV)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LCAO系数
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2p_{y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2p_{z}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1s_{{\rm H1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1s_{{\rm H2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ψ_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-11$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-12.7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.09
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.51$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.78
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.26
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-17$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.62
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.42
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.42$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ψ_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-35$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-0.22$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.84
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ψ_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-559.1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+引自“J.
+ N.
+ 默雷尔等.
+ 原子价理论, 科学出版社.
+ 1978”
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可把属于同一对称类型的原子轨道组合成分子轨道。显然, 
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+轨道只能是非键轨道。其它分子轨道中的组合系数和轨道能量可按SCF方法计算, 计算结果列于表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:5-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 中。
+\end_layout
+
+\begin_layout Standard
+在这五个占据轨道中, 其中
+\begin_inset Formula $ψ_{1}$
+\end_inset
+
+几乎全是O的
+\begin_inset Formula $1s$
+\end_inset
+
+轨道成分; 
+\begin_inset Formula $ψ_{2}$
+\end_inset
+
+的主要成分是O的
+\begin_inset Formula $2s$
+\end_inset
+
+轨道, 
+\begin_inset Formula $ψ_{5}$
+\end_inset
+
+是O的
+\begin_inset Formula $2p_{x}$
+\end_inset
+
+轨道; 这三个轨道基本上是定域轨道。
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+和
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+轨道是两个成键的非定域轨道。
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+的10个电子占据在这5个轨道上, 其总的波函数为10阶的Slater行列式。为简化起见, 把这个10阶行列式写成如下形式:
+\begin_inset Formula 
+\begin{equation}
+\varPsi=|\psi_{1}\bar{\psi_{1}}\psi_{2}\bar{\psi_{2}}\psi_{3}\bar{\psi_{3}}\psi_{4}\bar{\psi_{4}}\psi_{5}\bar{\psi_{5}}|\label{eq:5-104}
+\end{equation}
+
+\end_inset
+
+其中
+\begin_inset Formula $ψ_{1}$
+\end_inset
+
+表示
+\begin_inset Formula $\psi_{1}α$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{\psi_{1}}$
+\end_inset
+
+表示
+\begin_inset Formula $\psi_{1}β$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+如果把行列式的某一行(或列)乘以一个因子加到另一行(或列)上, 行列式的值不变, 即可不变。例如, 把第三列乘以
+\begin_inset Formula $c$
+\end_inset
+
+加到第一列, 第四列乘以
+\begin_inset Formula $c$
+\end_inset
+
+加到第二列, 可得到等同的波函数
+\begin_inset Formula $\varPsi$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\varPsi=|(\psi_{1}+c\psi_{2})\overline{(\psi_{1}+c\psi_{2})}\psi_{2}\bar{\psi_{2}}\psi_{3}\bar{\psi_{3}}\psi_{4}\bar{\psi_{4}}\psi_{5}\bar{\psi_{5}}|\label{eq:5-105}
+\end{equation}
+
+\end_inset
+
+上式表明, 电子的占据轨道为: 
+\begin_inset Formula $\psi_{1}+c\psi_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这组占据轨道虽然不同于原来的占据轨道
+\begin_inset Formula $ψ_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $ψ_{5}$
+\end_inset
+
+, 但二者所构成的总的波函数
+\begin_inset Formula $\varPsi$
+\end_inset
+
+却是相同的。这说明分子轨道的某种线性组合而形成的一组新的分子轨道并不会改变电子总体的状态
+\begin_inset Formula $\varPsi$
+\end_inset
+
+。在量子化学中, 把这种分子轨道的线性组合而得到一组新的分子轨道的变换称为
+\begin_inset Formula $U$
+\end_inset
+
+变换, 即在
+\begin_inset Formula $U$
+\end_inset
+
+变换下, 电子的总波函数
+\begin_inset Formula $\varPsi$
+\end_inset
+
+不变, 总电荷密度也不变。设原来的分子轨道为
+\begin_inset Formula $\{\psi_{i}\}$
+\end_inset
+
+, 经
+\begin_inset Formula $U$
+\end_inset
+
+变换后的分子轨道为
+\begin_inset Formula $\{u_{i}\}$
+\end_inset
+
+, 且每个轨道都占据两个电子, 则总电荷密度
+\begin_inset Formula 
+\begin{equation}
+ρ=N∫|\varPsi|^{2}dv_{2}dv_{3}\cdots dv_{N}=2\sum_{i=1}^{N/2}|ψ_{i}|^{2}=2\sum_{i=1}^{N/2}|u_{i}|^{2}\label{eq:5-106}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $N$
+\end_inset
+
+为分子中的总电子数。 
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $\{\psi_{i}\}$
+\end_inset
+
+是非定域的分子轨道, 上式表明, 总电荷密度为各个轨道的电子云迭加而成; 如果
+\begin_inset Formula $\{u_{i}\}$
+\end_inset
+
+是经
+\begin_inset Formula $U$
+\end_inset
+
+变换后所得到的定域在各个键附近的定域轨道, 则上式表明, 总电荷密度也可看成是每个键周围电子云拼凑而成的, 这就是定域轨道和非定域轨道之间的关系。
+\end_layout
+
+\begin_layout Standard
+下面我们将利用这种变换关系, 把
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+的非定域轨道变换成定域轨道。
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+的非定域成键轨道是
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+和
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+。把
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+和
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+线性组合成两个定域成键轨道
+\begin_inset Formula $u_{4}$
+\end_inset
+
+和
+\begin_inset Formula $u_{3}$
+\end_inset
+
+, 即
+\begin_inset Formula $u_{4}$
+\end_inset
+
+和
+\begin_inset Formula $u_{3}$
+\end_inset
+
+分别为定域在两个
+\begin_inset Formula $\ce{O-H}$
+\end_inset
+
+键上的轨道, 在
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+分子的
+\begin_inset Formula ${\hat{C}}_{2}(z)$
+\end_inset
+
+和
+\begin_inset Formula $\hat{\sigma}(xz)$
+\end_inset
+
+操作下, 
+\begin_inset Formula $u_{3}$
+\end_inset
+
+和
+\begin_inset Formula $u_{4}$
+\end_inset
+
+应该互换, 因而
+\begin_inset Formula $u_{3}$
+\end_inset
+
+和
+\begin_inset Formula $u_{4}$
+\end_inset
+
+可写成如下形式: 
+\begin_inset Formula 
+\begin{align}
+u_{3} & =λ\psi_{4}+ψμ_{3}\label{eq:5-107}\\
+u_{4} & =λ\psi_{4}-ψμ_{3}\label{eq:5-108}
+\end{align}
+
+\end_inset
+
+其中
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+属
+\begin_inset Formula $a_{1}$
+\end_inset
+
+对称类型, 在所有操作下不变; 
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+属
+\begin_inset Formula $b_{2}$
+\end_inset
+
+对称类型, 在
+\begin_inset Formula ${\hat{C}}_{2}(z)$
+\end_inset
+
+和
+\begin_inset Formula $\hat{\sigma}(xz)$
+\end_inset
+
+操作下改变符号, 以上两式可在这两个操作下互换。而且, 定域轨道间也应该是正交归一化的, 利用
+\begin_inset Formula $ψ_{3}$
+\end_inset
+
+和
+\begin_inset Formula $ψ_{4}$
+\end_inset
+
+的正交归一化条件, 得
+\begin_inset Formula 
+\begin{equation}
+λ=μ=0.707\label{eq:5-109}
+\end{equation}
+
+\end_inset
+
+把
+\begin_inset Formula $λ$
+\end_inset
+
+和
+\begin_inset Formula $μ$
+\end_inset
+
+的数值代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-107"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-108"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 利用表
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:5-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 的LCAO系数, 得
+\begin_inset Formula 
+\begin{align}
+u_{3} & =0.0661s-0.3582s+0.4412p_{y}+0.5662p_{z}+0.4861s_{{\rm H1}}+0.1121s_{{\rm H2}}\label{eq:5-110}\\
+u_{4} & =0.0661s-0.3582s-0.4412p_{y}+0.5662p_{z}+0.4861s_{{\rm H1}}+0.1121s_{{\rm H2}}\label{eq:5-111}
+\end{align}
+
+\end_inset
+
+这两个轨道已经基本上定域化了, 可近似地看成是O原子的两个
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道分别与两个H原子
+\begin_inset Formula $1s$
+\end_inset
+
+轨道形成两个
+\begin_inset Formula $σ$
+\end_inset
+
+键。
+\end_layout
+
+\begin_layout Standard
+按照这种作法, 可以把
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+的
+\begin_inset Formula $ψ_{2}$
+\end_inset
+
+和
+\begin_inset Formula $ψ_{5}$
+\end_inset
+
+组合起来, 形成两个孤对电子轨道: 
+\begin_inset Formula 
+\begin{align}
+u_{2} & =0.707(\psi_{2}+\psi_{5})=-0.1571s+0.5962s+0.7072p_{x}+0.0932p_{z}+0.1071s_{{\rm H1}}+0.1071s_{{\rm H2}}\label{eq:5-112}\\
+u_{5} & =0.707(\psi_{2}-\psi_{5})=-0.1571s+0.5962s-0.7072p_{x}+0.0932p_{z}+0.1071s_{{\rm H1}}+0.1071s_{{\rm H2}}\label{eq:5-113}
+\end{align}
+
+\end_inset
+
+这两个定域轨道可近似地看成是O原子的两个
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道, 因其被孤对电子占据, 故含有较多的
+\begin_inset Formula $2s$
+\end_inset
+
+轨道成分, 而
+\begin_inset Formula $u_{3}$
+\end_inset
+
+和
+\begin_inset Formula $u_{4}$
+\end_inset
+
+则含有较多的
+\begin_inset Formula $2p$
+\end_inset
+
+轨道成分。
+\end_layout
+
+\begin_layout Standard
+从以上这些讨论可知, 非定域分子轨道经
+\begin_inset Formula $U$
+\end_inset
+
+变换后可变为定域分子轨道, 但电子的总波函数
+\begin_inset Formula $\varPsi$
+\end_inset
+
+不变, 所以在涉及到与
+\begin_inset Formula $\varPsi$
+\end_inset
+
+有关的分子总体性质时, 定域轨道模型和非定域轨道模型都能给出满意的结果。而定域轨道模型具有化学直观性, 常为化学家们所喜爱。目前比较精确的非定域分子轨道是解Ha
+rtree-Fock-Roothaan方程所得到的正则轨道[见(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:2-66-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式], 其轨道能量具有明确的物理意义, 轨道能量的负值近似为电离能。在对这些正则轨道的定域化过程中, 须把不同能量的轨道组合起来以形成定域轨道,
+ 故定域轨道的能量没有明确的物理意义。定域轨道只能看成是大量电子统计平均的结果, 不能设想一个电子只能定域在某个键周围而不分布在其它区域。因此,
+ 在涉及单个电子的性质时(例如光谱和能谱等性质主要与单电子的跃迁有关), 定域轨道模型常不能给出满意的结果。在这种情况下, 一般应采用非定域轨道模型。
+\end_layout
+
+\begin_layout Section
+缺电子分子和多中心键
+\end_layout
+
+\begin_layout Standard
+铍、硼、铝等原子所含有的价电子数少于其价轨道的数目, 这类原子常统称为缺电子原子。氢、碳、硅等原子含有的价电子数等于其价轨道的数目, 这类原子常称为等电子原子,
+ 当缺电子原子与等电子原子结合成分子时, 其中价电子数少于分子价轨道的数目, 这样的分子叫做缺电子分子。缺电子分子的电子结构有其自身的特点, 有必要在此单独讨论
+。
+\end_layout
+
+\begin_layout Subsection
+硼烷的电子结构
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-12.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+的构型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-12"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+硼烷(
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+)分子是典型的缺电子分子, 关于
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+的几何构型, 曾发生过长时期的争论。后来经电子衍射实验、光谱实验和核磁共振等实验都证实
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+是桥式构型, 其键长和键角示于图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+。
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+分子的两个B原子和两侧的四个H原子在同一平面上, 形成四个
+\begin_inset Formula $\ce{B-H}$
+\end_inset
+
+键; 另外两个H原子分别位于该平商的上方和下方, 形成了
+\begin_inset Formula $\ce{B-H-B}$
+\end_inset
+
+桥键。这种桥键是两电子三中心的离域键, 可用杂化轨道理论来说明这种键的形成。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-13.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+分子三中心轨道和三中心键模型
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-13"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+中, B原子采用
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道与另一B原子的
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道以及H原子的
+\begin_inset Formula $1s$
+\end_inset
+
+轨道互相重迭组成了桥式三中心分子轨道, 有两个电子填充成键, 即生成双电子三中心桥键。每个B原子的其余两个
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道分别与两端的两个H原子的
+\begin_inset Formula $1s$
+\end_inset
+
+轨道形成正常
+\begin_inset Formula $σ$
+\end_inset
+
+键, 每个
+\begin_inset Formula $σ$
+\end_inset
+
+键上有两个电子。图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 表示了三中心分子轨道的模型和12个价电子的填充情况。
+\end_layout
+
+\begin_layout Standard
+这种三中心的分子轨道是一种离域轨道, 其上的两个电子在三个原子间运动, 不是只定域在两个原子之间, 可以仿照对离域
+\begin_inset Formula $π$
+\end_inset
+
+键的处理, 用HMO方法定性地计算这种三中心分子轨道的能级, 设
+\begin_inset Formula $ϕ_{{\rm B1}}$
+\end_inset
+
+和
+\begin_inset Formula $ϕ_{{\rm B2}}$
+\end_inset
+
+分别表示两个B原子的一个
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道, 
+\begin_inset Formula $ϕ_{{\rm H}}$
+\end_inset
+
+表示位于桥键上的H原子的
+\begin_inset Formula $1s$
+\end_inset
+
+轨道, 则三中心的分子轨道可表示为
+\begin_inset Formula 
+\begin{equation}
+ψ=c_{1}\phi_{{\rm B1}}+c_{2}\phi_{{\rm B2}}+c_{3}\phi_{{\rm H}}\label{eq:5-114}
+\end{equation}
+
+\end_inset
+
+若令
+\begin_inset Formula $α_{{\rm B}}$
+\end_inset
+
+和
+\begin_inset Formula $α_{{\rm H}}$
+\end_inset
+
+分别表示B原子
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道和H原子
+\begin_inset Formula $1s$
+\end_inset
+
+轨道的Coulomb积分, 
+\begin_inset Formula $\beta$
+\end_inset
+
+表示B原子
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道与H原子
+\begin_inset Formula $1s$
+\end_inset
+
+轨道的交换积分, 忽略两个B原子
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道间的变换积分, 即可得到与(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:5-59"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式相似的久期方程: 
+\begin_inset Formula 
+\begin{equation}
+\left|\begin{array}{ccc}
+\alpha_{{\rm B}}-\epsilon & \beta & 0\\
+\beta & \alpha_{{\rm H}}-\epsilon & \beta\\
+0 & \beta & \alpha_{{\rm B}}-\epsilon
+\end{array}\right|=0\label{eq:5-115}
+\end{equation}
+
+\end_inset
+
+由此方程可解出
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\epsilon_{1} & =\frac{1}{2}(\alpha_{{\rm B}}+\alpha_{{\rm H}})+β\sqrt{\left(\frac{\alpha_{{\rm B}}-\alpha_{{\rm H}}}{2\beta}\right)^{2}+2}\\
+\epsilon_{2} & =\alpha_{{\rm B}}\\
+\epsilon_{3} & =\frac{1}{2}(\alpha_{{\rm B}}+\alpha_{{\rm H}})-β\sqrt{\left(\frac{\alpha_{{\rm B}}-\alpha_{{\rm H}}}{2\beta}\right)^{2}+2}
+\end{split}
+\right\} \label{eq:5-116}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\ce{B-H-B}$
+\end_inset
+
+离域轨道的能级图示于图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+。有两个电子填充在
+\begin_inset Formula $\epsilon_{1}$
+\end_inset
+
+能级轨道上, 形成双电子三中心桥键。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-14.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{B-H-B}$
+\end_inset
+
+离域轨道的能级图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-14"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从这个HMO定性的能级图可以看出, 虽然
+\begin_inset Formula $\ce{B-H-B}$
+\end_inset
+
+是一种缺电子键, 但填充更多的电子并不能增加键的强度, 这可以解释缺电子分子普遍存在的原因。除了
+\begin_inset Formula $\ce{B2H6}$
+\end_inset
+
+以外, 硼氢类缺电子分子还有
+\begin_inset Formula $\ce{B4H10}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{B5H9}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{B5H11}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{B6H20}$
+\end_inset
+
+等, 并都已经由实验确定了其几何构型。
+\end_layout
+
+\begin_layout Subsection
+其它缺电子分子
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-15.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Be(BH4)2}$
+\end_inset
+
+的成键示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-15"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-16.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Al(BH4)3}$
+\end_inset
+
+的成键示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-16"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+不仅硼氢类化合物可形成缺电子分子, 铍和铝原子也能形成缺电子分子,  例如
+\begin_inset Formula $\ce{Be(BH4)2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{Al(BH4)3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{Be2(CH3)4}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{Al2(CH3)6}$
+\end_inset
+
+等分子都是缺电子分子。
+\begin_inset Formula $\ce{Be(BH4)2}$
+\end_inset
+
+分子中的Be原子缺少两个价电子; 每个B原子缺少一个价电子, 总共缺少四个价电子, 应形成四个双电子三中心键, 其中Be和B原子都采用
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道成键。图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 是
+\begin_inset Formula $\ce{Be(BH4)2}$
+\end_inset
+
+的成键示意图, 在
+\begin_inset Formula $\ce{Al(BH4)3}$
+\end_inset
+
+分子中, Al原子采用了
+\begin_inset Formula $d^{2}sp^{3}$
+\end_inset
+
+杂化轨道, 故缺少三个价电子, 三个B原子缺少三个价电子, 共缺少六个价电子。
+\begin_inset Formula $\ce{Al(BH4)3}$
+\end_inset
+
+形成六个双电子三中心键, 图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-16"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 是其成键示意图。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-17.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Be2(CH3)4}$
+\end_inset
+
+的成键示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-17"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-18.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Al2(CH3)6}$
+\end_inset
+
+的成键示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-18"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在二甲基铍和三甲基铝的蒸气中可形成二聚分子, 其中甲基中C的一个
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道可与Be或Al的
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道形成双电子三中心桥键。这两种分子的成键示意图分别示于图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 和图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-18"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 中。
+\end_layout
+
+\begin_layout Section
+分子的几何构型
+\end_layout
+
+\begin_layout Standard
+分子几何构型的确定既可以采用实验方法也可以采用理论方法。实验方法包括, 电子衍射, X射线衍射、红外光谱等, 理论方法主要是计算分子的总能量。在不同的键长键角下
+计算分子的总能量, 总能量最低时所对应的键长键角。即为分子的稳定几何构型一这些确定分子几何构型的方法都是精确而有效的。并且已经积累了大量的分子几何构型的数据,
+ 需要者可从一般的《化学和物理手册》中查到。本节的目的在于给出一些简单判据, 以定性判断一些简单分子的构型。
+\end_layout
+
+\begin_layout Subsection
+三原子分子的几何构型—沃尔斯(Walsh)规则
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-19.pdf
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+直线形 (a) 和三角形 (b) 
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+价轨道图形
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-19"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+实验和理论计算都表明, 
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+在基态时是直线形的, 而在某些激发态时则是三角形的。这一事实提示我们: 分子的几何构型与分子的电子组态有某种联系。为此, 我们来考察一下
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+分子的能级和分子轨道图形。图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 是直线形和三角形的
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+分子价轨道的图形。图中的
+\begin_inset Formula $2sp_{\sigma}$
+\end_inset
+
+是
+\begin_inset Formula $2s$
+\end_inset
+
+和
+\begin_inset Formula $2p$
+\end_inset
+
+的
+\begin_inset Formula $sp$
+\end_inset
+
+杂化轨道, 
+\begin_inset Formula $2p_{\sigma}$
+\end_inset
+
+是可形成
+\begin_inset Formula $σ$
+\end_inset
+
+键的
+\begin_inset Formula $2p$
+\end_inset
+
+轨道, 
+\begin_inset Formula $2p_{\pi}$
+\end_inset
+
+是可形成
+\begin_inset Formula $π$
+\end_inset
+
+键的
+\begin_inset Formula $2p$
+\end_inset
+
+轨道。
+\end_layout
+
+\begin_layout Standard
+图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 表明, 在三角形构型下, 
+\begin_inset Formula $6a_{1}$
+\end_inset
+
+轨道是三原子的成键轨道, 而其对应的直线形
+\begin_inset Formula $2\pi$
+\end_inset
+
+轨道是反键轨道, 所以
+\begin_inset Formula $6a_{1}$
+\end_inset
+
+轨道能量比
+\begin_inset Formula $2\pi_{a}$
+\end_inset
+
+轨道能量低。在三角形构型下, 两个O原子的反键轨道
+\begin_inset Formula $1a_{2}$
+\end_inset
+
+和
+\begin_inset Formula $4b_{2}$
+\end_inset
+
+。其能量应比对应的直线形轨道
+\begin_inset Formula $1\pi_{g}$
+\end_inset
+
+为高, 这是因为三角形构型的两个O原子靠得近了。总之, 
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+分子在几何构型变化时, 其轨道能置要发生变化, 图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 是键角OCO分别为
+\begin_inset Formula $90°$
+\end_inset
+
+, 
+\begin_inset Formula $120°$
+\end_inset
+
+, 
+\begin_inset Formula $180°$
+\end_inset
+
+时的轨道能量相关图。
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+在基态时, 直嶷形的最高占据轨道是
+\begin_inset Formula $1\pi_{g}^{4}$
+\end_inset
+
+。在三角形构型下, 低于
+\begin_inset Formula $1\pi_{u}$
+\end_inset
+
+的轨道能量或升高或降低, 而1
+\begin_inset Formula $π$
+\end_inset
+
+g的轨道能量则升高较大, 所以在
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+基态时, 直线构型的总能量较低
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+应为直线形。
+\end_layout
+
+\begin_layout Standard
+对于
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+的第一激发态; 
+\begin_inset Formula $1\pi_{g}^{3}2\pi_{u}^{1}$
+\end_inset
+
+, 直线形的
+\begin_inset Formula $2\pi_{u}$
+\end_inset
+
+能量比三角形的
+\begin_inset Formula $6a_{1}$
+\end_inset
+
+能量高得多, 以致其三角形构型更稳定, 实际上激发态
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+的键角
+\begin_inset Formula $\angle{\rm OCO}$
+\end_inset
+
+约为
+\begin_inset Formula $122°$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap5/5-20.pdf
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+轨道能量与键角
+\begin_inset Formula $\angle{\rm OCO}$
+\end_inset
+
+的关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5-20"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 的这种能级与构型的关系, 也适用于含有
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+轨道成键的其它较轻的三原子分子。
+\end_layout
+
+\begin_layout Standard
+对于含有12–16个价电子的基态三原子分子, 其
+\begin_inset Formula $2\pi_{u}$
+\end_inset
+
+轨道是空轨道, 其直线构型的能量应低于三角形构型的能量, 这些分子应是直线形的。如基态分子
+\begin_inset Formula $\ce{C3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{C2N}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{CN2}$
+\end_inset
+
+, NCO, 
+\begin_inset Formula $\ce{CO2+}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{CO2}$
+\end_inset
+
+等。
+\end_layout
+
+\begin_layout Standard
+对于含有17–20个价电子的基态三原子分子, 其
+\begin_inset Formula $2\pi_{u}$
+\end_inset
+
+轨道是占据轨道, 三角形构型的能量应低于直线形构型的能量, 这些分子应是三角形的, 如基态分子
+\begin_inset Formula $\ce{NO2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{O3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{ClO2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{Cl2O}$
+\end_inset
+
+等。
+\end_layout
+
+\begin_layout Standard
+这就是Walsh规则, 最初以这种定性的方式提出, 后为实验和理论计算所证实。Walsh规则只适用于
+\begin_inset Formula $s$
+\end_inset
+
+和
+\begin_inset Formula $p$
+\end_inset
+
+轨道参与成键的分子。当
+\begin_inset Formula $d$
+\end_inset
+
+轨道参与成键时, 能级与构型的关系将更为复杂。图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5-20"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 已不再实用, Walsh规则也不再成立。
+\end_layout
+
+\begin_layout Subsection
+多原子分子的几何构型——价电子对互斥理论
+\end_layout
+
+\begin_layout Standard
+价电子对包括成键电子对和孤对电子对。价电子对互斥理论认为各价电子对之间存在着相互排斥作用, 相距越远越稳定。这就要求分布在中心原子周围的各电子对尽可能互相远离。
+虽然这个理论是定性的, 但可以解释许多简单分子的几何构型。
+\end_layout
+
+\begin_layout Standard
+(1) 分子中只含有形成单键的电子对, 没有孤对电子对和双键电子对, 则各个单键的电子对尽量互相远离, 由中心原子形成单键的数目可知其分子构型。
+\end_layout
+
+\begin_layout Standard
+(2) 孤对电子对相当于单键电子对, 但因孤对电子更靠近核而对其它键电子对排斥较强, 故孤对电子能使各单键的键角变小。
+\end_layout
+
+\begin_layout Standard
+(3) 双键和三重键的电子对, 只看成是一个电子对, 但对其它单键电子对的排斥作用更强, 故使其它单键的键角变得更小。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+的SCF计算结果
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:5-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+﻿几何构型
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+分子
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+直线形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{BeCl2},\ce{ CO2},\ce{HgCl2},\ce{HCN},\ce{ICl2-},\ce{I3-},\ce{XeF2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+正三角形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{NO3-},\ce{SO3},\ce{BX3}({\rm X=F,Cl,Br,I})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+三角形(弯曲形)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{SnX2},\ce{NO2},\ce{SO2},\ce{H2O},\ce{SCl2},\ce{NH2-},\ce{H2S}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+四面体形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{NH4+},\ce{CH4},\ce{SiF4},\ce{SO4^{2-}},\ce{TeCl4},\ce{SbF4-},\ce{SF4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+三角锥形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{NH3},\ce{H3O+},\ce{NF3},\ce{SO3^{2-}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+三方双锥形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{PCl5},\ce{PF5},\ce{SF4O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T$
+\end_inset
+
+形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{ClF3},\ce{BrF3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+八面体形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{SF6},\ce{PCl6-},\ce{AlF6^{3-}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+四方锥形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{SbF5^{2-}},\ce{IF5},\ce{BrF5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+四方形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{ICl4-},\ce{XeF4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+五角双锥形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{IF7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+五角锥形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{SbBr6^{3-}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:5-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 列出了一些简单分子的构型。
+\end_layout
+
+\begin_layout Section*
+习题
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{习题}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $\ce{H3}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{H3+}$
+\end_inset
+
+均为三角形构型, 试用简单分子轨道理论(HMO)讨论
+\begin_inset Formula $\ce{H3}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{H3+}$
+\end_inset
+
+的相对稳定性。
+\end_layout
+
+\begin_layout Enumerate
+设环丁二烯是四方形构型, 用HMO法计算环丁二烯的
+\begin_inset Formula $π$
+\end_inset
+
+电子能级。
+\end_layout
+
+\begin_layout Enumerate
+用HMO法计算丙烯基分子
+\begin_inset Formula $\ce{CH2\bond{~-}CH\bond{~-}CH2}$
+\end_inset
+
+ 
+\begin_inset Formula $π$
+\end_inset
+
+电子能级和分子轨道, 计算电荷密度、键级、自由价, 作出分子图。
+\end_layout
+
+\begin_layout Enumerate
+用HMO法比较丙烯基分子
+\begin_inset Formula $\ce{CH2\bond{~-}CH\bond{~-}CH2}$
+\end_inset
+
+、丙烯基阳离子
+\begin_inset Formula $\ce{[CH2\bond{~-}CH\bond{~-}CH2]+}$
+\end_inset
+
+和丙烯基阴离子
+\begin_inset Formula $\ce{[CH2\bond{~-}CH\bond{~-}CH2]- }$
+\end_inset
+
+的相对稳定性。
+\end_layout
+
+\begin_layout Enumerate
+设丁二烯分子中有一个电子从最高占据轨道跃迁到最低空轨道, 试计算这种激发态丁二烯分子的电荷密度、键级、自由价。
+\end_layout
+
+\begin_layout Enumerate
+试写出一个在
+\begin_inset Formula $θ=45°$
+\end_inset
+
+, 
+\begin_inset Formula $ϕ=45°$
+\end_inset
+
+方向上的
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道。
+\end_layout
+
+\begin_layout Enumerate
+若令一个杂化轨道的方向与
+\begin_inset Formula $z$
+\end_inset
+
+轴正方向同向, 另外两个杂化轨道在
+\begin_inset Formula $xoz$
+\end_inset
+
+平面上, 求
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+三个杂化轨道。
+\end_layout
+
+\begin_layout Enumerate
+试估计
+\begin_inset Formula $\ce{BF4-}$
+\end_inset
+
+的几何构型并说明其成键情况。
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ce{B3H9}$
+\end_inset
+
+分子尚未制备出来, 试判定它的可能结构。
+\end_layout
+
+\begin_layout Enumerate
+下列分子中哪些有大
+\begin_inset Formula $π$
+\end_inset
+
+键, 并用
+\begin_inset Formula $\Pi_{n}^{m}$
+\end_inset
+
+符号表示之。 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\ce{CH2=CH-CH2-CH=CH2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{CH2=C=O}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{C6H5Cl}$
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chemfig{O=*6(-=-(=O)-=-)}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Formula $\ce{HC#C-C#CH}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+令
+\begin_inset Formula $s$
+\end_inset
+
+-
+\begin_inset Formula $p$
+\end_inset
+
+杂化轨道
+\begin_inset Formula 
+\[
+ϕ=c_{1}s+c_{2}p_{x}+c_{3}p_{y}+c_{4}p_{z}
+\]
+
+\end_inset
+
+的极大值方向的单位矢量为
+\begin_inset Formula $\boldsymbol{a}(x_{1},y_{1},z_{1})$
+\end_inset
+
+, 若
+\begin_inset Formula $s$
+\end_inset
+
+轨道的成键能力为1, 
+\begin_inset Formula $p$
+\end_inset
+
+轨道的成键能力为
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+, 则杂化轨道
+\begin_inset Formula $ϕ$
+\end_inset
+
+的成键能力
+\begin_inset Formula $f_{ϕ}$
+\end_inset
+
+为
+\begin_inset Formula 
+\[
+f_{ϕ}=c_{1}+\sqrt{3}(c_{2}x_{1}+c_{3}y_{1}+c_{4}z_{1})
+\]
+
+\end_inset
+
+试证明: 
+\begin_inset Newline newline
+\end_inset
+
+(1) 
+\begin_inset Formula $f_{ϕ}=c_{1}+\sqrt{3\left(1-c_{1}^{2}\right)}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+(2) 等性杂化轨道
+\begin_inset Formula $sp$
+\end_inset
+
+, 
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+ 的成键能力都大于
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+。
+\end_layout
+
+\end_body
+\end_document

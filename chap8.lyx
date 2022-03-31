@@ -1,0 +1,6378 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\setCJKmainfont[ItalicFont={楷体}, BoldFont={黑体}]{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\renewcommand{\contentsname}{目录}
+\renewcommand\abstractname{摘要}
+\renewcommand\listfigurename{插图目录}
+\renewcommand\listtablename{表格目录}
+%\renewcommand\nomname{术语}
+\renewcommand\proofname{证明}
+\renewcommand\bibname{参考文献}
+\renewcommand\appendixname{附录}
+%\renewcommand\appendixpagename{附录}
+%\renewcommand\appendixtocname{附录}
+\end_preamble
+\use_default_options true
+\begin_modules
+subequations
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+分子的电性、磁性和分子间力
+\end_layout
+
+\begin_layout Section
+极化与分子的偶极矩
+\end_layout
+
+\begin_layout Subsection
+电介质中的静电现象
+\end_layout
+
+\begin_layout Standard
+分子是由带正电荷的原子核和带负电荷的电子组成。由于各种分子的几何结构不同, 有的分子其正、负电荷中心重合, 有的不重合, 前者称为非极性分子,
+ 而后者称为极性分子。分子的极性可用一物理量——电偶极矩来表示。两个大小相等符号相反的电荷系统的电偶极矩(简称偶极矩)定义为
+\begin_inset Formula 
+\[
+μ=qr
+\]
+
+\end_inset
+
+上式中
+\begin_inset Formula $r$
+\end_inset
+
+是两个电荷中心的距离, 
+\begin_inset Formula $q$
+\end_inset
+
+为电荷量。偶极矩为向量, 化学上规定它的方向是从正电荷到负电荷的方向, 而物理上恰恰相反。偶极矩的常用单位为德拜(Debye)。一个正电子和一个电子其间距为1
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+AA}
+\end_layout
+
+\end_inset
+
+的电荷系统的偶极矩为4.8 Debye。
+\begin_inset Formula 
+\[
+μ=4.8\times10^{-10}\times10^{-8}\ {\rm CGSE\cdot cm}=4.8\times10^{-18}\ {\rm CGSE\cdot cm}=4.8\ {\rm Debye}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在电场作用下, 非极性分子的正负电荷中心会变为不重合, 极性分子的正负电荷中心分离得更远, 这就使分子产生了附加的偶极矩
+\begin_inset Formula $m$
+\end_inset
+
+, 这种附加的偶极矩也称诱导偶极矩。分子的这一现象称为分子的极化。极性分子由于其正负电荷中心不重合而具有偶极矩, 这一偶极矩称为固有偶极矩。无论是固有偶极矩还是
+诱导偶极矩, 都会在电场的作用下发生取向运动, 即沿电场方向取向分子集体的这种取向也会产生附加偶极矩。诱导偶极矩的平均值币显然和分子所感受到的电场
+\begin_inset Formula $E_{i}$
+\end_inset
+
+有关, 在中等电场
+\begin_inset Formula $E_{i}$
+\end_inset
+
+下, 有
+\begin_inset Formula 
+\begin{equation}
+\bar{m}=\alpha E_{i}\label{eq:8-1}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $\alpha$
+\end_inset
+
+称为分子的极化率, 数值上等于单位场强下的诱导偶极矩。极化是变形极化(分子正负电荷中心的分离)和取向极化的总结果, 故
+\begin_inset Formula 
+\begin{equation}
+\alpha=\alpha_{D}+\alpha_{0}\label{eq:8-2}
+\end{equation}
+
+\end_inset
+
+式中,  
+\begin_inset Formula $\alpha_{D}$
+\end_inset
+
+和
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+分别称为变形极化率和取向极化率。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-1.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) 填充了电介质的平行板电容器 (b) 体积极化度
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+固有偶极矩和诱导偶极矩在电场中取向的结果是, 在电介质内部取向的偶极分子的异号电荷相互抵消, 而在电介质表面则 有“过剩”的束缚电荷
+\begin_inset Formula $\sigma'$
+\end_inset
+
+。以平行板电容器为计算模型, 则
+\begin_inset Formula 
+\begin{equation}
+\varepsilon=\frac{E_{0}}{E}\label{eq:8-3}
+\end{equation}
+
+\end_inset
+
+和
+\begin_inset Formula 
+\begin{equation}
+E=E_{0}+E'=E_{0}-4\pi\sigma'\label{eq:8-4}
+\end{equation}
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+为电介质的介电常数,  
+\begin_inset Formula $E_{0}$
+\end_inset
+
+和
+\begin_inset Formula $E$
+\end_inset
+
+分别为平行板电容器内真空和电介质的场强。将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式可得
+\begin_inset Formula 
+\begin{equation}
+\sigma'=\frac{\varepsilon-1}{4\pi}E\label{eq:8-5}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $\sigma'$
+\end_inset
+
+为束缚面电在密度。为了量度电介质的极化, 规定单位体积中分子的偶极矩之和为体积极化
+\begin_inset Formula $p$
+\end_inset
+
+。由图 8.l(b), 单位体积的偶极矩显然为
+\begin_inset Formula 
+\begin{equation}
+p=1\times\sigma'=\sigma'\label{eq:8-6}
+\end{equation}
+
+\end_inset
+
+上式表明, 体积极化度
+\begin_inset Formula $p$
+\end_inset
+
+虽为矢量, 但其数值上等于面电荷密度
+\begin_inset Formula $\sigma'$
+\end_inset
+
+。结合(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 得
+\begin_inset Formula 
+\begin{equation}
+p=\frac{\varepsilon-1}{4\pi}E\label{eq:8-7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+内场强的计算
+\end_layout
+
+\begin_layout Standard
+由分子组成的电介质并不是连续的, 分子和分子之间可相当大的距离, 每个分子处在周围分子的电场作用下。所以, 作用在个别分子上的场强是
+\begin_inset Formula $E_{i}$
+\end_inset
+
+而不应是
+\begin_inset Formula $E$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-2.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+内场强的计算
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了计算
+\begin_inset Formula $E_{i}$
+\end_inset
+
+, 我们在电介质内部引入一小球, 设小球内的电介质暂被移去, 所讨论的单个分子处在小球之中, 如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\end_layout
+
+\begin_layout Standard
+可以通过计算作用在小球内中心带有单位正电荷分子上所受的力来计算
+\begin_inset Formula $E_{i}$
+\end_inset
+
+。这个力包括四部分, 
+\begin_inset Formula 
+\begin{equation}
+E_{i}=F_{1}+F_{2}+F_{3}+F_{4}\label{eq:8-8}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $F_{1}$
+\end_inset
+
+是均匀分布在极板上的面电荷所产生的力, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $F_{1}=E_{0}=4\pi\sigma$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+。
+\begin_inset Formula $F_{2}$
+\end_inset
+
+是电介质极化的感生电荷所产生的力, 
+\begin_inset Formula $F_{2}=E'=4\pi\sigma'$
+\end_inset
+
+。
+\begin_inset Formula $F_{3}$
+\end_inset
+
+是小球表面感生电荷所生的力。
+\end_layout
+
+\begin_layout Standard
+为了计算
+\begin_inset Formula $F_{3}$
+\end_inset
+
+, 可用积分方法。设小球半径为
+\begin_inset Formula $r$
+\end_inset
+
+。在小球球面任取一球面元
+\begin_inset Formula $d\omega$
+\end_inset
+
+, 通过该球面元的半径和体积极化
+\begin_inset Formula $p$
+\end_inset
+
+(
+\begin_inset Formula $E_{0}$
+\end_inset
+
+方向)间的夹角为
+\begin_inset Formula $\theta$
+\end_inset
+
+。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 该球面元
+\begin_inset Formula $d\omega$
+\end_inset
+
+上的感生电荷为
+\begin_inset Formula $p\cos\theta d\omega$
+\end_inset
+
+。该电荷与球心单位正电荷的作用力为
+\begin_inset Formula $\frac{p\cos\theta d\omega}{r^{2}}$
+\end_inset
+
+ , 该作用力在
+\begin_inset Formula $F_{1}$
+\end_inset
+
+方向上的分力为
+\begin_inset Formula $\frac{p\cos^{2}\theta d\omega}{r^{2}}$
+\end_inset
+
+, 对球面积分可得
+\begin_inset Formula $F_{3}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+F_{3}=\int_{\text{球面}}\frac{p\cos^{2}\theta d\omega}{r^{2}}=\int_{\text{球面}}\frac{p\cos^{2}\theta}{r^{2}}r^{2}\sin\theta d\theta d\phi=\int_{0}^{2\pi}d\phi\int_{0}^{\pi}p\cos^{2}\theta\sin\theta d\theta=\frac{4\pi}{3}p\label{eq:8-9}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{4}$
+\end_inset
+
+是小球内物质分子对所考虑分子的作用力, 这个力的表示式一般还不能给出来。现假定
+\begin_inset Formula $F_{4}=0$
+\end_inset
+
+.于是
+\begin_inset Formula 
+\begin{equation}
+E_{i}=4\pi\sigma-4\pi p+\frac{4\pi}{3}p=E+\frac{4\pi}{3}p\label{eq:8-10}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+变形极化
+\end_layout
+
+\begin_layout Standard
+在电场作用下, 分子的正负电荷中心会分离而发生变形极化。变形极化包括了分子中正电荷( 原子核) 的移动和电子的移动, 所以
+\begin_inset Formula 
+\begin{equation}
+\alpha_{D}=\alpha_{A}+\alpha_{E}\label{eq:8-11}
+\end{equation}
+
+\end_inset
+
+上式中
+\begin_inset Formula $\alpha_{A}$
+\end_inset
+
+和
+\begin_inset Formula $\alpha_{E}$
+\end_inset
+
+分别是原子变形极化率和电子变形极化率。
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $n$
+\end_inset
+
+为单位体积中的分子数, 则
+\begin_inset Formula 
+\begin{equation}
+p=n\bar{m}=n\alpha_{D}E_{i}\label{eq:8-12}
+\end{equation}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 得
+\begin_inset Formula 
+\begin{equation}
+p=n\alpha_{D}\left(E+\frac{4\pi}{3}p\right)\label{eq:8-13}
+\end{equation}
+
+\end_inset
+
+再将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-13"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{equation}
+\frac{\varepsilon-1}{\varepsilon+2}=\frac{4\pi}{3}n\alpha_{D}\label{eq:8-14}
+\end{equation}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式两边同乘克分子量
+\begin_inset Formula $M$
+\end_inset
+
+和同除以密度
+\begin_inset Formula $\rho$
+\end_inset
+
+, 并注意到
+\begin_inset Formula $nM/\rho=N_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+为阿伏伽德罗常数, 即得
+\begin_inset Formula 
+\begin{equation}
+\frac{\varepsilon-1}{\varepsilon+2}\cdot\frac{M}{\rho}=\frac{4\pi}{3}N_{0}\alpha_{D}\label{eq:8-15}
+\end{equation}
+
+\end_inset
+
+这就是克劳修斯–莫索提(Clausius-Mosotti)方程。方程式右 边称为摩尔变形极化度
+\begin_inset Formula $P_{D}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\begin{equation}
+P_{D}=\frac{4\pi}{3}N_{0}\alpha_{D}=2.522\times10^{24}\alpha_{D}\label{eq:8-16}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式可知, 方程左边是无量纲因次, 
+\begin_inset Formula $n$
+\end_inset
+
+为
+\begin_inset Formula $(\text{体积})^{-1}$
+\end_inset
+
+因次, 故
+\begin_inset Formula $\alpha_{D}$
+\end_inset
+
+的因次为体积, 通过计算表明:  Bohr 原子模型的变形极化率等于电子轨道半径的立方, 现计算如下: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-3.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+内场强的计算
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 一个电子在半径
+\begin_inset Formula $r$
+\end_inset
+
+的圆形轨道上以
+\begin_inset Formula $\omega$
+\end_inset
+
+的角速度围绕原子核旋转, 令电场
+\begin_inset Formula $E$
+\end_inset
+
+垂直于轨道的于面。在电场的作用下, 电子和核向不同的方向移动, 它们的距离在电场方向的投影不为零, 而是一有限值
+\begin_inset Formula $l$
+\end_inset
+
+, 因此在电场方向的诱导偶极矩将等于
+\begin_inset Formula $el$
+\end_inset
+
+, 其中
+\begin_inset Formula $e$
+\end_inset
+
+是电子和核的电荷。当电场作用以前, 电子和核的库仑力为离心力所平衡
+\begin_inset Formula 
+\begin{equation}
+\frac{e^{2}}{r^{2}}=mr\omega^{2}\label{eq:8-17}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $m$
+\end_inset
+
+为电子的质量。当电场作用以后, 作用于电子上还有垂直于轨道平面的外力
+\begin_inset Formula $eE$
+\end_inset
+
+, 该力和离心力的合力应该通过核, 因此
+\begin_inset Formula 
+\begin{equation}
+\frac{eE}{mr\omega^{2}}=\frac{l}{r}\label{eq:8-18}
+\end{equation}
+
+\end_inset
+
+或
+\begin_inset Formula 
+\begin{equation}
+el=\frac{e^{2}}{m\omega^{2}}E\label{eq:8-19}
+\end{equation}
+
+\end_inset
+
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-17"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式可得
+\begin_inset Formula 
+\begin{equation}
+P=el=r^{3}E\label{eq:8-20}
+\end{equation}
+
+\end_inset
+
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可知, 这一模型的极化率等于电子轨道半径的立方。容易证明, 球形导体的极化率也等于同一值。量子力学也得出球形对称原子的极化率近似等于它的电子层半径的立方的平
+均值。摩尔极化度
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $P=\frac{4\pi}{3}N_{0}\alpha$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 对于球形分子实际上就是
+\begin_inset Formula $N_{0}$
+\end_inset
+
+倍分子的体积, 也就是一摩尔分子的体积。这一结论得到了直接的实验验证。
+\end_layout
+
+\begin_layout Standard
+摩尔变形极化度
+\begin_inset Formula $P_{D}$
+\end_inset
+
+可以表示为原子的摩尔变形极化度和电子的摩尔变形极化度之和。
+\begin_inset Formula 
+\begin{equation}
+P_{D}=\frac{4\pi}{3}N_{0}\alpha_{A}+\frac{4\pi}{3}N_{0}\alpha_{E}=P_{A}+P_{E}\label{eq:8-21}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula 
+\begin{align}
+P_{E} & =\frac{4\pi}{3}N_{0}\alpha_{E}\label{eq:8-22}\\
+P_{A} & =\frac{4\pi}{3}N_{0}\alpha_{A}\label{eq:8-23}
+\end{align}
+
+\end_inset
+
+对于通常分子而言, 
+\begin_inset Formula $P_{A}$
+\end_inset
+
+一般只是
+\begin_inset Formula $P_{E}$
+\end_inset
+
+的百分之五左右。例如苯的
+\begin_inset Formula $P_{E}$
+\end_inset
+
+和
+\begin_inset Formula $P_{A}$
+\end_inset
+
+分别是25.05 
+\begin_inset Formula ${\rm cm}^{3}$
+\end_inset
+
+和0.55 
+\begin_inset Formula ${\rm cm}^{3}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+取向极化
+\end_layout
+
+\begin_layout Standard
+极性分子具有固有偶极矩。由于热运动, 偶极矩指向各个方向的几率相同, 所以偶极矩的平均值为零。在外电场作用下, 具有固有偶极矩的分子会沿电场方向发生取向运动,
+ 而热运动却会扰乱这种取向, 当达到热力学平衡时, 分子具有一定的平均偶极矩。显然, 此平均偶极矩随外电场增大而增大, 随温度升高而减少。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-4.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+积分的立体角元
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设极化分子是刚性的, 对于
+\begin_inset Formula $n$
+\end_inset
+
+个分子, 单个分子的偶极矩为
+\begin_inset Formula $μ$
+\end_inset
+
+, 如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 当
+\begin_inset Formula $μ$
+\end_inset
+
+的排列方向与
+\begin_inset Formula $E_{i}$
+\end_inset
+
+的方向成
+\begin_inset Formula $\theta$
+\end_inset
+
+角时, 偶极矩的势能为
+\begin_inset Formula 
+\begin{equation}
+\epsilon=-\left(\boldsymbol{\mu}\cdot\boldsymbol{E}_{i}\right)=-\mu E_{i}\cos\theta\label{eq:8-24}
+\end{equation}
+
+\end_inset
+
+由Boltzmann分布定律, 位于
+\begin_inset Formula $\theta$
+\end_inset
+
+和
+\begin_inset Formula $\theta+d\theta$
+\end_inset
+
+之间的立体角元
+\begin_inset Formula $d\Omega=2\pi\sin\theta d\theta$
+\end_inset
+
+内的分子数目为
+\begin_inset Formula 
+\begin{equation}
+dN=c\exp\left[-\frac{\epsilon}{kT}\right]d\Omega=c\exp\left[\frac{\mu E_{i}\cos\theta}{kT}\right]2\pi\sin\theta d\theta\label{eq:8-25}
+\end{equation}
+
+\end_inset
+
+与
+\begin_inset Formula $E_{i}$
+\end_inset
+
+成
+\begin_inset Formula $\theta$
+\end_inset
+
+角的分子的固有偶极矩对极化的贡献为
+\begin_inset Formula $μ\cos\theta$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+μ\cos\theta dN=c\exp\left[\frac{\mu E_{i}\cos\theta}{kT}\right]\left(μ\cos\theta\right)2\pi\sin\theta d\theta\label{eq:8-26}
+\end{equation}
+
+\end_inset
+
+考虑到
+\begin_inset Formula $μ$
+\end_inset
+
+和
+\begin_inset Formula $c$
+\end_inset
+
+均为常数, 由平均值的定义可计算出诱导偶极矩
+\begin_inset Formula $\bar{m}$
+\end_inset
+
+为
+\begin_inset Formula 
+\begin{equation}
+\bar{m}=\mu\frac{\int_{0}^{\pi}\exp\left[\frac{\mu E_{i}\cos\theta}{kT}\right]\cos\theta\sin\theta d\theta}{\int_{0}^{\pi}\exp\left[\frac{\mu E_{i}\cos\theta}{kT}\right]\sin\theta d\theta}\label{eq:8-27}
+\end{equation}
+
+\end_inset
+
+令
+\begin_inset Formula $x＝\frac{\mu E_{i}}{kT}$
+\end_inset
+
+, 
+\begin_inset Formula $y=\cos\theta$
+\end_inset
+
+, 则
+\begin_inset Formula $dy=-\sin\theta d\theta$
+\end_inset
+
+, 一并代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-27"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 得
+\begin_inset Formula 
+\begin{equation}
+\bar{m}=\mu\frac{\int_{1}^{-1}ye^{xy}dy}{\int_{1}^{-1}e^{xy}dy}=\mu\left(\frac{e^{x}+e^{-x}}{e^{x}-e^{-x}}-\frac{1}{x}\right)=\mu\left(\coth x-\frac{1}{x}\right)\label{eq:8-28}
+\end{equation}
+
+\end_inset
+
+由于
+\begin_inset Formula 
+\begin{equation}
+\coth x=\frac{1}{x}+\frac{x}{3}-\frac{1}{45}x^{3}+\cdots\label{eq:8-29}
+\end{equation}
+
+\end_inset
+
+并对(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-29"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式的右边取前两项, 则
+\begin_inset Formula 
+\begin{equation}
+\bar{m}\approx\frac{\mu^{2}}{3kT}E_{i}\label{eq:8-30}
+\end{equation}
+
+\end_inset
+
+和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式比较, 可知分子的取向极化率为
+\begin_inset Formula 
+\begin{equation}
+\alpha_{0}=\frac{\mu^{2}}{3kT}\label{eq:8-31}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+考虑到取向极化率后,  Clausius-Mosotti 方程变为
+\begin_inset Formula 
+\begin{equation}
+\frac{\varepsilon-1}{\varepsilon+2}\cdot\frac{M}{\rho}=\frac{4\pi}{3}N_{0}\alpha\label{eq:8-32}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula 
+\begin{equation}
+\alpha=\alpha_{D}+\alpha_{0}=\alpha_{A}+\alpha_{E}+\alpha_{0}\label{eq:8-33}
+\end{equation}
+
+\end_inset
+
+相应地, 摩尔极化度为
+\begin_inset Formula 
+\begin{equation}
+P=P_{D}+P_{0}=P_{A}+P_{E}+P_{0}\label{eq:8-34}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}P_{E} & =\frac{4\pi}{3}N_{0}\alpha_{E}\\
+P_{A} & =\frac{4\pi}{3}N_{0}\alpha_{A}\\
+P_{0} & =\frac{4\pi}{3}N_{0}\alpha_{0}=\frac{4\pi N_{0}}{9kT}\mu^{2}
+\end{split}
+\right\} \label{eq:8-35}
+\end{equation}
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-32"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式还可写为
+\begin_inset Formula 
+\begin{equation}
+\frac{\varepsilon-1}{\varepsilon+2}\cdot\frac{M}{\rho}=\frac{4\pi}{3}N_{0}\left(\alpha_{D}+\frac{\mu^{2}}{3kT}\right)\label{eq:8-36}
+\end{equation}
+
+\end_inset
+
+上式称为 Clausius-Mosotti-Debye方程。
+\end_layout
+
+\begin_layout Subsection
+偶极矩和极化率的测定
+\end_layout
+
+\begin_layout Standard
+1) 温度法
+\end_layout
+
+\begin_layout Standard
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-36"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式改写为
+\begin_inset Formula 
+\begin{equation}
+P=\frac{\varepsilon-1}{\varepsilon+2}\cdot\frac{M}{\rho}=\frac{4\pi}{3}N_{0}\alpha_{D}+\frac{4\pi N_{0}\mu^{2}}{9k}\left(\frac{1}{T}\right)\label{eq:8-37}
+\end{equation}
+
+\end_inset
+
+按(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-37"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 在不同温度下测量样品的
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+和
+\begin_inset Formula $\rho$
+\end_inset
+
+, 由此计算出摩尔极化度
+\begin_inset Formula $P$
+\end_inset
+
+, 用
+\begin_inset Formula $P$
+\end_inset
+
+对
+\begin_inset Formula $\frac{1}{T}$
+\end_inset
+
+作图, 应得到一条直线, 其斜宰为
+\begin_inset Formula $\frac{4\pi N_{0}\mu^{2}}{9k}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{1}{T}$
+\end_inset
+
+外推至零的截距为
+\begin_inset Formula $\frac{4\pi}{3}N_{0}\alpha_{D}$
+\end_inset
+
+。由斜率可得分子的固有偶极矩
+\begin_inset Formula $μ$
+\end_inset
+
+, 由截距可得分子的变形极化率
+\begin_inset Formula $\alpha_{D}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+对于密度很小的气体样品, 由于介电常数
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+和1相差很小,  可用
+\begin_inset Formula 
+\begin{equation}
+P=\frac{\varepsilon-1}{3}\cdot\frac{M}{\rho}\label{eq:8-38}
+\end{equation}
+
+\end_inset
+
+来计算气体的摩尔极化度。气体的摩尔体积
+\begin_inset Formula $(M/\rho)$
+\end_inset
+
+可由气体方程来计算。为了校正与理想行为的偏差, 可在给定温度和几个不同压力下测定介电常数, 并外推到压力为零。
+\end_layout
+
+\begin_layout Standard
+2) 折射法
+\end_layout
+
+\begin_layout Standard
+温度法测量偶极矩虽然测量准确, 但不是所有分子在测量温度范围内都会稳定存在。
+\end_layout
+
+\begin_layout Standard
+折射法利用了分子的取向极化、原子极化和电子极化对外电场的交变频率有不同的响应这一特点, 先在低频交变电场(约kHz)下通过测定分子的介电常数
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+和密度
+\begin_inset Formula $\rho$
+\end_inset
+
+由
+\begin_inset Formula 
+\begin{equation}
+P=\frac{\varepsilon-1}{\varepsilon+2}\cdot\frac{M}{\rho}\label{eq:8-39}
+\end{equation}
+
+\end_inset
+
+计算分子的摩尔极化度
+\begin_inset Formula $P$
+\end_inset
+
+。由于这时电场的交变频率较低, 分子的取向、原子和电子极化都来得及响应, 故测量的摩尔极化度为分子的取向, 原子和电子的贡献。然后在高频的交变电场(可见光、钠
+\begin_inset Formula $D$
+\end_inset
+
+线)通过测定折射率
+\begin_inset Formula $n_{r}$
+\end_inset
+
+, 由
+\begin_inset Formula 
+\begin{equation}
+\epsilon=n_{r}^{2}\label{eq:8-40}
+\end{equation}
+
+\end_inset
+
+来计算介电常数。在这种高频交变电场作用下, 只有电子化才 来得及响应, 故这时测量的只是摩尔电子极化度
+\begin_inset Formula 
+\begin{equation}
+P_{K}=\left(\frac{n_{r}^{2}-1}{n_{r}^{2}+2}\right)\cdot\frac{M}{\rho}=R\label{eq:8-41}
+\end{equation}
+
+\end_inset
+
+摩尔电子极化度
+\begin_inset Formula $P_{K}$
+\end_inset
+
+也称摩尔折射度
+\begin_inset Formula $R$
+\end_inset
+
+。由于摩尔原子极化度较小, 通常只有摩尔电子极化度的5%–15%。如果略去摩尔原子极化度, 则由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-36"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 可得
+\begin_inset Formula 
+\begin{equation}
+\mu=\left(\frac{9k}{4\pi N_{0}}\right)^{1/2}\left(P-P_{K}\right)^{1/2}T^{1/2}\label{eq:8-42}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+摩尔折射度
+\begin_inset Formula $R$
+\end_inset
+
+满足加和规则, 即分子的摩尔折射度等于分子中各化学键的折射度的和。如
+\begin_inset Formula $\ce{C-H}$
+\end_inset
+
+的折射度为1.676 
+\begin_inset Formula ${\rm cm}^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{C-C}$
+\end_inset
+
+(直链烃)的折射度为1.296 
+\begin_inset Formula ${\rm cm}^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{C=C}$
+\end_inset
+
+和
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+ce{C
+\backslash
+bond{#}C}$
+\end_layout
+
+\end_inset
+
+的折射度分别为4.17 
+\begin_inset Formula ${\rm cm}^{3}$
+\end_inset
+
+和5.87 
+\begin_inset Formula ${\rm cm}^{3}$
+\end_inset
+
+。用此加和规则, 通过测量分子的摩尔折射度
+\begin_inset Formula $R$
+\end_inset
+
+, 可以帮助确定同分异构分子的几何构型。具体作法是, 先假定一种几何结构, 用键的折射度算出分子的摩尔折射度再用此数值与实测值
+\begin_inset Formula $R$
+\end_inset
+
+比较, 如计算值等于测量值, 则可认为分子是采取该种几何构型。
+\end_layout
+
+\begin_layout Standard
+3) 溶液中分子的偶极矩的测定
+\end_layout
+
+\begin_layout Standard
+在计算内场强的(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)中, 因为忽略了被测分子间的相互作力, 故该式只对分子间作用很小的分子体系才成立。对于极性液体, 分子间相互作用较强, 故不能通过直接测量其介电常数
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+, 密度
+\begin_inset Formula $\rho$
+\end_inset
+
+和折射率
+\begin_inset Formula $n$
+\end_inset
+
+, 按(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-42"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式来测量分子的偶极矩。而必须将极性液体分子溶于非极性溶剂之中, 配成不同浓度的稀溶液, 并将实测值外推到浓度为零。这样就可以消除被测分子间的作用。但不能消除被
+测分子和溶剂分子间相互作用。
+\end_layout
+
+\begin_layout Standard
+对于二组元溶液, 设单位体积中含
+\begin_inset Formula $n_{1}$
+\end_inset
+
+个溶剂分子和
+\begin_inset Formula $n_{2}$
+\end_inset
+
+个溶质 分子,  (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式变为
+\begin_inset Formula 
+\begin{equation}
+\frac{\varepsilon-1}{\varepsilon+2}=\frac{4\pi}{3}(n_{1}\alpha_{1}+n_{2}\alpha_{2})\label{eq:8-43}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+分别表示溶剂和极性溶质分子的极化率。溶液密度和摩尔分数的定义为
+\begin_inset Formula 
+\begin{align}
+\rho= & \frac{n_{1}M_{1}+n_{2}M_{2}}{N_{0}}\label{eq:8-44}\\
+X_{1}= & \frac{n_{1}}{n_{1}+n_{2}}\label{eq:8-45}\\
+X_{2}= & \frac{n_{2}}{n_{1}+n_{2}}\label{eq:8-46}
+\end{align}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-45"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式的
+\begin_inset Formula $n_{1}＝X_{1}(n_{1}+n_{2})$
+\end_inset
+
+和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-46"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式的
+\begin_inset Formula $n_{2}=X_{2}(n_{1}+n_{2})$
+\end_inset
+
+代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-43"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 并在等式两边同除以密度得
+\begin_inset Formula 
+\begin{equation}
+\frac{\varepsilon-1}{\varepsilon+2}\frac{1}{\rho}=\text{\ensuremath{\frac{n_{1}+n_{2}}{\left(n_{1}M_{1}+n_{2}M_{2}\right)}}}\frac{4\pi}{3}N_{0}(X_{1}\alpha_{1}+X_{2}\alpha_{2})\label{eq:8-47}
+\end{equation}
+
+\end_inset
+
+将上式两边同乘以
+\begin_inset Formula 
+\[
+X_{1}M_{1}+X_{2}M_{2}=\frac{n_{1}M_{1}+n_{2}M_{2}}{n_{1}+n_{2}}
+\]
+
+\end_inset
+
+得
+\begin_inset Formula 
+\begin{equation}
+P=\frac{\varepsilon-1}{\varepsilon+2}\frac{\left(X_{1}M_{1}+X_{2}M_{2}\right)}{\rho}=\frac{4\pi}{3}N_{0}(X_{1}\alpha_{1}+X_{2}\alpha_{2})=X_{1}P_{1}+X_{2}P_{2}\label{eq:8-48}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在实际测量中, 根据赫德斯特雷德(Hedestrand) 的假设,  认为在稀溶液中, 其介电常数, 折射率和摩尔极化度均和溶质的摩尔分数成线性关系,
+ 即
+\begin_inset Formula 
+\begin{align}
+\varepsilon= & \varepsilon_{1}(1+\alpha X_{2})\label{eq:8-49}\\
+n= & n_{1}(1+\gamma X_{2})\label{eq:8-50}\\
+\rho= & \rho_{1}(1+\beta X_{2})\label{eq:8-51}\\
+P= & P_{1}X_{1}+P_{2}X_{2}\label{eq:8-52}
+\end{align}
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-49"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)–(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-52"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式中, 脚标1和2分别表示溶剂和溶质, 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+, 
+\begin_inset Formula $n$
+\end_inset
+
+为介电常数和折射率
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+为常数。(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-51"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式实际上就是(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式。Fevre和Vine证明, 外推到浓度为零时的摩尔极化度
+\begin_inset Formula $P^{\infty}$
+\end_inset
+
+和摩尔折射度
+\begin_inset Formula $R^{\infty}$
+\end_inset
+
+分别为
+\begin_inset Formula 
+\begin{align}
+P^{\infty}= & \lim_{X_{2}\rightarrow0}P_{2}=\frac{3\alpha\varepsilon_{1}}{\left(\varepsilon_{1}+2\right)^{2}}\frac{M_{1}}{\rho_{1}}+\frac{\varepsilon_{1}-1}{\varepsilon_{1}+2}\frac{M_{2}-\beta M_{1}}{\rho_{1}}\label{eq:8-53}\\
+R^{\infty}= & \lim_{X_{2}\rightarrow0}R_{2}=\frac{n_{1}^{2}-1}{n_{1}^{2}+2}\frac{M_{2}-\beta M_{1}}{\rho_{1}}+\frac{6n_{1}^{2}M_{1}\gamma}{\left(n_{1}^{2}+2\right)^{2}\rho_{1}}\label{eq:8-54}
+\end{align}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-53"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-54"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式中的
+\begin_inset Formula $P^{\infty}$
+\end_inset
+
+和
+\begin_inset Formula $R^{\infty}$
+\end_inset
+
+代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-42"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{equation}
+\mu=\left(\frac{9k}{4\pi N_{0}}\right)^{1/2}(P^{\infty}-P_{E}^{\infty})^{1/2}T^{1/2}=0.0128\sqrt{(P^{\infty}-R^{\infty})T}\label{eq:8-55}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+偶极矩与分子的对称性
+\end_layout
+
+\begin_layout Standard
+偶极矩是向量, 具有加和性(对各化学键加和), 它和分子的对称性密切相关。测定出分子的偶极矩, 就可以对分子的对称性质作出一定的判断。具有下述对称性的分子其偶极
+矩为零: 
+\end_layout
+
+\begin_layout Standard
+1.
+ 分子有对称中心; 2.
+ 分子有
+\begin_inset Formula $C_{nk}$
+\end_inset
+
+或
+\begin_inset Formula $D_{nk}$
+\end_inset
+
+的对称性; 3.
+ 分子的对称轴多于一个; 4.
+ 分子具有反轴。
+\end_layout
+
+\begin_layout Standard
+如1, 2-二氯乙烯, 当
+\begin_inset Formula $μ=0$
+\end_inset
+
+时为反式(
+\begin_inset Formula $C_{2k}$
+\end_inset
+
+), 当
+\begin_inset Formula $μ\neq0$
+\end_inset
+
+时为顺式(
+\begin_inset Formula $C_{2v}$
+\end_inset
+
+)。
+\end_layout
+
+\begin_layout Section
+分子间作用力
+\end_layout
+
+\begin_layout Standard
+分子的偶极矩和极化率是分子的重要电学性质, 同时也是分子光学性质(光散射)和振动光谱的重要决定因素。它们分别决定红外光谱和Raman光谱的选择定则。这主要因为分
+子的极化率和偶极矩直接地反映了分子的电子层的性质。
+\end_layout
+
+\begin_layout Standard
+偶极矩和极化率还决定了分子间力。惰性气体的液化, 气体的液化, 分子晶体的稳定性, 固体表面对气体的吸附, 实际气体的内压力, 这些都说明, 除了分子内原子间的
+强烈的相互作用——化学键外, 还存在分子间的作用力。1873年, Van der Waals就假定所有原子和分子间存在吸引力, 并在气体方程中用
+\begin_inset Formula $\frac{a}{V^{2}}$
+\end_inset
+
+来表示, 所以分子间力又称Van der Waals力。分子间力主要包括三个方面, 即具有固有偶极矩分子间的取向作用, 具有固有偶极矩分子和非极性分子间的诱导作
+用和非极性分子间的色散作用。
+\end_layout
+
+\begin_layout Subsection
+取向作用
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-5.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+两个偶极子间的取向作用
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+考虑一对永久偶极矩, 其正负电荷量, 正负电荷中心间距分别为
+\begin_inset Formula $-e_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $+e_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+和
+\begin_inset Formula $-e_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $+e_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $l_{2}$
+\end_inset
+
+。设两个偶极矩的负端位于坐标原点, 方向分别为
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{1}$
+\end_inset
+
+和
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{2}$
+\end_inset
+
+, 如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。四个电荷的坐标为: 
+\begin_inset Formula $-e_{1}(0,0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $+e_{1}(x_{1},y_{1},z_{1})$
+\end_inset
+
+, 
+\begin_inset Formula $-e_{2}(0,0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $+e_{2}(x_{2},y_{2},z_{2})$
+\end_inset
+
+; 四个电荷之间的距离分别为
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\overline{-e_{1}-e_{2}}=R$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\overline{+e_{1}+e_{2}}=r_{1}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,  
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\overline{-e_{1}+e_{2}}=r_{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 和 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\overline{+e_{1}-e_{2}}=r_{3}$
+\end_inset
+
+, 由库仑定律, 一对偶极矩间的相互作用势能
+\begin_inset Formula 
+\begin{equation}
+V_{k}=e_{1}e_{2}\left\{ \frac{1}{R}+\frac{1}{r_{1}}-\frac{1}{r_{2}}-\frac{1}{r_{3}}\right\} \label{eq:8-56}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\frac{1}{r_{1}}= & \left[(R+z_{2}-z_{1})^{2}+(x_{1}-x_{2})^{2}+(y_{1}-y_{2})^{2}\right]^{-1/2}\\
+\frac{1}{r_{2}}= & \left[(R+z_{2})^{2}+x_{2}^{2}+y_{2}^{2}\right]^{-1/2}\\
+\frac{1}{r_{3}}= & \left[(R-z_{1})^{2}+x_{1}^{2}+y_{1}^{2}\right]^{-1/2}
+\end{split}
+\right\} \label{eq:8-57}
+\end{equation}
+
+\end_inset
+
+假设
+\begin_inset Formula $R\gg l_{1}$
+\end_inset
+
+和
+\begin_inset Formula $l_{2}$
+\end_inset
+
+, 即
+\begin_inset Formula $R$
+\end_inset
+
+远大于任何坐标值
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+, 则可用二项式定理
+\begin_inset Formula 
+\[
+\left(1\pm X\right)^{-\frac{1}{2}}=1\mp\frac{1}{2}X+\frac{3}{8}X^{2}\mp\cdots
+\]
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-57"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式展开成级数的形式: 
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}\frac{1}{r_{1}}= & \frac{1}{R}\left[1-\frac{z_{2}-z_{1}}{R}-\frac{1}{2}\frac{(x_{1}-x_{2})^{2}+(y_{1}-y_{2})^{2}+(z_{1}-z_{2})^{2}}{R^{2}}+\frac{3}{2}\frac{(z_{1}-z_{2})^{2}}{R^{2}}+\cdots\right]\\
+\frac{1}{r_{2}}= & \frac{1}{R}\left[1-\frac{z_{2}}{R}-\frac{1}{2}\frac{x_{2}^{2}+y_{2}^{2}+z_{2}^{2}}{R^{2}}+\frac{3}{2}\frac{z_{2}^{2}}{R^{2}}+\cdots\right]\\
+\frac{1}{r_{3}}= & \frac{1}{R}\left[1+\frac{z_{1}}{R}-\frac{1}{2}\frac{x_{1}^{2}+y_{1}^{2}+z_{1}^{2}}{R^{2}}+\frac{3}{2}\frac{z_{1}^{2}}{R^{2}}+\cdots\right]
+\end{split}
+\right\} \label{eq:8-58}
+\end{equation}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-58"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-56"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式并略去
+\begin_inset Formula $R^{-4}$
+\end_inset
+
+以后的项, 得
+\begin_inset Formula 
+\begin{equation}
+V_{k}=\frac{-e_{1}e_{2}}{R^{3}}\left[2z_{1}z_{2}-x_{1}x_{2}-y_{1}y_{2}\right]\label{eq:8-59}
+\end{equation}
+
+\end_inset
+
+将上式右边的分子分母同乘两个偶极矩电荷中心间距的积
+\begin_inset Formula $l_{1}l_{2}$
+\end_inset
+
+并进行恒等变换, 得
+\begin_inset Formula 
+\begin{equation}
+V_{k}=\frac{-e_{1}l_{1}\cdot e_{2}l_{2}}{R^{3}}\left[2\frac{z_{1}z_{2}}{l_{1}l_{2}}-\frac{\sqrt{x_{1}^{2}+y_{1}^{2}}\sqrt{x_{2}^{2}+y_{2}^{2}}}{l_{1}l_{2}}\left(\frac{x_{1}x_{2}+y_{1}y_{2}}{\sqrt{x_{1}^{2}+y_{1}^{2}}\sqrt{x_{2}^{2}+y_{2}^{2}}}\right)\right]\label{eq:8-60}
+\end{equation}
+
+\end_inset
+
+显然
+\begin_inset Formula 
+\begin{equation}
+V_{k}=\frac{-\mu_{1}\mu_{2}}{R^{3}}\left[2\cos\theta_{1}\cos\theta_{2}-\sin\theta_{1}\sin\theta_{2}\cos\left(\phi_{1}-\phi_{2}\right)\right]\label{eq:8-61}
+\end{equation}
+
+\end_inset
+
+由Boltzmann 分布定律,  势能的平均值为
+\begin_inset Formula 
+\[
+\bar{V}_{k}=\frac{\int\cdots\int VAe^{-\frac{V}{kT}}\sin\theta_{1}d\theta_{1}\sin\theta_{2}d\theta_{2}d\phi_{1}d\phi_{2}}{\int\cdots\int Ae^{-\frac{V}{kT}}\sin\theta_{1}d\theta_{1}\sin\theta_{2}d\theta_{2}d\phi_{1}d\phi_{2}}
+\]
+
+\end_inset
+
+式中
+\begin_inset Formula $A$
+\end_inset
+
+为常数。因为即使在常温下, 也有
+\begin_inset Formula $V\ll kT$
+\end_inset
+
+, 所以可将
+\begin_inset Formula $e^{-\frac{V}{kT}}$
+\end_inset
+
+展开, 取前两项, 即
+\begin_inset Formula $e^{-\frac{V}{kT}}\approx1-\frac{V}{kT}$
+\end_inset
+
+, 代入上式, 积分得
+\begin_inset Formula 
+\begin{equation}
+\bar{V}_{k}=-\frac{2\mu_{1}^{2}\mu_{2}^{2}}{3R^{6}kT}\label{eq:8-62}
+\end{equation}
+
+\end_inset
+
+对于同类分子
+\begin_inset Formula $\mu_{1}=\mu_{2}=\mu$
+\end_inset
+
+, 所以
+\begin_inset Formula 
+\begin{equation}
+\bar{V}_{k}=-\frac{2\mu^{4}}{3R^{6}kT}\label{eq:8-63}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+诱导作用
+\end_layout
+
+\begin_layout Standard
+诱导相互作用能由在永久偶极矩的电场作用下诱导产生偶极矩所需的功和诱导偶极矩与永久偶极矩的电场间的相。。互作用能之和。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-6.png
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+永久偶极矩的电场强度
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+首先要计算永久偶极矩在某点的场强。设该点与偶极矩中心距离为
+\begin_inset Formula $R$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+与偶极矩夹角为也如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。方向的场强
+\begin_inset Formula $E_{R}$
+\end_inset
+
+为
+\begin_inset Formula 
+\begin{multline}
+E_{R}=\frac{e}{r_{1}^{2}}\cos\alpha-\frac{e}{r_{2}^{2}}\cos\beta=\frac{e}{r_{1}^{2}}\frac{\left(R+\frac{l}{2}\cos\phi\right)}{r_{1}}-\frac{e}{r_{2}^{2}}\frac{\left(R+\frac{l}{2}\cos\phi\right)}{r_{2}}\\
+=\frac{eR}{r_{1}^{3}}\left(1+\frac{l}{2R}\cos\phi\right)-\frac{eR}{r_{2}^{3}}\left(1+\frac{l}{2R}\cos\phi\right)\label{eq:8-64}
+\end{multline}
+
+\end_inset
+
+由图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 可知
+\begin_inset Formula 
+\begin{align}
+r_{1}= & \left[\left(R+\frac{1}{2}l\cos\phi\right)^{2}+\left(\frac{1}{2}l\sin\phi\right)^{2}\right]^{1/2}=R\left[1+\left(\frac{l}{R}\cos\phi+\frac{l^{2}}{4R^{2}}\right)\right]^{1/2}\label{eq:8-65}\\
+r_{2}= & \left[\left(R-\frac{1}{2}l\cos\phi\right)^{2}+\left(\frac{1}{2}l\sin\phi\right)^{2}\right]^{1/2}=R\left[1-\left(\frac{l}{R}\cos\phi-\frac{l^{2}}{4R^{2}}\right)\right]^{1/2}\label{eq:8-66}
+\end{align}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-65"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-66"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-64"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{equation}
+E_{R}=\frac{e}{R^{2}}\frac{\left(1+\frac{l}{2R}\cos\phi\right)}{\left[1+\left(\frac{l}{R}\cos\phi+\frac{l^{2}}{4R^{2}}\right)\right]}-\frac{e}{R^{2}}\frac{\left(1-\frac{l}{2R}\cos\phi\right)}{\left[1-\left(\frac{l}{R}\cos\phi-\frac{l^{2}}{4R^{2}}\right)\right]}\label{eq:8-67}
+\end{equation}
+
+\end_inset
+
+因为
+\begin_inset Formula $R\gg l$
+\end_inset
+
+, 对(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-67"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式应用二项式定理
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\left(1\pm X\right)^{\frac{3}{2}}=1\mp\frac{3}{2}X+\frac{15}{8}X^{2}\mp\cdots
+\]
+
+\end_inset
+
+略去
+\begin_inset Formula $\frac{l^{3}}{R^{3}}$
+\end_inset
+
+以后的各项可得
+\begin_inset Formula 
+\begin{equation}
+E_{R}=-\frac{2\mu\cos\phi}{R^{3}}\left[1-\frac{3}{4}\frac{l^{2}}{R^{2}}\left(1-\frac{3}{5}\cos^{2}\phi\right)\right]\approx-\frac{2\mu\cos\phi}{R^{3}}\label{eq:8-68}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+同理可以计算该点与
+\begin_inset Formula $R$
+\end_inset
+
+方向垂直的电场
+\begin_inset Formula $E_{\phi}$
+\end_inset
+
+(以增加
+\begin_inset Formula $\phi$
+\end_inset
+
+的方向为正)
+\begin_inset Formula 
+\begin{equation}
+E_{\phi}=-\left[\frac{e}{r_{1}^{2}}\sin\alpha+\frac{e}{r_{2}^{2}}\sin\beta\right]\label{eq:8-69}
+\end{equation}
+
+\end_inset
+
+化简上式, 得
+\begin_inset Formula 
+\begin{equation}
+E_{\phi}=-\frac{\mu\sin\phi}{R^{3}}\label{eq:8-70}
+\end{equation}
+
+\end_inset
+
+该点的电场为
+\begin_inset Formula 
+\begin{equation}
+E=\sqrt{E_{R}^{2}+E_{\phi}^{2}}=\left[\frac{\mu^{2}}{R^{6}}\left(1+3\cos^{2}\phi\right)\right]^{1/2}=\frac{\mu}{R^{3}}\left(1+3\cos^{2}\phi\right)^{1/2}\label{eq:8-71}
+\end{equation}
+
+\end_inset
+
+因为
+\begin_inset Formula $\cos^{2}\phi$
+\end_inset
+
+的平均值为
+\begin_inset Formula $1/3$
+\end_inset
+
+, 所以偶极矩场强平方的平均值为
+\begin_inset Formula 
+\begin{equation}
+\overline{E^{2}}=\frac{2\mu^{2}}{R^{6}}\label{eq:8-72}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 非极性分子产生的诱导偶极矩为
+\begin_inset Formula 
+\begin{equation}
+\mu_{1}=\alpha_{1}E_{2}\label{eq:8-73}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+为非极性分子的变形极化率, 
+\begin_inset Formula $E_{2}$
+\end_inset
+
+为极性分子在非极性分子处产生的电场。电场
+\begin_inset Formula $E_{2}$
+\end_inset
+
+作用在电荷
+\begin_inset Formula $e_{1}$
+\end_inset
+
+上的力为
+\begin_inset Formula $e_{1}E_{2}$
+\end_inset
+
+, 在这电场力的作用下, 使非极性分子正负电荷中心距离由零拉长到
+\begin_inset Formula $l_{1}$
+\end_inset
+
+所需的功为
+\begin_inset Formula 
+\begin{equation}
+W=\int_{0}^{l_{1}}E_{2}e_{1}dl=\int_{0}^{l_{1}}e_{1}\frac{\mu_{1}}{\alpha_{1}}dl=\frac{e_{1}^{2}}{\alpha_{1}}\int_{0}^{l_{1}}ldl=\frac{1}{2}\frac{e_{1}^{2}l_{1}^{2}}{\alpha_{1}}=\frac{1}{2}\frac{\mu_{1}^{2}}{\alpha_{1}}=\frac{1}{2}\alpha_{1}E_{2}^{2}\label{eq:8-74}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\mu_{1}$
+\end_inset
+
+和
+\begin_inset Formula $E_{2}$
+\end_inset
+
+的相互作用势能为
+\begin_inset Formula 
+\begin{equation}
+V'=-\left(\boldsymbol{\mu}_{1}\cdot\boldsymbol{E}_{2}\right)=-\mu_{1}E_{2}\cos\theta=-\mu_{1}E_{2}\cos0=-\mu_{1}E_{2}=-\alpha_{1}E_{2}^{2}\label{eq:8-75}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $W$
+\end_inset
+
+和
+\begin_inset Formula $V'$
+\end_inset
+
+相加, 并以
+\begin_inset Formula $\overline{E_{2}^{2}}$
+\end_inset
+
+代替
+\begin_inset Formula $E_{2}^{2}$
+\end_inset
+
+, 得到总的诱导相互作用能
+\begin_inset Formula 
+\begin{equation}
+V_{2\rightarrow1}=\frac{1}{2}\alpha_{1}\overline{E_{2}^{2}}-\alpha_{1}\overline{E_{2}^{2}}=-\frac{1}{2}\alpha_{1}\overline{E_{2}^{2}}=-\frac{\alpha_{1}\mu_{2}^{2}}{R^{6}}\label{eq:8-76}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果用极性分子代替非极性分子(1) , 同样存在极性分子 (1) 对极性分子 (2) 的诱导作用能
+\begin_inset Formula 
+\begin{equation}
+V_{1\rightarrow2}=-\frac{\alpha_{2}\mu_{1}^{2}}{R^{6}}\label{eq:8-77}
+\end{equation}
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-76"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-77"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式的和即是异种分子间的诱导相互作用能
+\begin_inset Formula 
+\begin{equation}
+V_{D}=-\frac{\alpha_{1}\mu_{2}^{2}+\alpha_{2}\mu_{1}^{2}}{R^{6}}\label{eq:8-78}
+\end{equation}
+
+\end_inset
+
+对于同类分子上式化为
+\begin_inset Formula 
+\begin{equation}
+V_{D}=-\frac{2\alpha\mu^{2}}{R^{6}}\label{eq:8-79}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+色散作用
+\end_layout
+
+\begin_layout Standard
+惰性气体的液化说明即使在非极性分子之间, 也存在吸引作用势能。非极性分子或原子间的相互作用只能由量子力学理论来解释。 1930 年,  F.
+ London 提出, 这种相互作用的本质与零点振动能密切相关。
+\end_layout
+
+\begin_layout Standard
+原子中的电子总是在不停地运动, 即使在最低能态下也是如此, 这被称为“零点运动”。可将原子中的电子近似看作是在围绕其平衡位置作谐振动。平均而言,
+ 原子的偶极矩为零。振子间的相互作用导致零点能的降低, 即表现为相互吸引, 这称为色散作用。
+\end_layout
+
+\begin_layout Standard
+两个谐振子系统的势能为振子的位移势能和瞬变偶极矩之间的静电势能之和。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-59"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式可知, 其值为
+\begin_inset Formula 
+\begin{equation}
+V=\frac{1}{2}k(x_{1}^{2}+y_{1}^{2}+z_{1}^{2}+x_{2}^{2}+y_{2}^{2}+z_{2}^{2})+\frac{e^{2}}{R^{3}}(x_{1}x_{2}+y_{1}y_{2}-2z_{1}z_{2})\label{eq:8-80}
+\end{equation}
+
+\end_inset
+
+上式中
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+和 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+分别是两个振子的位移, 即正负电荷中心间距在直角坐标上的投影,  
+\begin_inset Formula $R$
+\end_inset
+
+为两个振子间的距离。 
+\begin_inset Formula $R$
+\end_inset
+
+趋于无穷大时, 两个振子相互独立, 振子都以
+\begin_inset Formula $\nu_{0}=\frac{1}{2\pi}\sqrt{\frac{k}{\mu}}$
+\end_inset
+
+的频率振动。
+\begin_inset Formula $μ$
+\end_inset
+
+为折合质量,  
+\begin_inset Formula $k$
+\end_inset
+
+为力常数。
+\end_layout
+
+\begin_layout Standard
+作坐标变换
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}X_{+}= & \frac{1}{\sqrt{2}}(x_{1}+x_{2}) & Y_{+}= & \frac{1}{\sqrt{2}}(y_{1}+y_{2}) & Z_{+}= & \frac{1}{\sqrt{2}}(z_{1}+z_{2})\\
+X_{-}= & \frac{1}{\sqrt{2}}(x_{1}-x_{2}) & Y_{-}= & \frac{1}{\sqrt{2}}(y_{1}-y_{2}) & Z_{-}= & \frac{1}{\sqrt{2}}(z_{1}-z_{2})
+\end{split}
+\right\} \label{eq:8-81}
+\end{equation}
+
+\end_inset
+
+由上式可得
+\begin_inset Formula 
+\begin{equation}
+\left.\begin{split}x_{1}= & \frac{1}{\sqrt{2}}(X_{+}+X_{-}) & y_{1}= & \frac{1}{\sqrt{2}}(Y_{+}+Y_{-}) & z_{1}= & \frac{1}{\sqrt{2}}(Z_{+}+Z_{-})\\
+x_{2}= & \frac{1}{\sqrt{2}}(X_{+}-X_{-}) & y_{2}= & \frac{1}{\sqrt{2}}(Y_{+}-Y_{-}) & z_{2}= & \frac{1}{\sqrt{2}}(Z_{+}-Z_{-})\\
+x_{1}x_{2}= & \frac{1}{2}(X_{+}^{2}-X_{-}^{2}) & y_{2}= & \frac{1}{2}(Y_{+}^{2}-Y_{-}^{2}) & z_{2}= & \frac{1}{2}(Z_{+}^{2}-Z_{-}^{2})
+\end{split}
+\right\} \label{eq:8-82}
+\end{equation}
+
+\end_inset
+
+将上式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-80"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{multline}
+V=\frac{1}{2}\left(k+\frac{e^{2}}{R^{3}}\right)X_{+}^{2}+\frac{1}{2}\left(k+\frac{e^{2}}{R^{3}}\right)Y_{+}^{2}+\frac{1}{2}\left(k-\frac{e^{2}}{R^{3}}\right)X_{-}^{2}+\frac{1}{2}\left(k-\frac{e^{2}}{R^{3}}\right)Y_{-}^{2}\\
++\frac{1}{2}\left(k-\frac{2e^{2}}{R^{3}}\right)Z_{+}^{2}+\frac{1}{2}\left(k+\frac{2e^{2}}{R^{3}}\right)Z_{-}^{2}\label{eq:8-83}
+\end{multline}
+
+\end_inset
+
+上式表明, 可以采用分离变量方法求解其相应的Schrodinger方程。对
+\begin_inset Formula $X_{+}$
+\end_inset
+
+和
+\begin_inset Formula $X_{-}$
+\end_inset
+
+变量, 其方程为
+\begin_inset Formula 
+\begin{equation}
+-\frac{\hslash^{2}}{2\mu}\frac{\partial^{2}\psi}{\partial X_{\pm}^{2}}+\frac{1}{2}\left(k\pm\frac{e^{2}}{R^{3}}\right)X_{\pm}^{2}\psi=\epsilon_{\pm}\psi\label{eq:8-84}
+\end{equation}
+
+\end_inset
+
+对
+\begin_inset Formula $Y_{+}$
+\end_inset
+
+和
+\begin_inset Formula $Y_{-}$
+\end_inset
+
+有类似的一组方程。对
+\begin_inset Formula $Z_{+}$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{-}$
+\end_inset
+
+有
+\begin_inset Formula 
+\begin{equation}
+-\frac{\hslash^{2}}{2\mu}\frac{\partial^{2}\psi'}{\partial Z_{\pm}^{2}}+\frac{1}{2}\left(k\mp\frac{2e^{2}}{R^{3}}\right)Z_{\pm}^{2}\psi'=\epsilon_{\pm}'\psi'\label{eq:8-85}
+\end{equation}
+
+\end_inset
+
+显然,  (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-84"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-85"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式为谐振子的Schrodinger方程,  其本征能量为
+\begin_inset Formula 
+\begin{align}
+\epsilon_{\pm} & =\left(n_{\pm}+\frac{1}{2}\right)\hslash\sqrt{\frac{k\pm\frac{e^{2}}{R^{3}}}{\mu}}\label{eq:8-86}\\
+\epsilon_{\pm}' & =\left(n_{\pm}'+\frac{1}{2}\right)\hslash\sqrt{\frac{k\mp\frac{2e^{2}}{R^{3}}}{\mu}}\label{eq:8-87}
+\end{align}
+
+\end_inset
+
+当
+\begin_inset Formula $n_{\pm}＝0$
+\end_inset
+
+ 
+\begin_inset Formula $n_{\pm}'＝0$
+\end_inset
+
+时, 就得到这两个相互作用的谐振子的最低能量
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{0}=\frac{1}{2}\hslash\sqrt{\frac{k}{\mu}}\left[2\left(\sqrt{1+\frac{e^{2}}{kR^{3}}}-\sqrt{1+\frac{e^{2}}{kR^{3}}}\right)+\sqrt{1+\frac{2e^{2}}{kR^{3}}}-\sqrt{1+\frac{2e^{2}}{kR^{3}}}\right]\label{eq:8-88}
+\end{equation}
+
+\end_inset
+
+如
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\frac{e^{2}}{kR^{3}}\ll1$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 利用 
+\begin_inset Formula 
+\[
+(1\pm X)^{\frac{1}{2}}=1\pm\frac{1}{2}X-\frac{1}{8}X^{2}\pm\cdots
+\]
+
+\end_inset
+
+和
+\begin_inset Formula $\nu_{0}=\frac{1}{2\pi}\sqrt{\frac{k}{\mu}}$
+\end_inset
+
+得
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{0}=\frac{1}{2}h\nu_{0}\left[6-2\left(\frac{2e^{4}}{8k^{2}R^{6}}\right)-2\left(\frac{4e^{4}}{8k^{2}R^{6}}\right)\right]=3h\nu_{0}-\frac{3}{4}h\nu_{0}\frac{e^{4}}{k^{2}R^{6}}\label{eq:8-89}
+\end{equation}
+
+\end_inset
+
+当
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+时,
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{0}^{0}=6\times\frac{1}{2}h\nu_{0}=\frac{2}{3}h\nu_{0}\label{eq:8-90}
+\end{equation}
+
+\end_inset
+
+上式中
+\begin_inset Formula $\epsilon_{0}^{0}$
+\end_inset
+
+为这两个谐振子分离无穷远时的最低能量, 即它们彼此独立的最低能量。因而色散作用能为
+\begin_inset Formula 
+\begin{equation}
+V_{L}=\epsilon_{0}-\epsilon_{0}^{0}=-\frac{3}{4}h\nu_{0}\frac{e^{4}}{k^{2}R^{6}}\label{eq:8-91}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将偶极子置于电场E 中, 电场力
+\begin_inset Formula $Ee$
+\end_inset
+
+将偶极子两端异号电荷拉开, 但抵抗这种拉开的弹性力
+\begin_inset Formula $kX$
+\end_inset
+
+与之平衡, 所以
+\begin_inset Formula 
+\begin{equation}
+X=\frac{e}{k}E\label{eq:8-92}
+\end{equation}
+
+\end_inset
+
+这样, 诱导的偶极矩为
+\begin_inset Formula 
+\begin{equation}
+\mu=eX=\frac{e^{2}}{k}E\label{eq:8-93}
+\end{equation}
+
+\end_inset
+
+由极化率的定义(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-93"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{equation}
+\alpha=\frac{e^{2}}{k}\label{eq:8-94}
+\end{equation}
+
+\end_inset
+
+若振子辐射的最大频率为
+\begin_inset Formula $\nu_{m}$
+\end_inset
+
+, 则电离能
+\begin_inset Formula $I=h\nu_{m}\approx h\nu_{0}$
+\end_inset
+
+。将
+\begin_inset Formula $I$
+\end_inset
+
+和 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-94"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-91"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) , 得
+\begin_inset Formula 
+\begin{equation}
+V_{L}=-\frac{3}{4}\frac{\alpha^{2}I}{R^{6}}\label{eq:8-95}
+\end{equation}
+
+\end_inset
+
+对于不同种类的分子对, 则有
+\begin_inset Formula 
+\begin{equation}
+V_{L}=-\frac{3}{4}\left(\frac{\alpha_{1}\alpha_{2}}{R^{6}}\right)\left(\frac{I_{1}I_{2}}{I_{1}+I_{2}}\right)\label{eq:8-96}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+的取向、诱导和色散作用能分别为190, 10和47(
+\begin_inset Formula $\times10^{12}$
+\end_inset
+
+ erg), 而HCl则分别为18.6, 5.4和111(
+\begin_inset Formula $\times10^{12}$
+\end_inset
+
+ erg)。由此可见, 分子力中色散力是主要的, 只有偶极矩很大的分子, 取向作用才显得重要。分子间作用能通常较小, 为0.1–1 kcal/mol,作用范围为3
+–5 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+AA}
+\end_layout
+
+\end_inset
+
+。分子间力一般没有方向性和饱和性, 由于没有考虑排斥力, 以上结果不能定量地和实验符合。分子间力通常用Mie方程表示
+\begin_inset Formula 
+\[
+V(R)=AR^{-n}-BR^{-m}
+\]
+
+\end_inset
+
+式中
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+为常数。在多数情况下
+\begin_inset Formula $m$
+\end_inset
+
+取为6, 
+\begin_inset Formula $n$
+\end_inset
+
+为12.
+ 林纳德-琼斯(Lennard-Jones) 在分子间力方面作出了重要贡献, 通常把上式的势称为Lennard-Jones势。
+\end_layout
+
+\begin_layout Section
+磁化率与分子结构
+\end_layout
+
+\begin_layout Subsection
+分子的磁性与分子结构
+\end_layout
+
+\begin_layout Standard
+电介质在电场中会被极化, 会产生出一附加的偶极矩。磁介质在磁场中也会被磁化而产生出附加的磁矩, 故有
+\begin_inset Formula 
+\begin{equation}
+B=H+H'=H+4\pi I\label{eq:8-97}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $B$
+\end_inset
+
+为磁介质内部的磁场强度(称为磁感应强度), 
+\begin_inset Formula $H$
+\end_inset
+
+为外加磁场强度, 
+\begin_inset Formula $H'$
+\end_inset
+
+是由于磁化而产生的附加磁场强度, 
+\begin_inset Formula $I$
+\end_inset
+
+为单位体积中的磁矩, 也称为磁化强度矢量。
+\end_layout
+
+\begin_layout Standard
+物质的磁性和组成物质的原子、分子的性质有关。当原子或分子中的总角动量不为零时, 其总磁矩不为零。这时
+\begin_inset Formula $H'$
+\end_inset
+
+(或
+\begin_inset Formula $I$
+\end_inset
+
+)
+\begin_inset Formula $>0$
+\end_inset
+
+.这种物质称为顺磁性物质。当原子或分子中的总角动量为零时, 总磁矩为零, 但是在外磁场的作用下, 会产生出一种感应环形电流, 因而产生感应的磁矩,
+ 这个磁矩和外磁场方向相反, 即
+\begin_inset Formula $H'$
+\end_inset
+
+(或
+\begin_inset Formula $I$
+\end_inset
+
+)
+\begin_inset Formula $<0$
+\end_inset
+
+.这种物质称为反磁性物质·顺磁性物质也具有反磁性, 只不过顺磁性超过反磁性而巳。还有一类物质例如铁、锦、磁铁矿等, 其
+\begin_inset Formula $H'$
+\end_inset
+
+也和和
+\begin_inset Formula $H$
+\end_inset
+
+方向相同, 但是它们的磁化强度矢量比顺磁性物质大得多, 而且还有其它一系列特殊性质, 这类物质称为铁磁性物质。对于铁磁性物质, 本节不作讨论。
+\end_layout
+
+\begin_layout Standard
+对于顺磁性和反磁性物质, 其磁化强矢量和外磁场成正比,  即
+\begin_inset Formula 
+\begin{equation}
+I=\chi H\label{eq:8-98}
+\end{equation}
+
+\end_inset
+
+上式中比例系数
+\begin_inset Formula $\chi$
+\end_inset
+
+称为单位体积磁化率。由于
+\begin_inset Formula $I$
+\end_inset
+
+是单位体积的磁 矩, 所以
+\begin_inset Formula $\chi$
+\end_inset
+
+表示了单位磁场强度下单位体积中的磁矩。化学中常用克磁化率
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\chi_{m}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和摩尔磁化率
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\chi_{M}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ , 它们的定义分别为
+\begin_inset Formula 
+\begin{align}
+\chi_{m} & =\frac{\chi}{\rho}\label{eq:8-99}\\
+\chi_{M} & =\frac{M\chi}{\rho}\label{eq:8-100}
+\end{align}
+
+\end_inset
+
+上式中
+\begin_inset Formula $\rho$
+\end_inset
+
+为磁介质的密度,  
+\begin_inset Formula $M$
+\end_inset
+
+为其分子量。 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\chi_{m}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\chi_{M}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+的量纲分别 为
+\begin_inset Formula ${\rm cm}^{3}/{\rm g}$
+\end_inset
+
+和
+\begin_inset Formula ${\rm cm}^{3}/{\rm mol}$
+\end_inset
+
+。磁化率的大小反映了物质易于磁化的程度。
+\end_layout
+
+\begin_layout Standard
+噩子力学计算表明, 当考虑了自旋和轨道运动相互作用时,  磁矩为
+\begin_inset Formula 
+\begin{equation}
+\mu_{mz}=-\frac{e\hslash}{2\mu c}m_{J}g-\frac{e^{2}}{4\mu c^{2}}\left(x^{2}+y^{2}\right)H\label{eq:8-101}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula 
+\begin{equation}
+g=1+\frac{J(J+1)-L(L+1)+S(S+1)}{2J(J+1)}\label{eq:8-102}
+\end{equation}
+
+\end_inset
+
+称为朗特因子。
+\begin_inset Formula $J$
+\end_inset
+
+, 
+\begin_inset Formula $L$
+\end_inset
+
+和
+\begin_inset Formula $S$
+\end_inset
+
+分别为原子中电子的总角动量量子数, 总轨道角动量量子数和总自旋量子数。磁量子数
+\begin_inset Formula $|m_{J}|\leqslant J$
+\end_inset
+
+。
+\begin_inset Formula $x$
+\end_inset
+
+和
+\begin_inset Formula $y$
+\end_inset
+
+是轨道平面上电子的坐标, 
+\begin_inset Formula $μ$
+\end_inset
+
+为电子的质量。(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-101"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式中一部分和
+\begin_inset Formula $H$
+\end_inset
+
+无关, 另一部分和
+\begin_inset Formula $H$
+\end_inset
+
+有关, 前者称为顺磁性磁矩
+\begin_inset Formula $μ_{mz}^{P}$
+\end_inset
+
+, 后者称为反磁性磁矩
+\begin_inset Formula $μ_{mz}^{D}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\begin{align}
+\mu_{mz}^{P} & =-\frac{e\hslash}{2\mu c}m_{J}g=-\mu_{B}m_{J}g\label{eq:8-103}\\
+\mu_{mz}^{D} & =-\frac{e^{2}H}{4\mu c^{2}}\left(x^{2}+y^{2}\right)\label{eq:8-104}
+\end{align}
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-103"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式中
+\begin_inset Formula 
+\begin{equation}
+\mu_{B}=\frac{e\hslash}{2\mu c}=9.284\times10^{-21}\ {\rm erg/Gs}\label{eq:8-105}
+\end{equation}
+
+\end_inset
+
+称为玻尔磁子, 它是磁矩的一个自然单位。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-103"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可得到磁矩
+\begin_inset Formula $μ_{mz}^{P}$
+\end_inset
+
+和角动量的比为
+\begin_inset Formula 
+\begin{equation}
+\frac{\mu_{mz}^{P}}{M_{z}}=\frac{-\mu_{B}m_{J}g}{m_{J}\hslash}=-\frac{\mu_{B}}{\hslash}g=-\frac{e}{2\mu c}g\label{eq:8-106}
+\end{equation}
+
+\end_inset
+
+其结果比经典理论多了一个因子
+\begin_inset Formula $g$
+\end_inset
+
+。若不考虑自旋, 即
+\begin_inset Formula $S=0$
+\end_inset
+
+, 
+\begin_inset Formula $J=L$
+\end_inset
+
+, 由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-102"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式
+\begin_inset Formula $g=1$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+因为
+\begin_inset Formula $Z$
+\end_inset
+
+轴是任意选的, 所以有
+\begin_inset Formula 
+\begin{equation}
+\frac{\boldsymbol{\mu}_{m}}{\boldsymbol{M}}-\frac{e}{2\mu c}g\label{eq:8-107}
+\end{equation}
+
+\end_inset
+
+将
+\begin_inset Formula $M=\sqrt{J(J+1)}\hslash$
+\end_inset
+
+代入上式, 得
+\begin_inset Formula 
+\begin{equation}
+\mu_{m}=-\frac{e\hslash}{2\mu c}g\sqrt{J(J+1)}=-g\mu_{B}\sqrt{J(J+1)}\label{eq:8-108}
+\end{equation}
+
+\end_inset
+
+当
+\begin_inset Formula $S=0$
+\end_inset
+
+时, 
+\begin_inset Formula $J=L$
+\end_inset
+
+, 
+\begin_inset Formula $g=1$
+\end_inset
+
+, 得到轨道磁矩
+\begin_inset Formula 
+\begin{equation}
+\mu_{m}=-\mu_{B}\sqrt{L(L+1)}\label{eq:8-109}
+\end{equation}
+
+\end_inset
+
+当
+\begin_inset Formula $L=0$
+\end_inset
+
+时, 
+\begin_inset Formula $J=S$
+\end_inset
+
+, 
+\begin_inset Formula $g=2$
+\end_inset
+
+, 得到自旋磁矩
+\begin_inset Formula 
+\begin{equation}
+\mu_{m}=-2\mu_{B}\sqrt{S(S+1)}\label{eq:8-110}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-104"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)可知, 因为
+\begin_inset Formula $x^{2}+y^{2}>0$
+\end_inset
+
+, 所以
+\begin_inset Formula $μ_{mz}^{D}$
+\end_inset
+
+始终和磁场方向相反, 故表现为反磁性。而且
+\begin_inset Formula $\mu_{mz}^{D}\neq0$
+\end_inset
+
+, 因此反磁性总是存在的。当
+\begin_inset Formula $\mu_{mz}^{P}=0$
+\end_inset
+
+时, 这种原子或分子称为反磁性的物质性; 当
+\begin_inset Formula $\mu_{mz}^{P}\neq0$
+\end_inset
+
+时, 一定有
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mu_{mz}^{P}\gg\mu_{mz}^{D}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,生, 尽管分子反磁性存在, 但总的结果是表现为顺磁性。
+\end_layout
+
+\begin_layout Standard
+由于热运动, 原子或分子的磁矩指向各个方向的几率相同, ·所以平均磁矩为零。但在外磁场中, 原子和分子的磁矩会沿外滋场方向取向, 因而具有非零的磁矩。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-103"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 总磁量子数为
+\begin_inset Formula $m_{J}$
+\end_inset
+
+的磁矩在外磁场中的能量为
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{m_{J}}=-\mu_{mz}^{P}H=-\mu_{B}m_{J}gH\label{eq:8-111}
+\end{equation}
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mu_{mz}^{P}$
+\end_inset
+
+在外磁场中的平均值为
+\begin_inset Formula 
+\begin{equation}
+\overline{\mu_{mz}^{P}}=\frac{\sum_{m_{J}=-J}^{J}\mu_{mz}^{P}e^{-\frac{\epsilon_{m_{J}}}{KT}}}{\sum_{m_{J}=-J}^{J}e^{-\frac{\epsilon_{m_{J}}}{KT}}}=\frac{\sum_{m_{J}=-J}^{J}\left(-\mu_{B}m_{J}g\right)e^{-\frac{\mu_{B}m_{J}gH}{KT}}}{\sum_{m_{J}=-J}^{J}e^{-\frac{\mu_{B}m_{J}gH}{KT}}}\label{eq:8-112}
+\end{equation}
+
+\end_inset
+
+在低磁场和高温下, 有
+\begin_inset Formula 
+\[
+\exp\left[-\frac{\mu_{B}m_{J}gH}{KT}\right]=1+\left(-\frac{\mu_{B}m_{J}gH}{KT}\right)+\cdots
+\]
+
+\end_inset
+
+取展开式的前两项代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-112"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 整理后得
+\begin_inset Formula 
+\begin{equation}
+\overline{\mu_{mz}^{P}}=\frac{J(J+1)g^{2}\mu_{B}^{2}H}{KT}\label{eq:8-113}
+\end{equation}
+
+\end_inset
+
+在整理过程中用到
+\begin_inset Formula 
+\[
+\sum_{m_{J}=-J}^{J}1=2J+1,\qquad\sum_{m_{J}=-J}^{J}m_{J}=0,\qquad\sum_{m_{J}=-J}^{J}m_{J}^{2}=\frac{1}{3}J(J+1)(2J+1)
+\]
+
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-113"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式说明
+\begin_inset Formula $\overline{\mu_{mz}^{P}}$
+\end_inset
+
+是顺着外磁场方向。
+\end_layout
+
+\begin_layout Standard
+摩尔磁化率定义为单位磁场强度下一摩尔物质的平均磁矩,  即
+\begin_inset Formula 
+\begin{equation}
+\chi_{P}=\frac{N_{0}\overline{\mu_{mz}^{P}}}{H}\label{eq:8-114}
+\end{equation}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-113"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入上式得
+\begin_inset Formula 
+\begin{equation}
+\chi_{P}=\frac{N_{0}J(J+1)g^{2}\mu_{B}^{2}}{KT}\label{eq:8-115}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $N_{0}$
+\end_inset
+
+为阿佛加德罗常数。将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-108"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 代入上式得
+\begin_inset Formula 
+\begin{equation}
+\chi_{P}=\frac{N_{0}\mu_{mz}^{2}}{3KT}=\frac{c}{T}\label{eq:8-116}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $c$
+\end_inset
+
+为常数。这说明摩尔顺磁磁化率和温度成反比, 这一关系称为居里(P.
+ Curie)定律。
+\end_layout
+
+\begin_layout Standard
+因为
+\begin_inset Formula 
+\[
+\overline{x^{2}}=\overline{y^{2}}=\frac{1}{3}\overline{r^{2}}
+\]
+
+\end_inset
+
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-104"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 可得
+\begin_inset Formula 
+\begin{equation}
+\mu_{mz}^{D}=-\frac{e^{2}H}{4\mu c^{2}}\cdot\frac{2}{3}\overline{r^{2}}=-\frac{e^{2}H}{6\mu c^{2}}\overline{r^{2}}\label{eq:8-117}
+\end{equation}
+
+\end_inset
+
+对于有
+\begin_inset Formula $n$
+\end_inset
+
+个电子的原子, 则有
+\begin_inset Formula 
+\begin{equation}
+\mu_{mz}^{D}=-\frac{e^{2}H}{6\mu c^{2}}\sum_{i=1}^{n}\overline{r_{i}^{2}}\label{eq:8-118}
+\end{equation}
+
+\end_inset
+
+摩尔反磁化率
+\begin_inset Formula $\chi_{D}$
+\end_inset
+
+为
+\begin_inset Formula 
+\begin{equation}
+\chi_{D}=\frac{N_{0}\mu_{mz}^{D}}{H}=-\frac{e^{2}H}{6\mu c^{2}}\sum_{i=1}^{n}\overline{r_{i}^{2}}\label{eq:8-119}
+\end{equation}
+
+\end_inset
+
+将
+\begin_inset Formula $e$
+\end_inset
+
+, 
+\begin_inset Formula $\mu$
+\end_inset
+
+, 
+\begin_inset Formula $c$
+\end_inset
+
+, 
+\begin_inset Formula $N_{0}$
+\end_inset
+
+代入上式, 则
+\begin_inset Formula 
+\begin{equation}
+\chi_{D}=-2.829\times10^{10}\sum_{i=1}^{n}\overline{r_{i}^{2}}\label{eq:8-120}
+\end{equation}
+
+\end_inset
+
+对于He 原子, 利用其原子的电子波函数可算得
+\begin_inset Formula $\overline{r^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $n=2$
+\end_inset
+
+, 可得
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\chi_{D}=-1.87\times10^{-6}{\rm cm}^{3}/{\rm mol}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 而实验值为
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\chi_{D}=-1.88\times10^{-6}{\rm cm}^{3}/{\rm mol}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+总的摩尔磁化率
+\begin_inset Formula $\chi$
+\end_inset
+
+为
+\begin_inset Formula 
+\begin{equation}
+\chi=\chi_{P}+\chi_{D}=\frac{N_{0}\mu_{m}^{2}}{3KT}-\frac{N_{0}e^{2}}{6\mu c^{2}}\sum_{i=1}^{n}\overline{r_{i}^{2}}\label{eq:8-121}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+气体的反磁化率与温度无关, 而与原子的大小有关, 另外, 巴斯卡总结分析了大量有机化合物的摩尔反磁化率, 提出摩尔反磁磁化率可近似地视为其中原子的、多重键的环状
+结构和其它反常效应的反磁磁化率之和
+\begin_inset Formula 
+\begin{equation}
+\chi_{D}=\sum_{i=1}^{n}n_{i}\chi_{i}+\sum_{i=1}^{n'}\lambda_{i}\label{eq:8-122}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $n_{i}$
+\end_inset
+
+和
+\begin_inset Formula $\chi_{i}$
+\end_inset
+
+分别为第
+\begin_inset Formula $i$
+\end_inset
+
+种原子的数目和摩尔反磁磁化率, 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+是某种结构改正常数。如
+\begin_inset Formula $\ce{C=C}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{C=C}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{C\bond{#}N}$
+\end_inset
+
+的
+\begin_inset Formula $\lambda$
+\end_inset
+
+分别为5.5, 0.8和
+\begin_inset Formula $0.8\times10^{-6}{\rm cm}^{3}$
+\end_inset
+
+; 实验还发现, 晶体的反磁化率是各向异性钓, 特别是平面芳香化合物的晶体(苯)尤其明显。在垂直于苯核平面的方向上, 反磁化率特别大, 而与苯核平面平行的两个方
+向上, 反磁化率特别小。这和苯核平面上的
+\begin_inset Formula $\pi$
+\end_inset
+
+电子非定域化有关。
+\end_layout
+
+\begin_layout Standard
+分子的顺磁磁化率与分子的电子结构密切相关。对大多数过渡金属的多原子分子(三价稀土元素离子例外), 其电子的轨道运动与分子的核构型联系很紧密, 以致电子的轨道运动
+不能顺着外磁场方向, 所以轨道磁矩对顺磁性的贡献很小, 分子的顺磁性全部或几乎全部都是由自旋运动所提供。溶液中的单原子离子, 由于溶剂分子与轨道运动相互作用,
+ 也足以阻止电子轨道的定向, 即阻止轨道磁矩对分子顺磁性的贡献。在这些悄况下, 分子磁矩由电子自旋决定。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-110"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 得
+\begin_inset Formula 
+\begin{equation}
+\mu_{m}=-2\mu_{B}\sqrt{S(S+1)}\label{eq:8-123}
+\end{equation}
+
+\end_inset
+
+分子的摩尔顺磁磁化率为
+\begin_inset Formula 
+\begin{equation}
+\chi_{P}=\frac{N_{0}\mu_{m}^{2}}{3kT}=\frac{4N_{0}\mu_{B}^{2}S(S+1)}{3kT}\label{eq:8-124}
+\end{equation}
+
+\end_inset
+
+设未配对电子数为
+\begin_inset Formula $n$
+\end_inset
+
+, 则
+\begin_inset Formula $S=\frac{n}{2}$
+\end_inset
+
+ , 故
+\begin_inset Formula 
+\begin{equation}
+\mu_{m}=-\mu_{B}\sqrt{n(n+2)}\label{eq:8-125}
+\end{equation}
+
+\end_inset
+
+和
+\begin_inset Formula 
+\begin{equation}
+\chi_{P}=\frac{N_{0}\mu_{B}^{2}n(n+2)}{3kT}\label{eq:8-126}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对三价稀土元素离子,  (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-126"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式不成立, 必须用和总角动量量子
+\begin_inset Formula $J$
+\end_inset
+
+相联系的
+\begin_inset Formula $μ_{m}$
+\end_inset
+
+, 由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-115"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式决定顺磁磁化率
+\begin_inset Formula $\chi_{P}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-126"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式可知, 如果测出了顺磁磁化率
+\begin_inset Formula $\chi_{P}$
+\end_inset
+
+, 则能够算出分子中的未配对电子数
+\begin_inset Formula $n$
+\end_inset
+
+。氧分子总共有偶数个电子, 但实验测出其
+\begin_inset Formula $\chi_{P}$
+\end_inset
+
+为
+\begin_inset Formula $3360\times10^{-6}{\rm cm}^{3}/{\rm mol}$
+\end_inset
+
+, 由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-126"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 算出氧分子有两个未配对电子。这证实了分子轨道理论对氧分子处理的正确性。
+\end_layout
+
+\begin_layout Standard
+磁化率的数据在解释络合物的结构方面有重要意义。实测出
+\begin_inset Formula $\ce{FeSO4*7H2O}$
+\end_inset
+
+中心
+\begin_inset Formula $\ce{Fe^{2+}}$
+\end_inset
+
+有四个未对电子, 故可判定这种正八面体络合物是弱场高自旋络合物, 其键型是属于电价配键。而
+\begin_inset Formula $\ce{K3Fe(CN)6}$
+\end_inset
+
+中心
+\begin_inset Formula $\ce{Fe^{2+}}$
+\end_inset
+
+没有未配对电子, 故这种正八面体络合协是强场低自旋络合物, 属于共价配键。
+\end_layout
+
+\begin_layout Subsection
+磁化率的测定
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-7.png
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+古埃磁天平示意图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-7"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+磁化率的测定方法较多, 这里仅介绍古埃(Gouy)方法。将悬挂在天平一端的样品管置于一非均匀磁场中, 如图8.7所示。样品管的底部的磁铁两极中心齐平,
+ 此处的磁场最强(H)。样品管的顶部位于磁场为零的区域。磁场沿样品管的方向有梯度
+\begin_inset Formula $\frac{\partial H}{\partial z}$
+\end_inset
+
+, 装满样品的样品管在非均匀磁场中要受到力的作用。
+\begin_inset Formula $dz$
+\end_inset
+
+一段样品的体积为
+\begin_inset Formula $Adz$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+为样品管横截面积。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-100"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式, 
+\begin_inset Formula $\chi_{m}\cdot\frac{\rho}{M}$
+\end_inset
+
+为体积磁化率, 则
+\begin_inset Formula $\chi_{m}\cdot\frac{\rho}{M}HAdz$
+\end_inset
+
+为
+\begin_inset Formula $dz$
+\end_inset
+
+高的样品柱的磁矩, 它所受的力为
+\begin_inset Formula 
+\begin{equation}
+dF=\chi_{m}\frac{\rho}{M}HA\frac{\partial H}{\partial z}dz\label{eq:8-127}
+\end{equation}
+
+\end_inset
+
+积分上式得到整个样品上所受的力
+\begin_inset Formula 
+\begin{equation}
+F=\int_{z_{H}}^{z_{0}}\chi_{m}\frac{\rho}{M}HA\frac{\partial H}{\partial z}dz=\int_{H}^{0}\chi_{m}\frac{\rho}{M}AHdH=\frac{\rho A}{2M}\chi_{M}H^{2}=\frac{k}{2}H^{2}A\label{eq:8-128}
+\end{equation}
+
+\end_inset
+
+当样品周围介质的磁化率不能忽略时, 且样品管顶部磁场不为零而为
+\begin_inset Formula $H_{0}$
+\end_inset
+
+时,  则
+\begin_inset Formula 
+\begin{equation}
+F=\frac{1}{2}(k-k_{0})(H^{2}-H_{0}^{2})A\label{eq:8-129}
+\end{equation}
+
+\end_inset
+
+当样品受到磁力时, 在磁天平的另一端加减祛码使之平衡, 若
+\begin_inset Formula $\Delta W$
+\end_inset
+
+为加磁场前后样品的表观质量差, 则
+\begin_inset Formula 
+\begin{equation}
+F=\frac{k}{2}H^{2}A\Delta Wg\label{eq:8-130}
+\end{equation}
+
+\end_inset
+
+上式中
+\begin_inset Formula $g$
+\end_inset
+
+为重力加速度。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-128"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-130"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{equation}
+\chi_{M}=\frac{2\Delta WgM}{AH^{2}\rho}\label{eq:8-131}
+\end{equation}
+
+\end_inset
+
+因为
+\begin_inset Formula $\rho=\frac{W}{hA}$
+\end_inset
+
+, 
+\begin_inset Formula $h$
+\end_inset
+
+为样品高度, 
+\begin_inset Formula $W$
+\end_inset
+
+为样品在不加磁场时样品的质量, 则
+\begin_inset Formula 
+\begin{equation}
+\chi_{M}=\frac{2\Delta WghM}{WH^{2}}\label{eq:8-132}
+\end{equation}
+
+\end_inset
+
+磁场强度
+\begin_inset Formula $H$
+\end_inset
+
+也可通过对已知磁化率的标准样品(如莫尔氏盐)的测量来求得。
+\end_layout
+
+\begin_layout Section
+核磁共振(NMR)
+\end_layout
+
+\begin_layout Subsection
+核的磁矩 
+\end_layout
+
+\begin_layout Standard
+核是带电粒子, 和核外电子一样, 也有自旋。核的自旋角能量为 
+\begin_inset Formula 
+\begin{equation}
+M=\sqrt{I(I+1)}\hslash\label{eq:8-133}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $I$
+\end_inset
+
+称为核自旋量子数, 其值为零、整数和半整数。实验表明可将核自旋量子数
+\begin_inset Formula $I$
+\end_inset
+
+分为三种类型。
+\end_layout
+
+\begin_layout Standard
+(1) 当核的原子序数和质量数都为偶数时, 其
+\begin_inset Formula $I=0$
+\end_inset
+
+, 如
+\begin_inset Formula $\ce{_{6}^{12}C}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{_{8}^{16}O}$
+\end_inset
+
+, 和
+\begin_inset Formula $\ce{_{16}^{32}S}$
+\end_inset
+
+等。 
+\end_layout
+
+\begin_layout Standard
+(2) 当核的原子序数为奇数, 质量数为偶数时, 其
+\begin_inset Formula $I$
+\end_inset
+
+为正整数, 例如
+\begin_inset Formula $\ce{_{7}^{14}N}$
+\end_inset
+
+等。 
+\end_layout
+
+\begin_layout Standard
+(3) 当核的质量数为奇数时, 其
+\begin_inset Formula $I$
+\end_inset
+
+为半整数, 例如
+\begin_inset Formula $I=\frac{1}{2}$
+\end_inset
+
+的
+\begin_inset Formula $\ce{_{1}^{1}H}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{_{6}^{13}C}$
+\end_inset
+
+, 
+\begin_inset Formula $I=\frac{3}{2}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+的
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\ce{_{17}^{35}Cl}$
+\end_inset
+
+ 和
+\begin_inset Formula $I=\frac{5}{2}$
+\end_inset
+
+的
+\begin_inset Formula $\ce{_{8}^{17}O}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+许多有机物是由C, H, O组成, 而
+\begin_inset Formula $\ce{_{6}^{12}C}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{_{8}^{16}O}$
+\end_inset
+
+的核自旋量子数为零, 由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-133"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 它们的核自旋角动量等于零。只有
+\begin_inset Formula $\ce{_{1}^{1}H}$
+\end_inset
+
+的核自旋角动量不为零。利用这一特点,  可以研究有机化合物的结构。
+\end_layout
+
+\begin_layout Standard
+原子中电子的总角动量量子数
+\begin_inset Formula $J$
+\end_inset
+
+不为零, 则必具有一定的角动量和磁矩。原子核也一样, 核的磁矩
+\begin_inset Formula $\mu_{m}$
+\end_inset
+
+和核自旋角动量的比为
+\begin_inset Formula 
+\begin{equation}
+\frac{\mu_{m}}{M}=\frac{e}{2M_{p}c}g=\gamma\label{eq:8-134}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $M_{p}$
+\end_inset
+
+为核的质量; 
+\begin_inset Formula $g$
+\end_inset
+
+是核的朗特因数, 对于质子
+\begin_inset Formula $g_{p}=5.586$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+为磁旋比。将 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-133"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-134"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{equation}
+\mu_{m}=\frac{eh}{4\pi M_{p}c}g\sqrt{I(I+1)}=g\mu_{n}\sqrt{I(I+1)}\label{eq:8-135}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $\mu_{n}$
+\end_inset
+
+称为核磁子, 其值为
+\begin_inset Formula 
+\begin{equation}
+\mu_{n}=\frac{eh}{4\pi M_{p}c}=5.0504\times10^{-24}\ {\rm erg/Gs}\label{eq:8-136}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+核磁矩和自旋角动量在磁场方向 (
+\begin_inset Formula $z$
+\end_inset
+
+轴)上的分量比为
+\begin_inset Formula 
+\begin{equation}
+\frac{\mu_{mz}}{M_{z}}=\frac{e}{2M_{p}c}g=\gamma\label{eq:8-137}
+\end{equation}
+
+\end_inset
+
+自旋角动量分量
+\begin_inset Formula 
+\begin{equation}
+M_{z}=m\hslash\label{eq:8-138fake}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $m=I$
+\end_inset
+
+, 
+\begin_inset Formula $I-1$
+\end_inset
+
+, 
+\begin_inset Formula $I-2$
+\end_inset
+
+, 
+\begin_inset Formula $\cdots$
+\end_inset
+
+, 1, 0, -1, 
+\begin_inset Formula $\cdots$
+\end_inset
+
+, 
+\begin_inset Formula $-(I-1)$
+\end_inset
+
+, 
+\begin_inset Formula $-I$
+\end_inset
+
+。将 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-138fake"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式代入 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-137"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 得
+\begin_inset Formula 
+\begin{equation}
+\mu_{mz}=g\frac{eh}{4\pi M_{p}c}m=gm\mu_{n}\label{eq:8-138}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于核自旋不为零的核, 和电子相似, 也表现为顺磁性, 顺磁磁化率; 可表示为
+\begin_inset Formula 
+\begin{equation}
+\chi_{n}=\frac{N_{0}I(I+1)g^{2}\mu_{n}^{2}}{3kT}\label{eq:8-139}
+\end{equation}
+
+\end_inset
+
+由此可见, 核磁化率只有电子磁化率的
+\begin_inset Formula $10^{6}$
+\end_inset
+
+分之一。
+\end_layout
+
+\begin_layout Standard
+当原子核被置于均匀的外磁场中时, 磁矩
+\begin_inset Formula $\mu_{m}$
+\end_inset
+
+和外磁场
+\begin_inset Formula $H$
+\end_inset
+
+之间的相互作用而产生不同的磁能级, 这种能级也是觉子化的, 即
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{m}=-\left(\boldsymbol{\mu}_{m}\cdot\boldsymbol{H}\right)=-\mu_{mz}H=-gm\mu_{n}H\label{eq:8-140}
+\end{equation}
+
+\end_inset
+
+一个核自旋为
+\begin_inset Formula $I$
+\end_inset
+
+的原子核, 其
+\begin_inset Formula $m$
+\end_inset
+
+有
+\begin_inset Formula $(2I+1)$
+\end_inset
+
+个取值, 所以它在磁场中有
+\begin_inset Formula $(2I+1)$
+\end_inset
+
+个取向或能级。例如
+\begin_inset Formula $\ce{_{1}^{1}H}$
+\end_inset
+
+其
+\begin_inset Formula $I=1/2$
+\end_inset
+
+, 则有二个磁能级, 它们是
+\begin_inset Formula $m=\frac{1}{2}$
+\end_inset
+
+的
+\begin_inset Formula $\alpha$
+\end_inset
+
+取向和
+\begin_inset Formula $m=-\frac{1}{2}$
+\end_inset
+
+的
+\begin_inset Formula $\beta$
+\end_inset
+
+取向。由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-140"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)可知, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+取向的能量比
+\begin_inset Formula $\beta$
+\end_inset
+
+取向的能量低。当外磁场不存在时, 在由大量核组成的体系中, 
+\begin_inset Formula $m=\frac{1}{2}$
+\end_inset
+
+和
+\begin_inset Formula $m=-\frac{1}{2}$
+\end_inset
+
+的核的数目相等, 而当磁场存在时, 对于
+\begin_inset Formula $m=\frac{1}{2}$
+\end_inset
+
+的
+\begin_inset Formula $\alpha$
+\end_inset
+
+取向由于其能量较低而比
+\begin_inset Formula $m=-\frac{1}{2}$
+\end_inset
+
+的
+\begin_inset Formula $\beta$
+\end_inset
+
+取向的核数目多。热运动会破坏这种取向倾向, 当达到热力学平衡时, 由Boltzmann分布定律可计算两种取向核数目之比。例如, 在300 K和9400
+ Gs时, 对于质子有
+\begin_inset Formula 
+\[
+\frac{N\left(+\frac{1}{2}\right)}{N\left(-\frac{1}{2}\right)}=\frac{A\exp\left[\frac{\frac{1}{2}g\mu_{n}H}{kT}\right]}{A\exp\left[\frac{-\frac{1}{2}g\mu_{n}H}{kT}\right]}=\exp\left[\frac{g\mu_{n}H}{kT}\right]=\exp\left[\frac{5.586\times5.050\times10^{-24}\times9400}{1.380\times10^{-16}\times300}\right]=1.0000066
+\]
+
+\end_inset
+
+这表明在百万个质子中,  
+\begin_inset Formula $\alpha$
+\end_inset
+
+态比
+\begin_inset Formula $\beta$
+\end_inset
+
+态只多66个核。
+\end_layout
+
+\begin_layout Subsection
+核磁共振 (NMR)
+\end_layout
+
+\begin_layout Standard
+在磁场中, 当核受到不同能量加的电磁波的照射后, 一旦满足关系
+\begin_inset Formula 
+\begin{equation}
+\Delta\epsilon=h\nu_{0}=\left[+\frac{1}{2}g\mu_{n}H-\left(-\frac{1}{2}g\mu_{n}H\right)\right]=g\mu_{n}H\label{eq:8-141}
+\end{equation}
+
+\end_inset
+
+时, 它就可以从基态
+\begin_inset Formula $\left(m=\frac{1}{2}\right)$
+\end_inset
+
+跃迁到较高的能级
+\begin_inset Formula $\left(m=-\frac{1}{2}\right)$
+\end_inset
+
+, 从而产生核磁共振吸收。这种跃迁也必须符合选择定则, 
+\begin_inset Formula $\Delta m=\pm1$
+\end_inset
+
+。例如当含有
+\begin_inset Formula $\ce{_{1}^{1}H}$
+\end_inset
+
+核的样品置于磁场强度为14092高斯的磁场中时, 由 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-141"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式计算应在 60 MHz/s发生共振吸收。
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-141"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式又可写为
+\begin_inset Formula 
+\begin{equation}
+\nu_{0}=\frac{g\mu_{n}}{h}H\label{eq:8-142}
+\end{equation}
+
+\end_inset
+
+这表明可以有两种等效的方法达到共振吸收, 一种是固定磁场强度
+\begin_inset Formula $H$
+\end_inset
+
+, 调整射频电磁波的频率
+\begin_inset Formula $\nu$
+\end_inset
+
+, 当
+\begin_inset Formula $\nu=\nu_{0}$
+\end_inset
+
+时, 发生能量共振吸收。另一种常用方式是固定射频电磁波的频率, 改变磁场强度
+\begin_inset Formula $H$
+\end_inset
+
+, 直到(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-142"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式成立, 即发生能量共振吸收。
+\end_layout
+
+\begin_layout Standard
+核磁共振就是基于上述理论而设计的一种产生并接收核的这种能量共振吸收信号的仪器。核磁共振仪主要由磁铁, 射频发生器和射频检示系统组成。
+\end_layout
+
+\begin_layout Subsection
+化学位移
+\end_layout
+
+\begin_layout Standard
+由于核的运动并不是孤立的, 它与核外电子、周围环境的原子和分子均有相互作用, 这就使得分子中各官能团上氢的核磁共振吸收峰并不都在同一位置上。例如乙醇中
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{CH2}$
+\end_inset
+
+和OH中H的NMR吸收峰各不相同。同一种原子核的共振频率随核外电子结构而发生变化, 称为化学位移。它主要来自核外反磁性的电子云的影响, 使得作用在原子核处的外磁
+场不是
+\begin_inset Formula $H$
+\end_inset
+
+而是被反磁性的电子云所削弱了的磁场强度, 故若固定电磁波频率
+\begin_inset Formula $\nu$
+\end_inset
+
+, 则要使外磁场增加才能使核达到共振吸收。
+\end_layout
+
+\begin_layout Standard
+由于各个基团上
+\begin_inset Formula $\ce{_{1}^{1}H}$
+\end_inset
+
+共振峰的化学位移比起所用射频频率或外磁场强度是很小的, 因此我们总是选择某一物质的共振峰作为标准, 并用被测物质和标准物质的磁场强度或频率之差的相对值作为化学位
+移的数值, 即
+\begin_inset Formula 
+\begin{equation}
+\delta=\frac{\nu_{\text{样品}}-\nu_{\text{标准}}}{\nu_{\text{标准}}}\times10^{6}=\frac{H_{\text{样品}}-H_{\text{标准}}}{H_{\text{标准}}}\times10^{6}({\rm ppm})\label{eq:8-143}
+\end{equation}
+
+\end_inset
+
+用这种方法定义的化学位移其值不会随使用的共振频率而改变,  为无量纲因次的量。
+\end_layout
+
+\begin_layout Standard
+一般常用
+\begin_inset Formula $\ce{(CH3)4Si}$
+\end_inset
+
+(TMS) 作标准。它只有一个NMR峰,  而且具有
+\begin_inset Formula $\delta$
+\end_inset
+
+大、化学惰性和磁性各向同性等优点。以 TMS 的
+\begin_inset Formula $\delta$
+\end_inset
+
+为零点, 一般化合物的共振峰的
+\begin_inset Formula $\delta$
+\end_inset
+
+ 为负值, 但文献上有时也将负 省去。为了避免正负号的混乱, 文献上还采用
+\begin_inset Formula $\tau$
+\end_inset
+
+值, 它定义为
+\begin_inset Formula 
+\begin{equation}
+\tau=10+\delta\label{eq:8-144}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+下列因素影响化学位移:
+\end_layout
+
+\begin_layout Standard
+1) 核外电子的反磁性屏蔽
+\end_layout
+
+\begin_layout Standard
+反磁性屏蔽和核外电子云密度直接有关, 电负性大的取代基, 如卤素、硝基、氰基、羰基、氢氧基和氨基等, 会降低核外电子密度、即降低反磁性屏弊, 使共振谱线向低场移
+动。 
+\begin_inset Formula $\ce{CH4}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{CH3Cl}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{CH2Cl2}$
+\end_inset
+
+的化学位移
+\begin_inset Formula $\tau$
+\end_inset
+
+分别为 9.3, 7.4和 4.8 ppm。这表明随着氢原子被氯原子所取代, 化学位移向低磁场移动。
+\end_layout
+
+\begin_layout Standard
+2) 核外电子的顺磁性屏蔽
+\end_layout
+
+\begin_layout Standard
+在不对称性分子中, 表现反磁性屏弊的电子旋进运动会受到阻碍, 电子云的这种不对称性效应与反磁性屏蔽效应相反, 表现为顺磁性屏蔽。
+\end_layout
+
+\begin_layout Standard
+3) 苯环的屏蔽效应
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-8.png
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+苯的屏蔽区
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-8"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于
+\begin_inset Formula $\pi$
+\end_inset
+
+电子的离域化, 
+\begin_inset Formula $\pi$
+\end_inset
+
+电子产生的感应磁场使环上和环下的质子处在正屏蔽区(化学位移向高场方向移动), 环周围为负屏蔽区(化学位移向低场方向移动)。如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\end_layout
+
+\begin_layout Subsection
+自旋-自旋耦合
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-9a.png
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+低分辨率
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-9b.png
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+低分辨率
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+乙醇的NMR谱
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+乙醇的核磁共振谱如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+(a) 所示。其中三个峰对应 OH, 
+\begin_inset Formula $\ce{CH2}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+三种不同化学环境的基团。由于氧的电负性大,  OH氢核的 NMR 峰处于低场位置。各峰的面积应和该基团中
+\begin_inset Formula $\ce{_{1}^{1}H}$
+\end_inset
+
+的个 数成正比。乙醇 NMR 谱中各峰面积之比为
+\begin_inset Formula $1:2:3$
+\end_inset
+
+, 因而分别对应OH, 
+\begin_inset Formula $\ce{CH2}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+的峰。
+\end_layout
+
+\begin_layout Standard
+当使用高分辨的核磁共振仪时, 其谱如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+(b) 所示。各峰面积为
+\begin_inset Formula $1:2:3$
+\end_inset
+
+但
+\begin_inset Formula $\ce{CH2}$
+\end_inset
+
+分裂成面积比为
+\begin_inset Formula $1:3:3:1$
+\end_inset
+
+的四个峰, 
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+分裂为面积比为
+\begin_inset Formula $1:2:1$
+\end_inset
+
+的三个烽。这种精细结构的出现是由于不同核之间的自旋耦合的结果。
+\begin_inset Formula $\ce{CH2}$
+\end_inset
+
+中两个氢在磁场中有
+\begin_inset Formula $\alpha\alpha(\uparrow\uparrow)$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\beta(\uparrow\downarrow)$
+\end_inset
+
+, 
+\begin_inset Formula $\beta\alpha(\downarrow\uparrow)$
+\end_inset
+
+和
+\begin_inset Formula $\beta\beta(\downarrow\downarrow)$
+\end_inset
+
+这几种排列方式, 其中 
+\begin_inset Formula $\alpha\beta$
+\end_inset
+
+和
+\begin_inset Formula $\beta\alpha$
+\end_inset
+
+是属于一种排列方式, 所以
+\begin_inset Formula $\ce{CH2}$
+\end_inset
+
+的两个氢核在磁场中共有三种排列方式, 其状态数之比为
+\begin_inset Formula $1:2:1$
+\end_inset
+
+。
+\begin_inset Formula $\ce{CH2}$
+\end_inset
+
+中质子对
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+中质子的自旋耦合作用使得
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+的NMR峰分裂为三重峰, 其面积之比为
+\begin_inset Formula $1:2:1$
+\end_inset
+
+。
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+中三个质子在磁场中有
+\begin_inset Formula $\alpha\alpha\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\alpha\beta$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\beta\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta\alpha\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\beta\beta$
+\end_inset
+
+, 
+\begin_inset Formula $\beta\alpha\beta$
+\end_inset
+
+, 
+\begin_inset Formula $\beta\beta\alpha$
+\end_inset
+
+和
+\begin_inset Formula $\beta\beta\beta$
+\end_inset
+
+这几种排列方式, 其总自旋分别为
+\begin_inset Formula $\frac{3}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $-\frac{1}{2}$
+\end_inset
+
+和
+\begin_inset Formula $-\frac{3}{2}$
+\end_inset
+
+即共有四种排列方式, 其状态数之比为
+\begin_inset Formula $1:3:3:1$
+\end_inset
+
+。对于
+\begin_inset Formula $n$
+\end_inset
+
+个耦合的氢原子, 可以导出所谓的
+\begin_inset Formula $n+1$
+\end_inset
+
+规则: 有
+\begin_inset Formula $n$
+\end_inset
+
+个相邻的氢时就显示
+\begin_inset Formula $n+1$
+\end_inset
+
+个蜂。当有两种等价邻近核时, 则会显示出
+\begin_inset Formula $(n+1)(n'+1)$
+\end_inset
+
+个峰, 其中
+\begin_inset Formula $n$
+\end_inset
+
+和
+\begin_inset Formula $n'$
+\end_inset
+
+为每种邻近核的数目。
+\end_layout
+
+\begin_layout Standard
+在一般情况下, 由非等价原子
+\begin_inset Formula $B$
+\end_inset
+
+引起
+\begin_inset Formula $A$
+\end_inset
+
+ 原子分裂峰的数目
+\begin_inset Formula $N$
+\end_inset
+
+为
+\begin_inset Formula 
+\begin{equation}
+N=2\sum_{B}I_{B}+1\label{eq:8-145}
+\end{equation}
+
+\end_inset
+
+式中
+\begin_inset Formula $\sum I_{B}$
+\end_inset
+
+为等价
+\begin_inset Formula $B$
+\end_inset
+
+核的自旋之和· 其分裂峰的相对强度由
+\begin_inset Formula $(r+1)^{m}$
+\end_inset
+
+二项式展开式的系数比所确定。例如, 当
+\begin_inset Formula $m=3$
+\end_inset
+
+时, 其系数比为
+\begin_inset Formula $1:3:3:1$
+\end_inset
+
+。若
+\begin_inset Formula $A$
+\end_inset
+
+原子有
+\begin_inset Formula $n$
+\end_inset
+
+个H 核时, 则
+\begin_inset Formula $A$
+\end_inset
+
+会分裂成
+\begin_inset Formula $2\times n\times\frac{1}{2}+1=n+1$
+\end_inset
+
+个峰。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $b$
+\end_inset
+
+两个核的自旋耦合强度大小用偶合常数
+\begin_inset Formula $J_{ab}$
+\end_inset
+
+表示, 由多重分裂峰的间距测得。核间的自旋一自旋相互作用是通过点键电子而间接传递的, 所以也称为间接偶极-偶极相互作用。耦合作用的大小和核间距的二次方成反比,
+ 距离越近, 耦合越强。
+\begin_inset Formula $\pi$
+\end_inset
+
+电子比
+\begin_inset Formula $\sigma$
+\end_inset
+
+电子传得远些。对有机链状饱和化合物, 相邻碳原子的质子(相隔三个键)的耦合常数一般为5–9 Hz.当相隔四个键肘, 
+\begin_inset Formula $J$
+\end_inset
+
+值小到无法测量。象乙醇中
+\begin_inset Formula $\ce{CH3}$
+\end_inset
+
+这类基团, 其中三个H原子都以单键和碳原子相连, 可以自由旋转, 这种几何构型平均化的结果使这三个H具有相同的化学位移(称为化学等价)。这三个氢核对其邻近核的耦
+合也是等价的(称为磁性等价)。
+\end_layout
+
+\begin_layout Standard
+在发生多重峰分裂时, 花样中心的化学位移就是该基团的化学位移, 复峰中相邻谱线的间距就是耦合常数。
+\end_layout
+
+\begin_layout Standard
+核磁共振技术在化学分析、判断有机化合物的结构、反应动力学和聚合物的结构研究方而都有重要而广泛的应用。
+\end_layout
+
+\begin_layout Section
+电子顺磁共振 (EPR)
+\end_layout
+
+\begin_layout Subsection
+电子自旋磁矩
+\end_layout
+
+\begin_layout Standard
+电子具有自旋, 因而具有自旋磁矩, 在外磁场中有分立的磁能级, 因而也有磁共振现象, 这称为电子顺磁共振 (EPR) 或电子自旋共振 (ESR)
+ , 其原理和实验方法同核磁共振相似。
+\end_layout
+
+\begin_layout Standard
+由 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-110"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 电子的自旋磁矩为
+\begin_inset Formula 
+\begin{equation}
+\mu_{m\text{自}}=-g\mu_{B}\sqrt{s(s+1)}\label{eq:8-146}
+\end{equation}
+
+\end_inset
+
+此自旋磁矩在外磁场方向 (
+\begin_inset Formula $z$
+\end_inset
+
+方向) 的分量为
+\begin_inset Formula 
+\begin{equation}
+\mu_{m\text{自}z}=-m_{s}\mu_{B}g\label{eq:8-147}
+\end{equation}
+
+\end_inset
+
+上式中
+\begin_inset Formula $g$
+\end_inset
+
+为朗特因子,  
+\begin_inset Formula $m_{s}$
+\end_inset
+
+为自旋磁量子数, 其值为 
+\begin_inset Formula $m_{s}=\frac{1}{2}$
+\end_inset
+
+和 
+\begin_inset Formula $m_{s}=-\frac{1}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{B}$
+\end_inset
+
+为玻尔磁子。
+\end_layout
+
+\begin_layout Subsection
+电子顺磁共振
+\end_layout
+
+\begin_layout Standard
+电子自旋磁矩和外磁场的相互作用能为
+\begin_inset Formula 
+\begin{equation}
+\epsilon=-\left(\boldsymbol{\mu}_{m\text{自}}\cdot\boldsymbol{H}\right)=-\mu_{m\text{自}}\cdot H=m_{s}\mu_{B}gH\label{eq:8-148}
+\end{equation}
+
+\end_inset
+
+相邻磁能级的差为
+\begin_inset Formula 
+\begin{equation}
+\Delta\epsilon=\epsilon(m_{s})-\epsilon(m_{s}-1)=m_{s}\mu_{B}gH-\left(m_{s}-1\right)\mu_{B}gH=g\mu_{B}H\label{eq:8-149}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若入射的电磁波的频率为
+\begin_inset Formula $\nu$
+\end_inset
+
+, 则磁共振的条件为
+\begin_inset Formula 
+\begin{equation}
+h\nu=g\mu_{B}H\label{eq:8-150}
+\end{equation}
+
+\end_inset
+
+即
+\begin_inset Formula 
+\begin{equation}
+\nu=\frac{g\mu_{B}H}{h}\label{eq:8-151}
+\end{equation}
+
+\end_inset
+
+由于电子质量是质子质量的
+\begin_inset Formula $\frac{1}{1840}$
+\end_inset
+
+, 由
+\begin_inset Formula $\mu_{B}$
+\end_inset
+
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mu_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+定义的 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-105"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)和 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-136"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 
+\begin_inset Formula $\mu_{B}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+比
+\begin_inset Formula $\mu_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+大三个量级, 所以电子顺磁共振频率比核磁大三个量级而位于微波区。
+\end_layout
+
+\begin_layout Subsection
+顺磁共振谱的精细结构和超精细结构
+\end_layout
+
+\begin_layout Standard
+电子自旋磁矩间的相互作用引起谱线的分裂称为顺磁共振谱线的精细结构。电子自旋磁矩和附近核自旋磁矩间的相互作用引起谱线的分裂称为顺磁共振谱线的超精细结构。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-10.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+一个电子与一个质子相互作用产生的超精细结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-10"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+先考虑一个自旋未成对电子和一个邻近质子的作用。由 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-149"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式, 当
+\begin_inset Formula $m_{s}＝\frac{1}{2}$
+\end_inset
+
+时,  
+\begin_inset Formula $\epsilon\left(\frac{1}{2}\right)=\frac{1}{2}g\mu_{B}H$
+\end_inset
+
+,  当
+\begin_inset Formula $m_{s}＝-\frac{1}{2}$
+\end_inset
+
+时,  
+\begin_inset Formula $\epsilon\left(-\frac{1}{2}\right)=-\frac{1}{2}g\mu_{B}H$
+\end_inset
+
+, 两个磁能级间距
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Delta\epsilon=g\mu_{B}H$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+。显然
+\begin_inset Formula $\Delta\epsilon$
+\end_inset
+
+随
+\begin_inset Formula $H$
+\end_inset
+
+增大而增大。质子的核自旋
+\begin_inset Formula $I＝\frac{1}{2}$
+\end_inset
+
+, 质子在磁场中有两种取向: 
+\begin_inset Formula $m_{I}=\frac{1}{2}$
+\end_inset
+
+时核磁矩顺着外磁场方向, 从而增大电子所在处的磁场强度, 当
+\begin_inset Formula $m_{I}=-\frac{1}{2}$
+\end_inset
+
+时则减小电子所在处的磁场强度。这样, 由电子自旋在磁场中分裂的磁能级
+\begin_inset Formula $\epsilon\left(\frac{1}{2}\right)$
+\end_inset
+
+和
+\begin_inset Formula $\epsilon\left(-\frac{1}{2}\right)$
+\end_inset
+
+又会各自分裂成两个能级(对应
+\begin_inset Formula $m_{I}=\frac{1}{2}$
+\end_inset
+
+和
+\begin_inset Formula $m_{I}=-\frac{1}{2}$
+\end_inset
+
+)如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\end_layout
+
+\begin_layout Standard
+如果质子不存在时, 在由 (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:8-151"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) 式确定的
+\begin_inset Formula $H_{0}$
+\end_inset
+
+处产生一条磁共振潜线。当质子存在时, 由于电子运动比原子核快得多, 所以在电子跃迁时质子的自旋磁量子数保持不变, 因而在
+\begin_inset Formula $H_{0}+\Delta H$
+\end_inset
+
+和
+\begin_inset Formula $H_{0}-\Delta H$
+\end_inset
+
+处产生两条磁共振谱线, 它们分别对应
+\begin_inset Formula $m_{I}=-\frac{1}{2}$
+\end_inset
+
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $m_{I}=+\frac{1}{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+的跃迁。 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+为质子自旋产生的附加的磁场强度。
+\end_layout
+
+\begin_layout Standard
+当电子附近存在核自旋为
+\begin_inset Formula $I$
+\end_inset
+
+的原子核时, 则原来每一个电子自旋磁能级将会分裂为
+\begin_inset Formula $(2I+1)$
+\end_inset
+
+个能级, 这时原来的一条谱线分裂成
+\begin_inset Formula $(2I+1)$
+\end_inset
+
+条谱线。
+\end_layout
+
+\begin_layout Standard
+当未成对电子的运动轨道包围几个磁性原子核时, 而且电子与不同的原子核相互作用的强弱差别较大时, 依由强至弱的次序,  谱峰先分裂成
+\begin_inset Formula $(2I_{1}+1)$
+\end_inset
+
+个次峰, 每个次峰又分裂成
+\begin_inset Formula $(2I_{2}+1)$
+\end_inset
+
+个更次的峰。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-11.png
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+一个电子和两个等同质子相互作用产生的超精细结构
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当一个分子中一个未成对电分与两个等同质子相互作用时, 其能级分裂如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。由于两个质子与电子相互作用的大小相同, 所以它们所引起的能级分裂大小也相同。原来一条谱线, 现在分裂成强度比为
+\begin_inset Formula $1:2:1$
+\end_inset
+
+的三条谱线。若有三个等同质子, 则分裂成强度比为
+\begin_inset Formula $1:3:3:1$
+\end_inset
+
+的四条谱线。若有
+\begin_inset Formula $n$
+\end_inset
+
+个等同质子, 则有
+\begin_inset Formula $2nI+1=2\times n\times\frac{1}{2}+1=n+1$
+\end_inset
+
+条谱线, 其强度比为
+\begin_inset Formula $n$
+\end_inset
+
+次二项式系数之比。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap8/8-12.png
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+苯负离子的顺磁共振谱
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8-12"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如反应
+\begin_inset Formula 
+\[
+\ce{C6H6 + Na ->[-80^{\circ}{\rm C}][\text{在四氢呋喃中}]\dot{\ce{C}}_{6}H5^{-} +Na^{+}}
+\]
+
+\end_inset
+
+所形成的
+\begin_inset Formula $\ce{\dot{\ce{C}}_{6}H5^{-}}$
+\end_inset
+
+自由基, 它的 EPR 谱如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 为七条等距的强度比为
+\begin_inset Formula $1:6:15:20:15:6:1$
+\end_inset
+
+ 的谱线。它对应于自由电子和环七六个等价质子的耦合, 耦合常数为 3.75 Gs。
+\end_layout
+
+\begin_layout Standard
+电子顺磁共振共脤技术可应用于有机自由基的分子轨道理论解释, 络合物的价态和键型及其电子的离域作用和催化动力学等方面的研究。
+\end_layout
+
+\begin_layout Section*
+习题
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{习题}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ce{CCl4}$
+\end_inset
+
+分子为正四面体, 偶极矩为零, 
+\begin_inset Formula $20^{\circ}{\rm C}$
+\end_inset
+
+时液体
+\begin_inset Formula $\ce{CCl4}$
+\end_inset
+
+的 介电常数为 2.238, 密度为 1.595 
+\begin_inset Formula ${\rm g/cm}^{3}$
+\end_inset
+
+, 计算其摩尔极化度和极化率
+\begin_inset Formula $\alpha_{D}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Enumerate
+在一大气压下测得蒸气 
+\begin_inset Formula $\ce{BrF5}$
+\end_inset
+
+在几个温度下的介电常数为:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $K$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+345.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+374.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+402.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+430.8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.006320
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.005525
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.004910
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.004378
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+设该气体为理想气体, 试计算其偶极矩。摩尔变形极化度和变形极化率。
+\end_layout
+
+\begin_layout Enumerate
+氯仿在
+\begin_inset Formula $25^{\circ}{\rm C}$
+\end_inset
+
+测得其偶极矩为 1.01 D, 介电常为数 4.724, 密度为1.48 
+\begin_inset Formula ${\rm g/cm}^{3}$
+\end_inset
+
+, 求氯仿的摩尔变形极化度和变形极化率。
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $25^{\circ}{\rm C}$
+\end_inset
+
+时测得 
+\begin_inset Formula $\ce{O2}$
+\end_inset
+
+的
+\begin_inset Formula $\lambda_{p}=3360\times10^{-6}$
+\end_inset
+
+ 
+\begin_inset Formula ${\rm cm}^{3}/{\rm mol}$
+\end_inset
+
+, 计算
+\begin_inset Formula $\ce{O2}$
+\end_inset
+
+的未成对电子数。
+\end_layout
+
+\begin_layout Enumerate
+测得
+\begin_inset Formula $\ce{[CoF6]^{3-}}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{[Co(CN)6]^{3-}}$
+\end_inset
+
+的磁矩分别为
+\begin_inset Formula $5.3\mu_{B}$
+\end_inset
+
+和 0, 试判断其
+\begin_inset Formula $d$
+\end_inset
+
+电子组态; 和配位体场的强弱。
+\end_layout
+
+\begin_layout Enumerate
+用磁天平测量三乙酰丙酮络锰的磁化率。样品1.4370 g, 样品休积2.546 
+\begin_inset Formula ${\rm cm}^{3}$
+\end_inset
+
+, 样品截面积 0.18 
+\begin_inset Formula ${\rm cm}^{2}$
+\end_inset
+
+。又在温度295 K, 4000 奥斯特场强下测得表观质量增加0.0252 g, 计算摩尔磁化率, 并确定未成对电子数。
+\end_layout
+
+\begin_layout Enumerate
+当磁场固定在 14100 Gs 时, 试计算使质子发生共振吸收的颜率。
+\end_layout
+
+\begin_layout Enumerate
+DPPH分子中一个未成对电子等同地和两个 N 原子作用, 试导出其EPR超精细结构谱线间的强度比。
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,219 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\setCJKmainfont[ItalicFont={楷体}, BoldFont={黑体}]{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\renewcommand{\contentsname}{目录}
+\renewcommand\abstractname{摘要}
+\renewcommand\listfigurename{插图目录}
+\renewcommand\listtablename{表格目录}
+%\renewcommand\nomname{术语}
+\renewcommand\proofname{证明}
+\renewcommand\bibname{参考文献}
+\renewcommand\appendixname{附录}
+%\renewcommand\appendixpagename{附录}
+%\renewcommand\appendixtocname{附录}
+\end_preamble
+\use_default_options true
+\begin_modules
+subequations
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+物质结构导论
+\end_layout
+
+\begin_layout Author
+李俊清等
+\end_layout
+
+\begin_layout Date
+1990
+\end_layout
+
+\begin_layout Address
+合肥: 中国科学技术大学出版社
+\end_layout
+
+\begin_layout Chapter*
+前言
+\end_layout
+
+\begin_layout Standard
+本书是我们在中国科学技术大学讲授“物质结构”课程所编的讲义的基础上多次补充、修改而成的。
+\end_layout
+
+\begin_layout Standard
+目前, 用量子理论处理原子、分子和固体的结果已能根据微观粒子的相互作用来解释和预言很多宏观上所能观察到的规律。因此, 这门课的目的在于使化学、材料科学、生物等专
+业的学生能在量子理论的基础上了解化学和化学物理的有关现象与物质的微观结构的本质联系, 以及掌握有关揭示物质微观结构的理论和实验方法。本书从量子理论的建立和发展讲
+起, 并在了解原子的电子结构的基础上, 进而讨论原子的集合体——分子和固体的结构。本书主要由四部分组成: (1) 非相对论量子力学的基本原理;
+ (2) 原子的电子结构和原子光谱; (3) 分子结构和分子光谱; (4) 固体结构。
+\end_layout
+
+\begin_layout Standard
+本书在选材上尽量用较新的科研成果和量子观点(分子轨道理论, 能带论等)来阐明物质的微观结构, 比一般的物质结构教科书增加了算符理论、微扰理论、群表示理论、多原子
+分子光谱、固体的电子结构和能带理论等内容。这样, 本书就包括了量子力学、量子化学、分子光谱学和固体物理学中的基本内容, 以使学生打下更为坚实的理论基础。
+\end_layout
+
+\begin_layout Standard
+考虑到化学系的学生往往不习惯于将其所学到的数理知识应用于具体科研问题的理论分析和处理, 因此本书在写法上有意加强了这方面的训练: 对于重要的结果,
+ 或用较少的数学运算就能得到的结果, 并不回避用高等数学进行严格推导, 且对其物理意义作理论分析。对于那些需用冗长的数学运算而又易弄混其物理轮廓的问题,
+ 本文直接给出结果并分析其物理意义。
+\end_layout
+
+\begin_layout Standard
+书中的第四章是相对独立部分, 亦可作为量子化学课群论部分的教材。
+\end_layout
+
+\begin_layout Standard
+限于作者的学术和教学水平, 书中的不妥之处在所难免, 恳请读者给予批评指正。
+\end_layout
+
+\begin_layout Standard
+本书在编写过程中得到辛厚文、俞书勤教授的帮助与支持, 在此顺致谢意。
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\align right
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+编者
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+1990年1月
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+于中国科学技术大学近代化学系
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

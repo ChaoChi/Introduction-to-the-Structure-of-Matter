@@ -1,0 +1,7100 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-book
+\begin_preamble
+\setCJKmainfont[ItalicFont={楷体}, BoldFont={黑体}]{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\renewcommand{\contentsname}{目录}
+\renewcommand\abstractname{摘要}
+\renewcommand\listfigurename{插图目录}
+\renewcommand\listtablename{表格目录}
+%\renewcommand\nomname{术语}
+\renewcommand\proofname{证明}
+\renewcommand\bibname{参考文献}
+\renewcommand\appendixname{附录}
+%\renewcommand\appendixpagename{附录}
+%\renewcommand\appendixtocname{附录}
+\end_preamble
+\use_default_options true
+\begin_modules
+subequations
+\end_modules
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+络合物结构和配位场理论
+\end_layout
+
+\begin_layout Standard
+由中央原子(或离子)和其周围的若干分子或离子所组成的化台物叫络合物, 中央原子或离子称为络合物的核, 与核相结合的分子或离子称为配位体。根据络合物所含核的数量可
+以分为单核络合物和多核络合物。带有电荷的结合物你为络离子, 络合物的接通常是过渡金属原子或离子, 配位体通常是含有孤对电子或
+\begin_inset Formula $\pi$
+\end_inset
+
+键的分子或离子。
+\end_layout
+
+\begin_layout Section
+络合物的价键理论
+\end_layout
+
+\begin_layout Subsection
+价键理论
+\end_layout
+
+\begin_layout Standard
+本世纪30年代, L.
+ Pauling提出: 络合物的中央离子(或原子)和配位体之间的化学键可分为电价配键和共价配键两种, 相应的络合物称为电价络合物和共价络合物。在电价络合物中,
+ 带正电的中央离子和带负电或具有偶极矩的配位体之间是靠静电引力结合成键, 这种静电引力不会影响中央离子的电子结构, 故中央离子的电子排布将按Hund规则,
+ 即电子尽可能分占不同的轨道而且自旋相互平行, 这样电价络合物往往含有较多的自旋平行电子, 而呈高自旋状态, 一般来说, 当中央原子和配位体原子的电负性相差较大
+时, 则容易形成电价结合物。故含氟、氧等原子的配位体(如
+\begin_inset Formula $\ce{F-}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+等)常与金属离子生成电价结合物。
+\begin_inset Formula $\ce{[FeF6]^{3-}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Fe(H2O)6]^{3+}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Ni(NH3)6]^{2+}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Co(NH3)6]^{2+}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Mn(NH3)6]^{2+}}$
+\end_inset
+
+等都是电价络合物。
+\end_layout
+
+\begin_layout Standard
+在共价络合物中, 配位体的孤对电子和中央离子空的杂化价轨道形成共价
+\begin_inset Formula $σ$
+\end_inset
+
+配键。在这些杂化轨道中以
+\begin_inset Formula $d^{2}sp^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $dsp^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{4}sp^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $sp^{2}$
+\end_inset
+
+和
+\begin_inset Formula $sp$
+\end_inset
+
+杂化为常见, 相应络合物的几何构型分别为正八面体、平面正方形、正十二面体、正四面体、正三角形和直线形。为了腾出空
+\begin_inset Formula $d$
+\end_inset
+
+轨道参与杂化, 
+\begin_inset Formula $d$
+\end_inset
+
+电子常被挤到少数
+\begin_inset Formula $d$
+\end_inset
+
+轨道中而成自旋相互反平行的自旋配对状态, 这样, 自旋平行的电子则较少, 故共价络合物一般为低自旋络合物。有时少数
+\begin_inset Formula $d$
+\end_inset
+
+电子还要激发到较高能级的空轨道上去, 以腾出足够多的空
+\begin_inset Formula $d$
+\end_inset
+
+轨道参与杂化, 其升高的激发能量将被较多的成键面带来的较多的能量下降所补偿。
+\begin_inset Formula $\ce{Fe^{3+}}$
+\end_inset
+
+的电子结构是
+\begin_inset Formula $3d^{5}4s^{0}4p^{0}$
+\end_inset
+
+, 即
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/pic1.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+当它与六个
+\begin_inset Formula $\ce{CN-}$
+\end_inset
+
+配位体形成
+\begin_inset Formula $\ce{[Fe(CN)6]^{3-}}$
+\end_inset
+
+络离子时, 
+\begin_inset Formula $\ce{Fe^{3+}}$
+\end_inset
+
+的5个
+\begin_inset Formula $d$
+\end_inset
+
+电子被挤到三个
+\begin_inset Formula $d$
+\end_inset
+
+轨道中, 空出两个
+\begin_inset Formula $d$
+\end_inset
+
+轨道和
+\begin_inset Formula $4s$
+\end_inset
+
+, 
+\begin_inset Formula $4p$
+\end_inset
+
+轨道形成
+\begin_inset Formula $d$
+\end_inset
+
+ 2
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化轨道。这六个指向正八面体顶点的杂化轨道容纳六个
+\begin_inset Formula $\ce{CN-}$
+\end_inset
+
+配位体上的孤对电子, 形成六个共价配键, 这可表示为
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/pic2.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+由于这六个共价配键的形成, 使分子体系的能量显著降低而稳定。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ce{Co^{2+}}$
+\end_inset
+
+含有七个
+\begin_inset Formula $d$
+\end_inset
+
+电子, 当六个
+\begin_inset Formula $d$
+\end_inset
+
+电子挤到三个
+\begin_inset Formula $d$
+\end_inset
+
+轨道中之后, 为了采用
+\begin_inset Formula $d^{2}sp^{5}$
+\end_inset
+
+杂化, 则需要将一个
+\begin_inset Formula $d$
+\end_inset
+
+电子激发到能量较高的5s轨道上去, 因此
+\begin_inset Formula $\ce{[Co(CN)6]^{4-}}$
+\end_inset
+
+很容易失去一个电子而变成
+\begin_inset Formula $\ce{[Co(CN)6]^{3-}}$
+\end_inset
+
+, 所以
+\begin_inset Formula $\ce{[Co(CN)6]^{4-}}$
+\end_inset
+
+是一个很强的还原剂, 它能把水中的
+\begin_inset Formula $\ce{H+}$
+\end_inset
+
+还原成
+\begin_inset Formula $\ce{H2}$
+\end_inset
+
+, 自己则变成三价钴络离子
+\begin_inset Formula $\ce{[Co(CN)6]^{3-}}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+含有
+\begin_inset Formula $d^{8}$
+\end_inset
+
+结构的
+\begin_inset Formula $\ce{Ni^{2+}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{Pd^{2+}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{Pt^{2+}}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{Au^{3+}}$
+\end_inset
+
+等离子在形成络合物中需要4个
+\begin_inset Formula $d$
+\end_inset
+
+轨道容纳8个
+\begin_inset Formula $d$
+\end_inset
+
+电子, 所以只能以一个空
+\begin_inset Formula $d$
+\end_inset
+
+轨道和
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+轨道杂化形成
+\begin_inset Formula $dsp^{2}$
+\end_inset
+
+杂化轨道, 它接受配位体的孤对电子而形成平面正方形络合物, 如
+\begin_inset Formula $\ce{[Ni(CN)4]^{2-}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Pt(NH3)4]^{2+}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Pt(CN)4]^{2-}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[PtCl4]^{2-}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Pt(NH3)2Cl2]}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[PdCl4]^{2-}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Pd(CN)4]^{2-}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Pd(NH3)6]^{2+}}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{[AuCl4]-}$
+\end_inset
+
+等都是具有
+\begin_inset Formula $dsp^{2}$
+\end_inset
+
+杂化的平面正方形络合物。在这类络合物中, 中心离子空的
+\begin_inset Formula $p$
+\end_inset
+
+轨道还可与配位体的
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道重迭而形成离域键。
+\end_layout
+
+\begin_layout Standard
+含有
+\begin_inset Formula $d^{9}$
+\end_inset
+
+电子结构中心离子的络合物如
+\begin_inset Formula $\ce{[Cu(NH3)6]^{2+}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[CuCl4]^{2-}}$
+\end_inset
+
+, 
+\begin_inset Formula $\ce{[Cu(CN)4]^{2-}}$
+\end_inset
+
+等, 中央离子将一个
+\begin_inset Formula $d$
+\end_inset
+
+电子激发到
+\begin_inset Formula $4p$
+\end_inset
+
+轨道上去, 采用
+\begin_inset Formula $dsp^{2}$
+\end_inset
+
+杂化, 故也是平面正方形构型。在
+\begin_inset Formula $\ce{[Cu(CN)6]^{2-}}$
+\end_inset
+
+中, 未参加杂化的
+\begin_inset Formula $4p$
+\end_inset
+
+轨道还可以和
+\begin_inset Formula $\ce{CN-}$
+\end_inset
+
+中的
+\begin_inset Formula $\pi$
+\end_inset
+
+轨道作用形成离域
+\begin_inset Formula $\pi$
+\end_inset
+
+键
+\begin_inset Formula $Π_{9}^{9}$
+\end_inset
+
+, 这就增加了络合物的稳定性。
+\end_layout
+
+\begin_layout Standard
+含有
+\begin_inset Formula $d^{10}$
+\end_inset
+
+电子结构的
+\begin_inset Formula $\ce{[Ag(CN)2]-}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{[ZnCl4]^{2-}}$
+\end_inset
+
+分别果用
+\begin_inset Formula $sp$
+\end_inset
+
+和
+\begin_inset Formula $sp^{3}$
+\end_inset
+
+杂化而成直线型和正四面体的络合物。
+\end_layout
+
+\begin_layout Subsection
+价键理论的成功和局限性
+\end_layout
+
+\begin_layout Standard
+络合物的价键理论说明了高自旋络合物和低自旋络合物产生的原因, 对络合物的磁性和几何构型也都给予了一定的说明。但价键理论截然将络合物划分为电价和共价两类,
+ 并把高自旋络合物看成是电价的, 低自旋络合物看成是共价的, 这种方法有时和实验事实并不完全符合, 例如三价铁的乙酰丙酮络合物
+\begin_inset Formula $\ce{[Fe(C5H7O2)3]^{3+}}$
+\end_inset
+
+, 实验测得有五个未配对电子, 应属高自旋的电价络合物一类, 但它易挥发、易溶于非极性有机溶剂的性质却是共价化合物的特性, 价键理论还无法解释络合物的颜色,
+ 络合物的稳定性随中央离子
+\begin_inset Formula $d$
+\end_inset
+
+电子数变化而变化的现象, 以及有些络合物几何构型会发生变形等现象。
+\end_layout
+
+\begin_layout Section
+晶体场理论
+\end_layout
+
+\begin_layout Standard
+为解释络合物的一系列性质, 在络合物的价键理论之后, 贝特(H.
+ Bethe)和范夫利克(J.
+ H.
+ Van Vleck)于1932–1935年提出了晶体场理论(CFT)。晶体场理论把配位体和中央离子的静电作用看成是各配位体叫点电荷形式同中央离子的作用,
+ 使得中央离子能量简并的
+\begin_inset Formula $d$
+\end_inset
+
+轨道发生分裂。
+\end_layout
+
+\begin_layout Subsection
+正八面体配位场的势能函数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-1.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+正八面体场坐标
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设络合物中心离子位于直角坐标系的原点, 六个配位体位于
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+轴上和中心离子等距离的六个顶点上, 其几何构型为正八面体, 如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。每个配位体
+\begin_inset Formula $L$
+\end_inset
+
+与原点的距离为
+\begin_inset Formula $a$
+\end_inset
+
+,它在空间某点
+\begin_inset Formula $Q$
+\end_inset
+
+(
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+)处产生的势场为
+\begin_inset Formula $V_{i}$
+\end_inset
+
+, 计算出各配位体的
+\begin_inset Formula $V_{i}$
+\end_inset
+
+, 再把六个配位体的
+\begin_inset Formula $V_{i}$
+\end_inset
+
+相加便可得到所有配位体在
+\begin_inset Formula $Q$
+\end_inset
+
+(
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+)点的势场。
+\end_layout
+
+\begin_layout Standard
+设点电荷
+\begin_inset Formula $L_{1}$
+\end_inset
+
+且在相距为
+\begin_inset Formula $R$
+\end_inset
+
+的
+\begin_inset Formula $Q$
+\end_inset
+
+处产生的静电势为
+\begin_inset Formula $V_{1}$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\begin{equation}
+V_{1}=\frac{-q}{R}\label{eq:6-1}
+\end{equation}
+
+\end_inset
+
+ 其中
+\begin_inset Formula $-q$
+\end_inset
+
+为配位体
+\begin_inset Formula $L_{1}$
+\end_inset
+
+的负电荷。由于
+\begin_inset Formula 
+\[
+R=(a^{2}+r^{2}-2ar\cosθ)^{1/2}
+\]
+
+\end_inset
+
+
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-2.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+正八面体络合物的极坐标
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+式中
+\begin_inset Formula $r$
+\end_inset
+
+为
+\begin_inset Formula $Q$
+\end_inset
+
+(
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+)点的矢径, 
+\begin_inset Formula $a$
+\end_inset
+
+为
+\begin_inset Formula $r$
+\end_inset
+
+和
+\begin_inset Formula $z$
+\end_inset
+
+轴的夹角, 如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 忽略中心离子在半径为
+\begin_inset Formula $a$
+\end_inset
+
+的球外部分的影响, 即只考虑
+\begin_inset Formula $r<a$
+\end_inset
+
+的区域, 并由Legendre多项式的母函数的定义, 有
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{R}=\frac{1}{\sqrt{a^{2}[1+\left({r/a}\right)^{2}-2({r/a})\cos\theta}}=\frac{1}{a}\frac{1}{\left(1-2gt+g^{2}\right)^{1/2}}\equiv\frac{1}{a}\sum_{l=1}^{\infty}P_{l}(t)g^{l}\label{eq:6-3}
+\end{equation}
+
+\end_inset
+
+其中, 
+\begin_inset Formula $g=r/a$
+\end_inset
+
+, 
+\begin_inset Formula $t=\cosθ$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+P_{l}(t)=\frac{1}{2^{l}l!}\frac{d^{l}}{dt^{l}}(t^{2}-1)^{l}\label{eq:6-4}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $P_{l}(t)$
+\end_inset
+
+是
+\begin_inset Formula $l$
+\end_inset
+
+次的Legendre多项式。将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)得
+\begin_inset Formula 
+\[
+V_{1}=\frac{-q}{a}\sum_{l=0}^{\infty}\left(\frac{r}{a}\right)^{l}P_{l}(\cosθ)
+\]
+
+\end_inset
+
+前几个
+\begin_inset Formula $P_{l}(\cosθ)$
+\end_inset
+
+为
+\begin_inset Formula 
+\begin{equation}
+\begin{split}P_{0}(\cosθ) & =1\\
+P_{1}(\cosθ) & =\cosθ\\
+P_{2}(\cosθ) & =\frac{1}{2}(3\cos^{2}θ-1)\\
+P_{3}(\cosθ) & =\frac{1}{2}(5\cos^{3}θ-3\cosθ)\\
+P_{4}(\cosθ) & =\frac{1}{8}(35\cos^{4}θ-30\cos^{2}θ+3)
+\end{split}
+\label{eq:6-6}
+\end{equation}
+
+\end_inset
+
+可以证明高于五次的项如
+\begin_inset Formula $P_{5}(\cosθ)$
+\end_inset
+
+, 
+\begin_inset Formula $P_{6}(\cosθ)$
+\end_inset
+
+等对
+\begin_inset Formula $d$
+\end_inset
+
+电子在配位场中能量计算中的贡献为零, 所以可以取
+\begin_inset Formula 
+\begin{equation}
+V_{1}=-\frac{q}{a}\left[1+\left(\frac{r}{a}\right)P_{0}(\cosθ)+\left(\frac{r}{a}\right)^{2}P_{2}(\cosθ)+\left(\frac{r}{a}\right)^{3}P_{3}(\cosθ)+\left(\frac{r}{a}\right)^{4}P_{4}(\cosθ)\right]\label{eq:6-7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{2}$
+\end_inset
+
+位于
+\begin_inset Formula $z$
+\end_inset
+
+轴上
+\begin_inset Formula $(0,0,-a)$
+\end_inset
+
+处, 计算
+\begin_inset Formula $V_{2}$
+\end_inset
+
+时只须将
+\begin_inset Formula $V_{1}$
+\end_inset
+
+中的
+\begin_inset Formula $\cos$
+\end_inset
+
+换成
+\begin_inset Formula $\cos(π-θ)$
+\end_inset
+
+即可, 注意到
+\begin_inset Formula 
+\begin{equation}
+\cos^{n}(π-θ)=(-1)^{n}\cosθ\label{eq:6-8}
+\end{equation}
+
+\end_inset
+
+可得
+\begin_inset Formula 
+\begin{equation}
+V_{2}=-\frac{q}{a}\left[1-\left(\frac{r}{a}\right)P_{0}(\cosθ)+\left(\frac{r}{a}\right)^{2}P_{2}(\cosθ)-\left(\frac{r}{a}\right)^{3}P_{3}(\cosθ)+\left(\frac{r}{a}\right)^{4}P_{4}(\cosθ)\right]\label{eq:6-9}
+\end{equation}
+
+\end_inset
+
+故可得
+\begin_inset Formula 
+\begin{equation}
+V_{1}+V_{2}=-\frac{2q}{a}\left[1+\left(\frac{r}{a}\right)^{2}P_{2}(\cosθ)+\left(\frac{r}{a}\right)^{4}P_{4}(\cosθ)\right]\label{eq:6-10}
+\end{equation}
+
+\end_inset
+
+注意到(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式和
+\begin_inset Formula 
+\begin{equation}
+\cosθ=z/r\label{eq:6-11}
+\end{equation}
+
+\end_inset
+
+有
+\begin_inset Formula 
+\begin{equation}
+V_{1}+V_{2}=-\frac{2q}{a}\left[1+\frac{1}{2}\left(\frac{r}{a}\right)^{2}\left(\frac{3z^{2}}{r^{2}}-1\right)+\frac{1}{8}\left(\frac{r}{a}\right)^{4}\left(\frac{35z^{4}}{r^{4}}+\frac{30z^{2}}{r^{2}}-3\right)\right]\label{eq:6-12}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式看出, 位于
+\begin_inset Formula $z$
+\end_inset
+
+轴上的两个配证体
+\begin_inset Formula $L_{1}$
+\end_inset
+
+和
+\begin_inset Formula $L_{2}$
+\end_inset
+
+在
+\begin_inset Formula $Q$
+\end_inset
+
+(
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+)点产生的势能只和
+\begin_inset Formula $Q$
+\end_inset
+
+点到原点的距离
+\begin_inset Formula $r$
+\end_inset
+
+, 
+\begin_inset Formula $Q$
+\end_inset
+
+点在
+\begin_inset Formula $z$
+\end_inset
+
+轴上的投影
+\begin_inset Formula $z,$
+\end_inset
+
+ 以及
+\begin_inset Formula $L_{1}$
+\end_inset
+
+和
+\begin_inset Formula $L_{2}$
+\end_inset
+
+到原点的距离
+\begin_inset Formula $a$
+\end_inset
+
+有关。据此可得
+\begin_inset Formula 
+\begin{align}
+V_{3}+V_{4} & =-\frac{2q}{a}\left[1+\frac{1}{2}\left(\frac{r}{a}\right)^{2}(\frac{3x^{2}}{r^{2}}-1)+\frac{1}{8}\left(\frac{r}{a}\right)^{4}(\frac{35x^{4}}{r^{4}}+\frac{30x^{2}}{r^{2}}-3)\right]\label{eq:6-13}\\
+V_{5}+V_{6} & =-\frac{2q}{a}\left[1+\frac{1}{2}\left(\frac{r}{a}\right)^{2}(\frac{3y^{2}}{r^{2}}-1)+\frac{1}{8}\left(\frac{r}{a}\right)^{4}(\frac{35y^{4}}{r^{4}}+\frac{30y^{2}}{r^{2}}-3)\right]\label{eq:6-14}
+\end{align}
+
+\end_inset
+
+最后可得六个配位体点电荷在
+\begin_inset Formula $Q$
+\end_inset
+
+(
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+)点的配位场势能函数为
+\begin_inset Formula 
+\begin{equation}
+V_{1}=\sum_{i=1}^{6}V_{i}=-\frac{6q}{a}-\frac{35q}{4a^{5}}\left(x^{4}+y^{4}+z^{4}-\frac{3}{5}r^{4}\right)\label{eq:6-15}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $V$
+\end_inset
+
+中的第一项与
+\begin_inset Formula $Q$
+\end_inset
+
+点坐标无关, 相当于配位体的
+\begin_inset Formula $-6q$
+\end_inset
+
+电荷均匀分布在以原点为球心, 半径为
+\begin_inset Formula $a$
+\end_inset
+
+的球壳上对球壳内部产生的电势, 它对于中央离子来说是球对称的, 它只会使中央离子的5个
+\begin_inset Formula $d$
+\end_inset
+
+轨道都提高到同一能量水平, 
+\begin_inset Formula $V$
+\end_inset
+
+中的第二项与配位体的空间排布有关, 正是它, 才使得简并的中央离子
+\begin_inset Formula $d$
+\end_inset
+
+轨道产生分裂。
+\end_layout
+
+\begin_layout Subsection
+在正八面体配位场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道的能级分裂
+\end_layout
+
+\begin_layout Standard
+配位体相同的正八面体络合物属于
+\begin_inset Formula $O_{h}$
+\end_inset
+
+点群, 因
+\begin_inset Formula $O_{h}$
+\end_inset
+
+群的最高不可约表示为三维, 如果以中央离子的五个
+\begin_inset Formula $d$
+\end_inset
+
+轨道为基底, 所求得的是此点群的一个五维可约表示, 它可以分解为若干不可约表示的和。逸就表明了中央离子的
+\begin_inset Formula $d$
+\end_inset
+
+轨道在
+\begin_inset Formula $O_{h}$
+\end_inset
+
+配位体场作用下的分裂。
+\begin_inset Formula $O_{h}$
+\end_inset
+
+的不可约表示分为偶表示(
+\begin_inset Formula $g$
+\end_inset
+
+)和奇表示(
+\begin_inset Formula $u$
+\end_inset
+
+)两种, 它们在中心反演操作下不改变和改变符号。以偶函数为基底的表示一定是偶表示, 以奇函数为基底的表示一定是奇表示, 五个
+\begin_inset Formula $d$
+\end_inset
+
+轨道都是偶函数, 所以以五个
+\begin_inset Formula $d$
+\end_inset
+
+轨道为基底的表示也一定为偶表示。于是只需用
+\begin_inset Formula $O_{h}$
+\end_inset
+
+群的子群
+\begin_inset Formula $O$
+\end_inset
+
+群就可以确定
+\begin_inset Formula $d$
+\end_inset
+
+轨道的分裂情况。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $O$
+\end_inset
+
+群的特征标表如表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:6-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $O$
+\end_inset
+
+群的特征标表
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:6-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6C_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3C_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8C_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6C_{2}'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x^{2}+y^{2}+z^{2})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\begin{array}{c}
+2z^{2}-x^{2}-y^{2}\\
+x^{2}-y^{2}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-$
+\end_inset
+
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(xy,yz,xz)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+原子轨道也可以取
+\begin_inset Formula 
+\begin{equation}
+\phi_{nlm}=R_{nl}(r)\varTheta_{lm}(θ)\left(\frac{e^{im\varphi}}{\sqrt{2\pi}}\right)\label{eq:6-16}
+\end{equation}
+
+\end_inset
+
+同一壳层的五个
+\begin_inset Formula $d$
+\end_inset
+
+轨道其
+\begin_inset Formula $m$
+\end_inset
+
+分别为2, 1, 0, 
+\begin_inset Formula $-1$
+\end_inset
+
+和
+\begin_inset Formula $-2$
+\end_inset
+
+,对应的
+\begin_inset Formula $d$
+\end_inset
+
+轨道记为
+\begin_inset Formula $d_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{-1}$
+\end_inset
+
+, 和
+\begin_inset Formula $d_{-2}$
+\end_inset
+
+。它们和五个实的
+\begin_inset Formula $d$
+\end_inset
+
+轨道间有下面的
+\begin_inset Formula $U$
+\end_inset
+
+, 变换关系
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{c}
+d_{z^{2}}\\
+d_{xz}\\
+d_{yz}\\
+d_{x^{2}-y^{2}}\\
+d_{xy}
+\end{array}\right]=\left[\begin{array}{ccccc}
+1 & 0 & 0 & 0 & 0\\
+0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 & 0\\
+0 & -\frac{i}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 & 0\\
+0 & 0 & 0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+0 & 0 & 0 & -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{array}\right]\left[\begin{array}{c}
+d_{0}\\
+d_{1}\\
+d_{-1}\\
+d_{2}\\
+d_{-2}
+\end{array}\right]\label{eq:6-17}
+\end{equation}
+
+\end_inset
+
+若将任意的转动轴选为原子轨道的
+\begin_inset Formula $z$
+\end_inset
+
+轴, 则对绕此轴的转动而言, 只有
+\begin_inset Formula $φ$
+\end_inset
+
+角变化, 径向函数
+\begin_inset Formula $R_{nl}(r)$
+\end_inset
+
+及
+\begin_inset Formula $\varTheta_{lm}(θ)$
+\end_inset
+
+都保持不变。转动
+\begin_inset Formula $\hat{C}(α)$
+\end_inset
+
+作用于
+\begin_inset Formula $ϕ_{nlm}$
+\end_inset
+
+上有
+\begin_inset Formula 
+\begin{equation}
+\hat{C}(\alpha)\phi_{nlm}(r,θ,φ)=R_{nl}(r)\varTheta_{lm}(\theta)\frac{e^{im(\varphi+\alpha)}}{\sqrt{2\pi}}=e^{imα}\phi_{nlm}(r,θ,φ)\label{eq:6-18}
+\end{equation}
+
+\end_inset
+
+于是
+\begin_inset Formula 
+\begin{equation}
+\hat{C}(\alpha)\left[\begin{array}{c}
+d_{0}\\
+d_{1}\\
+d_{-1}\\
+d_{2}\\
+d_{-2}
+\end{array}\right]=\left[\begin{array}{ccccc}
+e^{i2\alpha} & 0 & 0 & 0 & 0\\
+0 & e^{i\alpha} & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & e^{-i\alpha} & 0\\
+0 & 0 & 0 & 0 & e^{-i2\alpha}
+\end{array}\right]\left[\begin{array}{c}
+d_{0}\\
+d_{1}\\
+d_{-1}\\
+d_{2}\\
+d_{-2}
+\end{array}\right]\label{eq:6-19}
+\end{equation}
+
+\end_inset
+
+这个转动操作的特征标
+\begin_inset Formula $χ(α)$
+\end_inset
+
+是
+\begin_inset Formula 
+\begin{equation}
+χ(α)=e^{i2α}+e^{iα}+e^{i0α}+e^{-iα}+e^{-i2α}=2\cos2α+2\cosα+1\label{eq:6-20}
+\end{equation}
+
+\end_inset
+
+当
+\begin_inset Formula $O$
+\end_inset
+
+群的纯转动操作
+\begin_inset Formula $\hat{E}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{C}_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $Ĉ_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $Ĉ_{3}$
+\end_inset
+
+和
+\begin_inset Formula $Ĉ'_{2}$
+\end_inset
+
+作用于
+\begin_inset Formula $d$
+\end_inset
+
+轨道上时, 其变换矩阵的特征标分别为
+\begin_inset Formula 
+\[
+χ(E)=5\qquadχ(C_{2})=χ(C_{2}')=1\qquadχ(C_{3})=-1\qquadχ(C_{4})=-1
+\]
+
+\end_inset
+
+利用点群的可约表示向不可约表示分解的公式
+\begin_inset Formula 
+\begin{equation}
+a_{i}=\frac{1}{h}\frac{\Sigma}{R}χ(R)χ_{i}(R)\label{eq:6-21}
+\end{equation}
+
+\end_inset
+
+将以五个
+\begin_inset Formula $d$
+\end_inset
+
+轨道为基底的可约表示
+\begin_inset Formula $Γ$
+\end_inset
+
+分解为不可约表示
+\begin_inset Formula 
+\begin{align*}
+a_{A1} & =\frac{1}{24}[5×1+6×(-1)×1+3×1×1+8×(-1)×l+6×1×1]=0\\
+a_{A2} & =\frac{1}{24}[5×1+6×(-1)×(-1)+3×1×1+8×(-1)×1+6×1×(-1)]=0\\
+a_{E} & =\frac{1}{24}[5×2+6×(-1)×0+3×1×2+8×(-1)×(-1)+6×1×0=1\\
+a_{T1} & =\frac{1}{24}[5×3+6×(-1)×1+3×1×(-1)+8×(-1)×0+6×1×(-1)]=0\\
+a_{T2} & =\frac{1}{24}[5×3×6×(-1)×(-1)+3×1×(-1)+8×(-1)×0+6×1×1]=1
+\end{align*}
+
+\end_inset
+
+这可表示为
+\begin_inset Formula 
+\begin{equation}
+Γ=e+t_{2}\label{eq:6-22}
+\end{equation}
+
+\end_inset
+
+在(6 -23)式中以小写英文字母
+\begin_inset Formula $e$
+\end_inset
+
+和
+\begin_inset Formula $t_{2}$
+\end_inset
+
+表示用不可约表示
+\begin_inset Formula $E$
+\end_inset
+
+和
+\begin_inset Formula $T$
+\end_inset
+
+来划分相应的原子轨道。由于
+\begin_inset Formula $d$
+\end_inset
+
+轨道在正八面体
+\begin_inset Formula $O_{h}$
+\end_inset
+
+群中都是偶表示, 故在
+\begin_inset Formula $O_{h}$
+\end_inset
+
+配位场中, 中央离子
+\begin_inset Formula $d$
+\end_inset
+
+轨道分裂为: 
+\begin_inset Formula 
+\begin{equation}
+Γ=e_{g}+t_{2g}\label{eq:6-23}
+\end{equation}
+
+\end_inset
+
+这表明, 中央离子的
+\begin_inset Formula $d$
+\end_inset
+
+轨道在正八面体配位场作用下分裂成了两组, 一组属于
+\begin_inset Formula $e_{g}$
+\end_inset
+
+不可约表示, 由表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:6-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 可知, 
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+和
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+属于
+\begin_inset Formula $e_{g}$
+\end_inset
+
+不可约表示。另一组属于
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+不可约表示, 由表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:6-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 可知, 
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+, 和
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+属于
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+不可约表示。
+\end_layout
+
+\begin_layout Standard
+在正八面体配位场中, 
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+轨道的能量(以其自由离子为能量零点)由下列积分给出
+\begin_inset Formula 
+\begin{equation}
+ΔE(d_{z^{2}})=∫d_{z^{2}}Vd_{z^{2}}dτ\label{eq:6-24}
+\end{equation}
+
+\end_inset
+
+为计算方便, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可化为球坐标系的相应表达式
+\begin_inset Formula 
+\begin{multline}
+V=-\frac{6q}{a}-\frac{35q}{4a^{5}}\left[r^{4}\sin^{4}θ(\sin^{4}φ+\cos^{4}φ)+r4\cos^{4}θ-\frac{3}{5}r^{4}\right]\\
+=r_{0}+Dr^{4}\left[\sin^{4}θ(\sin^{4}φ+\cos^{4}φ)+\cos4θ-\frac{3}{5}\right]\label{eq:6-25}
+\end{multline}
+
+\end_inset
+
+式中
+\begin_inset Formula 
+\begin{align}
+r_{0} & =-\frac{6q}{a}\label{eq:6-26}\\
+D & =-\frac{35q}{4a^{5}}\label{eq:6-27}
+\end{align}
+
+\end_inset
+
+则
+\begin_inset Formula 
+\begin{multline}
+ΔE(d_{z^{2}})=\int_{0}^{\infty}\int_{0}^{\pi}\int_{0}^{2\pi}{R_{n2}^{2}(r)}\frac{5}{8}(3\cos^{2}θ-1)^{2}\left(\frac{1}{\sqrt{2\pi}}\right)^{2}\\
+\left\{ r_{0}+Dr^{4}\left[\sin^{4}θ(\sin^{4}φ+\cos^{4}φ)+\cos^{4}θ-\frac{3}{5}\right]\right\} r^{2}\sinθdrdθdφ=ΔE_{0}+ΔE_{1}\label{eq:6-28}
+\end{multline}
+
+\end_inset
+
+式中
+\begin_inset Formula 
+\begin{multline}
+ΔE_{0}=r_{0}\int_{0}^{\infty}{R_{n2}^{2}(r)}r^{2}dr\cdot\frac{1}{2\pi}\int_{0}^{\pi}\int_{0}^{2\pi}\frac{5}{8}\left(3\cos^{2}θ-1\right)^{2}\sinθdθdφ\\
+ΔE_{1}=D\int_{0}^{\infty}{R_{n2}^{2}(r)}r^{4}\cdot r^{2}dr\\
+\cdot\frac{1}{2\pi}\int_{0}^{\pi}\int_{0}^{2\pi}\left[\sin^{4}θ(\sin^{4}φ+\cos^{4}φ)+\cos^{4}θ-\frac{3}{5}\right]×\frac{5}{8}\left(3\cos^{2}θ-1\right)^{2}\sinθdθdφ\label{eq:6-30}
+\end{multline}
+
+\end_inset
+
+ 由于
+\begin_inset Formula 
+\begin{equation}
+∫d_{z^{2}}d_{z^{2}}dτ=1\label{eq:6-31}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\pi}\sqrt{\frac{5}{8}}(3\cos^{2}θ-1)^{2}\sinθdθ=1\label{eq:6-32}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{2\pi}(\sin^{4}φ+\cos^{4}φ)dφ=\int_{0}^{2\pi}\frac{3+\cos^{4}\varphi}{4}dφ=\frac{3}{4}×2π\label{eq:6-33}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\frac{\pi}{2}}\sin^{n}{\theta}dθ=\frac{n-1}{n}\int_{0}^{\frac{\pi}{2}}\sin^{n-2}{\theta}dθ=\begin{cases}
+\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdots\frac{4}{5}\cdot\frac{2}{3}\cdot1 & n\text{为奇数}\\
+\frac{n-1}{n}\cdot\frac{n-3}{n-2}\cdots\frac{3}{4}\cdot\frac{1}{2}\cdot\frac{\pi}{2} & n\text{为偶数}
+\end{cases}\label{eq:6-34}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\frac{\pi}{2}}\cos^{n}{\theta}\sinθdθ=\frac{1}{n+1}\label{eq:6-35}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{0}^{\frac{\pi}{2}}\cos^{n}{\theta}\sin^{2m+1}θdθ=\frac{2\cdot4\cdot6\cdots2m}{\left(n+1\right)\left(n+3\right)\cdots(n+2m+1)}
+\]
+
+\end_inset
+
+可得
+\begin_inset Formula 
+\begin{align}
+ΔE_{0} & =r_{0}=-\frac{6q}{a}\label{eq:6-37}\\
+ΔE_{1} & =D\int_{0}^{\infty}{R_{n2}^{2}(r)}r^{4}\cdot r^{2}dr\frac{5}{8}\left\{ \int_{0}^{\pi}\left(\frac{3}{4}\sin^{4}θ+\cos^{4}θ\right)(3\cos^{2}θ-1)^{2}\sinθdθ-\frac{3}{5}\right\} \label{eq:6-38}
+\end{align}
+
+\end_inset
+
+对于
+\begin_inset Formula $θ$
+\end_inset
+
+部分的积分有
+\begin_inset Formula 
+\begin{multline}
+\int_{0}^{\pi}\left(\frac{3}{4}\sin^{4}θ+\cos^{4}θ\right)(3\cos^{2}θ-1)^{2}\sinθdθ=2\int_{0}^{\frac{\pi}{2}}(\frac{3}{4}\sin^{4}θ+\cos^{4}θ)(3\cos^{2}θ-1)^{2}\sinθdθ\\
+=2\int_{0}^{\frac{\pi}{2}}\left(\frac{27}{4}\cos^{4}θ\sin^{5}θ-\frac{9}{2}\cos^{2}θ\sin^{5}θ+\frac{3}{4}\sin^{5}θ+9\sinθ\cos^{8}θ-6\cos^{6}θ\sinθ+\sinθ\cos^{4}θ\right)dθ\\
+=2×\left[\frac{27}{4}×\frac{2\times4}{5\times7\times9}-\frac{9}{2}×\frac{2\times4}{3\times5\times7}+\frac{3}{4}×\frac{4}{5}×\frac{2}{3}+9×\frac{1}{9}-6×\frac{1}{7}+\frac{1}{5}\right]=\frac{8}{7}\label{eq:6-39}
+\end{multline}
+
+\end_inset
+
+于是
+\begin_inset Formula 
+\begin{equation}
+ΔE_{1}=D\int_{0}^{\infty}{R_{n2}^{2}(r)}r^{6}dr\left(\frac{5}{8}×\frac{8}{7}-\frac{3}{5}\right)=\frac{4}{35}D\int_{0}^{\infty}{R_{n2}^{2}(r)}r^{6}dr\label{eq:6-40}
+\end{equation}
+
+\end_inset
+
+令
+\begin_inset Formula 
+\begin{equation}
+q=\frac{2}{105}D\int_{0}^{\infty}{R_{n2}^{2}(r)}r^{6}dr\label{eq:6-41}
+\end{equation}
+
+\end_inset
+
+则
+\begin_inset Formula 
+\begin{equation}
+ΔE_{1}=6Dq\equiv6D_{q}\label{eq:6-42}
+\end{equation}
+
+\end_inset
+
+于是
+\begin_inset Formula 
+\begin{equation}
+ΔE(d_{z^{2}})=r_{0}+6D_{q}\label{eq:6-43}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+和
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+是属于同一不可约表示, 它们在正八面体配位场中有相同的能量
+\begin_inset Formula 
+\[
+ΔE(d_{x^{2}-y^{2}})=r_{0}+6D_{q}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+用同样的办法可以计算出
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+和
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+这一单轨道在正八面体配位场中的能量, 
+\begin_inset Formula 
+\begin{equation}
+ΔE(d_{xy})=r_{0}-4D_{q}\label{eq:6-44}
+\end{equation}
+
+\end_inset
+
+令
+\begin_inset Formula 
+\begin{equation}
+Δ=ΔE(d_{z^{2}})-ΔE(d_{xy})=r_{0}+6D_{q}-(r_{0}-4D_{q})=10D_{q}\label{eq:6-45}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $Δ$
+\end_inset
+
+称为分裂能, 结果可用图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 来表示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-3.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+在八面体场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道能级的分裂
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+用点电荷模型求得的
+\begin_inset Formula $Δ$
+\end_inset
+
+不够准确.一般可把能量表达为含有几个参量的函数, 由实测一条或几条谱线的波数, 定出这几个参数。
+\begin_inset Formula $\ce{[Ti(H2O)6]^{3+}}$
+\end_inset
+
+在紫外可见吸收光谱中, 于20300 
+\begin_inset Formula ${\rm cm^{-1}}$
+\end_inset
+
+处有一吸收峰, 它被解释为一个
+\begin_inset Formula $d$
+\end_inset
+
+电子由
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+能级向
+\begin_inset Formula $e_{g}$
+\end_inset
+
+能级的跃迁, 这种跃迁称为
+\begin_inset Formula $d$
+\end_inset
+
+-
+\begin_inset Formula $d$
+\end_inset
+
+跃迁。在
+\begin_inset Formula $\ce{[Ti(H2O)6]^{3+}}$
+\end_inset
+
+的
+\begin_inset Formula $d$
+\end_inset
+
+-
+\begin_inset Formula $d$
+\end_inset
+
+跃迁中, 
+\begin_inset Formula 
+\[
+\Delta=20300\ {\rm cm^{-1}}≈2.5\ {\rm eV}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+正四面体场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道的能级分裂
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-4.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+正四面体中
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+和
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+轨道
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正四面体属于
+\begin_inset Formula $T_{d}$
+\end_inset
+
+群, 它和
+\begin_inset Formula $O$
+\end_inset
+
+群同构, 五个
+\begin_inset Formula $d$
+\end_inset
+
+轨道要分裂为
+\begin_inset Formula $e$
+\end_inset
+
+轨道和
+\begin_inset Formula $t_{g}$
+\end_inset
+
+轨道。
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+和
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+属于
+\begin_inset Formula $e$
+\end_inset
+
+, 
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+和
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+属于
+\begin_inset Formula $t_{2}$
+\end_inset
+
+。用相似的计算方法可得
+\begin_inset Formula 
+\begin{align}
+\Delta E(d_{z^{2}}) & =r_{0}'+6D_{q}'\label{eq:6-46}\\
+\Delta E(d_{xy}) & =r_{0}'-4D_{q}'\label{eq:6-47}\\
+\Delta'=\Delta E(d_{xy})-\Delta E(d_{z^{2}}) & =10D_{q}'=\frac{4}{9}\Delta\label{eq:6-48}
+\end{align}
+
+\end_inset
+
+用直观的静电相互作用物理图象也可以说明中心离子的
+\begin_inset Formula $d$
+\end_inset
+
+轨道在
+\begin_inset Formula $T_{d}$
+\end_inset
+
+配位场中的分裂情况。图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+表示了
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+和
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+轨道在
+\begin_inset Formula $T_{d}$
+\end_inset
+
+场中的取向。
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+轨道的极大值指向立方体四条棱的中点, 而
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+轨道的极大值指向立方体的面心。前者离配位体较近, 后者离配位体较远。轨道上的电子和配位体负电荷之间的静电排斥作用较大, 能量较高, 轨道上的电子和配位体负电荷之
+间静电排斥作用较小, 能量较低。
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+和
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+三个轨道与四个配位体的相对位置相同, 所以是简并的, 同样
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+和
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+也是简并的, 量子力学可以证明, 若选择与配位体电荷总量相等但呈均匀分布的球形对称的配位场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道能级为零点, 则分裂后
+\begin_inset Formula $d$
+\end_inset
+
+轨道的能量和等于零, 由此可得
+\begin_inset Formula 
+\begin{align}
+E_{t_{2}}-E_{e} & =\Delta'\label{eq:6-49}\\
+3E_{t_{2}}+2E_{e} & =0\label{eq:6-50}\\
+\Delta' & =10D_{q}'\label{eq:6-51}
+\end{align}
+
+\end_inset
+
+解由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-49"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)、(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-50"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)、(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-51"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)所组成的方程组可得
+\begin_inset Formula 
+\begin{align}
+E_{t_{2}} & =\frac{2}{5}\Delta'=4D_{q}'\label{eq:6-52}\\
+E_{e} & =-\frac{3}{5}\Delta'=-6D_{q}'\label{eq:6-53}
+\end{align}
+
+\end_inset
+
+在正四面体场中, 无论
+\begin_inset Formula $t_{2}$
+\end_inset
+
+轨道还是
+\begin_inset Formula $e$
+\end_inset
+
+轨道都没有处于象正八面体场中那样的与配位体迎头相碰的位置, 所以在配位体和中央离子的距离相同时, 应有
+\begin_inset Formula $\Delta'<\Delta$
+\end_inset
+
+, 由(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-48"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式计算可得
+\begin_inset Formula 
+\begin{equation}
+\Delta'=\frac{4}{9}\Delta=\frac{4}{9}×10D_{q}=\frac{40}{9}D_{q}\label{eq:6-54}
+\end{equation}
+
+\end_inset
+
+将(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-54"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)代入(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-52"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)和(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-53"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可得
+\begin_inset Formula 
+\begin{align}
+E_{t_{2}} & =1.78D_{q}\label{eq:6-55}\\
+E_{e} & =-2.67D_{q}\label{eq:6-56}
+\end{align}
+
+\end_inset
+
+正四面体场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道的能级分裂如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。使甩同样的方法, 可以得到其它点群配位场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道的能级分裂大小, 其主要结果列于表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:6-2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 中。从中可知, 场的对称性越低, 
+\begin_inset Formula $d$
+\end_inset
+
+轨道分裂的组数越多。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbh
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-5.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+正
+\begin_inset Formula $T_{d}$
+\end_inset
+
+场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道能级分裂
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+各种对称性场中
+\begin_inset Formula $d$
+\end_inset
+
+轨道的能量(
+\begin_inset Formula $D_{q}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:6-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+﻿配位数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+场的对称性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+直线型
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-6.28$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-6.28$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.14
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.14
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+三角形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3.21$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3.86$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-3.86$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+正四面体
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2.67$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2.67$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.78
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.78
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.78
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+正方形
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-4.28$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.28
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-5.14$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-5.14$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+正八面体
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-4.00$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-4.00$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-4.00$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+高自旋态和低自旋态
+\end_layout
+
+\begin_layout Standard
+对于同一能级上不同
+\begin_inset Formula $d$
+\end_inset
+
+轨道上的电子的排布, 根据洪特规则, 这时
+\begin_inset Formula $d$
+\end_inset
+
+电子将尽可能分占不同的
+\begin_inset Formula $d$
+\end_inset
+
+轨道而保持自旋相互平行, 量力学计算表明, 满足洪特规则的体系能量最低。这表明当一个轨道已被一个电子占据之后, 若将第二个电子填入此轨道并与之配成对时,
+ 要克服电子之间的排斥而使体系钱量增加(保持电子总数不变)。这种克服电子间相互排斥作用所需要的能量称为电子成对能, 以符号
+\begin_inset Formula $p$
+\end_inset
+
+表示。络合物中心离子
+\begin_inset Formula $d$
+\end_inset
+
+电子的排布将要考虑到两种因素的影响, 即能级分裂和电子成对能的影响, 分离能
+\begin_inset Formula $Δ$
+\end_inset
+
+的影响使电子优先占据能量较低的轨道, 电子成对能
+\begin_inset Formula $p$
+\end_inset
+
+的影响使电子尽可能分占不同的
+\begin_inset Formula $d$
+\end_inset
+
+轨道并保持自旋平行, 当这两种因素不发生矛盾时, 只能得到一种电子排布。在正八面体场中, 
+\begin_inset Formula $d^{1}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{8}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{9}$
+\end_inset
+
+和
+\begin_inset Formula $d^{10}$
+\end_inset
+
+的电子排布分别为: 
+\begin_inset Formula $(t_{2g})^{1}(e_{g})^{0}$
+\end_inset
+
+, 
+\begin_inset Formula $(t_{2g})^{2}(e_{g})^{0}$
+\end_inset
+
+, 
+\begin_inset Formula $(t_{2g})^{3}(e_{g})^{0}$
+\end_inset
+
+, 
+\begin_inset Formula $(t_{2g})^{6}(e_{g})^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $(t_{2g})^{6}(e_{g})^{3}$
+\end_inset
+
+和
+\begin_inset Formula $(t_{2g})^{6}(e_{g})^{4}$
+\end_inset
+
+。当这两种因素矛盾时, 根据
+\begin_inset Formula $\Delta>p$
+\end_inset
+
+还是
+\begin_inset Formula $\Delta<p$
+\end_inset
+
+可得到两种电子排布, 正八面体场中
+\begin_inset Formula $d^{4}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{5}$
+\end_inset
+
+, 
+\begin_inset Formula $d^{6}$
+\end_inset
+
+和
+\begin_inset Formula $d^{7}$
+\end_inset
+
+便属于这种情形。当
+\begin_inset Formula $\Delta>p$
+\end_inset
+
+时, 电子应尽可能填入能量较低的轨道, 这时来配对电子数较少, 属于低自旋态。当
+\begin_inset Formula $\Delta<p$
+\end_inset
+
+时, 电子应尽可能分占不同的
+\begin_inset Formula $d$
+\end_inset
+
+轨道并保持自旋平行, 这时来配对电子数较多, 属于高自旋态, 在
+\begin_inset Formula $\ce{[Fe(H2O)6]^{2+}}$
+\end_inset
+
+中, 
+\begin_inset Formula $\Delta(10400\ {\rm cm^{-1}})<p(15000\ {\rm cm^{-1}})$
+\end_inset
+
+, 是弱场络合物, 中心离子
+\begin_inset Formula $d$
+\end_inset
+
+电子采取
+\begin_inset Formula $(t_{2g})^{4}(e_{g})^{2}$
+\end_inset
+
+排布, 属高自旋态。在
+\begin_inset Formula $\ce{[Fe(CN)4]^{4-}}$
+\end_inset
+
+中, 
+\begin_inset Formula $\Delta(33000\ {\rm cm^{-1}})>p(15000\ {\rm cm^{-1}})$
+\end_inset
+
+, 是强场络合物, 中心离子
+\begin_inset Formula $d$
+\end_inset
+
+电子采取
+\begin_inset Formula $(t_{2g})^{6}(e_{g})^{0}$
+\end_inset
+
+排布, 属于低自旋态, 一些正八面体络合物的自旋态如表 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:6-3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+某些正八面体络合物的自旋状态
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:6-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="7">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+中央离子
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+(
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula ${\rm cm^{-1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+配位体
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Δ$
+\end_inset
+
+(
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula ${\rm cm^{-1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+自旋状态
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+理论
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+实验
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3d^{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Cr^{2+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13900
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Mn^{2+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3d^{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Mn^{2+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7800
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Fe^{3+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13700
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3d^{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Fe^{2+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10400
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Fe^{2+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\begin_inset Formula $\ce{CN-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+低
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+低
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Co^{3+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\begin_inset Formula $\ce{F-}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Co^{3+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+21000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\begin_inset Formula $\ce{NH3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+低
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+低
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3d^{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{Co^{2+}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{H2O}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+高
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在配位体场的作用下, 中央离子
+\begin_inset Formula $d$
+\end_inset
+
+轨道能级发生分裂。这就可能发生电子在不同能量
+\begin_inset Formula $d$
+\end_inset
+
+轨道之间的跃迁, 这种跃迁称为
+\begin_inset Formula $d$
+\end_inset
+
+-
+\begin_inset Formula $d$
+\end_inset
+
+跃迁。
+\begin_inset Formula $d$
+\end_inset
+
+-
+\begin_inset Formula $d$
+\end_inset
+
+跃迁的频率一在紫外及可见波段, 所以过渡金属的络合物一般都具有颜色, 颜色的不同和分裂能的大小有直接关系, 例如水溶液巾络离子
+\begin_inset Formula $\ce{[Ti(H2O)6]^{3+}}$
+\end_inset
+
+在4927 
+\begin_inset Formula $\AA$
+\end_inset
+
+(20400
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula ${\rm cm^{-1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)处有一最大吸收峰, 因而分裂能
+\begin_inset Formula $Δ$
+\end_inset
+
+为20400
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula ${\rm cm^{-1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 这就是电子从
+\begin_inset Formula $t_{2}$
+\end_inset
+
+轨道跃迁到
+\begin_inset Formula $e_{g}$
+\end_inset
+
+轨道所吸收的能量。因为]吸收了蓝绿光, 所以它呈紫红色。
+\end_layout
+
+\begin_layout Standard
+对于同一金属离子, 分裂能
+\begin_inset Formula $Δ$
+\end_inset
+
+随配位体不同而变化, 其大致顺序为: 
+\begin_inset Formula 
+\begin{gather*}
+\ce{I-}<\ce{Br-}<\ce{C1-}<\ce{SCN-}<\ce{F-}<\ce{OH-}\sim\ce{NO2-}\sim\ce{HCOO-}<\ce{C2O4-}<\ce{H2O}<{\rm EDTA}\\
+<\text{吡啶}\sim\ce{NH3}<\text{乙二胺}\sim\text{二乙三胺}<\ce{SO3^{2-}}<\text{联吡啶}<\ce{NO2-}<\ce{CN-}
+\end{gather*}
+
+\end_inset
+
+这个顺序称为光谱化学顺序。
+\end_layout
+
+\begin_layout Standard
+对相同的配位体和同一金属离子, 高价离子的分裂能比低价离子的大, 例如
+\begin_inset Formula $\ce{[Fe(H2O)6]^{3+}}$
+\end_inset
+
+和
+\begin_inset Formula $\ce{[Fe(H2O)6]^{2+}}$
+\end_inset
+
+, 
+\begin_inset Formula $Δ$
+\end_inset
+
+值分别为13700
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula ${\rm cm^{-1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和10400
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula ${\rm cm^{-1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+故前者的颜色比后者的深。
+\end_layout
+
+\begin_layout Subsection
+晶体场稳定化能(CFSE)
+\end_layout
+
+\begin_layout Standard
+中央离子
+\begin_inset Formula $d$
+\end_inset
+
+电子处于未分裂的
+\begin_inset Formula $d$
+\end_inset
+
+轨道的总能量和它们进入分裂的
+\begin_inset Formula $d$
+\end_inset
+
+轨道后的总能量之差, 即
+\begin_inset Formula $d$
+\end_inset
+
+电子从未分裂的
+\begin_inset Formula $d$
+\end_inset
+
+轨道进入分裂的
+\begin_inset Formula $d$
+\end_inset
+
+轨道所产生的总能量下降值称为晶体场稳定化能(CFSE)。
+\end_layout
+
+\begin_layout Standard
+它表征了络合物的稳定性, 例如
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{Fe^{2+}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,在弱正八面体配位场中, 采取
+\begin_inset Formula $(t_{2g})^{4}(e_{g})^{2}$
+\end_inset
+
+的高自旋态排布, 故其晶体场稳定化能为
+\begin_inset Formula 
+\begin{equation}
+{\rm CFSE}=0-(4E_{t_{2g}}+2E_{e})=-4×(-4D_{q})-2×6D_{q}=4D_{q}\label{eq:6-57}
+\end{equation}
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ce{Fe^{2+}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+在强正八面体配缸场中, 采取
+\begin_inset Formula $(t_{2g})^{6}(e_{g})^{0}$
+\end_inset
+
+的低自旋排布态其晶体场稳定化能为
+\begin_inset Formula 
+\begin{equation}
+{\rm CFSE}=0-6E_{t_{2g}}-2p=0-6×(-4D_{q})-2p=24D_{q}-2p\label{eq:6-58}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+络合物的热力学稳定性可用晶体场稳定化能来解释, 第三周期过渡元素二价离子六水合物
+\begin_inset Formula $\ce{[M(H2O)6]^{2+}}$
+\end_inset
+
+的水化热(
+\begin_inset Formula $-\Delta H$
+\end_inset
+
+)可表示为
+\begin_inset Formula 
+\[
+\ce{M2+}(\text{气})+6\ce{H2O}(\text{液})→\ce{[M(H2O)6]^{2+}}(\text{溶液})+(-\Delta H)
+\]
+
+\end_inset
+
+实验测定结果如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示(实线)。
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-6.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+离子水化热与
+\begin_inset Formula $d$
+\end_inset
+
+电子数的关系
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于中央离子核电荷从Ca到Zn逐步增加, 
+\begin_inset Formula $3d$
+\end_inset
+
+电子壳层逐步缩小, 因而极性水分子和中央离子的距离就逐渐缩短, 故水化作用也应逐渐加强。从静电作用来看, 其水化热应随
+\begin_inset Formula $d$
+\end_inset
+
+电子数的增加而逐渐上升, 呈一平滑曲线(图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 中的虚线)。但实际的曲线却是一条双蜂曲线, 将图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 中的平滑虚线对应的
+\begin_inset Formula $-\Delta H$
+\end_inset
+
+值, 加上各
+\begin_inset Formula $d^{n}$
+\end_inset
+
+组态在弱正八面体场中的各CFSE值, 结果正好就是实验测得的双峰曲线。
+\end_layout
+
+\begin_layout Subsection
+络合物的畸变和姜-泰勒(Jahn-Teller)效应
+\end_layout
+
+\begin_layout Standard
+1937年H.
+ A.
+ Jahn和E.
+ Teller指出: 在对称的非线型分子中, 如果体系的基态有几个简并能级, 则体系是不稳定的, 它一定要发生畸变, 使体系简并解除, 而稳定于较低能级的构型。
+这就是Jahn-Teller效应, 具有
+\begin_inset Formula $d^{9}$
+\end_inset
+
+结构的中央离子, 在正八面体配位场中, 具有
+\begin_inset Formula $(t_{2g})^{6}(d_{x^{2}-y^{2}})^{1}(d_{z^{2}})^{2}$
+\end_inset
+
+和
+\begin_inset Formula $(t_{2g})^{6}(d_{x^{2}-y^{2}})^{2}(d_{z^{2}})^{1}$
+\end_inset
+
+两种可能的排布, 它们县有相同的能量, 即体系处于二度简并状态, 按Jahn-Teller效应, 体系几何构型要发生畸变而稳定于一种构型。
+\begin_inset Formula $d^{9}$
+\end_inset
+
+比
+\begin_inset Formula $d^{10}$
+\end_inset
+
+少1个电子, 
+\begin_inset Formula $d^{10}$
+\end_inset
+
+具有理想的正八面体构型。如
+\begin_inset Formula $d^{9}$
+\end_inset
+
+是去掉
+\begin_inset Formula $d^{10}$
+\end_inset
+
+中
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+上的一个电子, 即
+\begin_inset Formula $(d_{x^{2}-y^{2}})^{1}(d_{z^{2}})^{2}$
+\end_inset
+
+排布, 这就减小了对
+\begin_inset Formula $x$
+\end_inset
+
+轴和
+\begin_inset Formula $y$
+\end_inset
+
+轴上配位体的排斥力, 使
+\begin_inset Formula $±x$
+\end_inset
+
+和
+\begin_inset Formula $±y$
+\end_inset
+
+方向上四个配位体能够内移, 形成四个较短的键；而在z轴上的两个配位体则相对要到了较大的排斥力而形成两个较长的键, 这。样的畸变使得
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+轨道的能量升高, 
+\begin_inset Formula $d_{x^{2}-y^{2}}$
+\end_inset
+
+轨道能量下降, 消除了简并。对于采取
+\begin_inset Formula $(t_{2g})^{6}(d_{x^{2}-y^{2}})^{2}(d_{z^{2}})^{1}$
+\end_inset
+
+排布的
+\begin_inset Formula $d^{9}$
+\end_inset
+
+结构, 类似的讨论得出应形成四个较长的键和两个较短的键, 正八面体络合物中央离子
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+轨道出现简并时, 也会发生畸变, 但其畸变程度较小。
+\begin_inset Formula $\ce{[Cr(H2O)6]^{2+}}$
+\end_inset
+
+的几何构型为拉长了的八面体, 其稳定化能比正八面体的稳定化能高, 因而
+\begin_inset Formula $\ce{Cr^{2+}}$
+\end_inset
+
+的水化热也大。这就解释了图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 中双蜂曲线在
+\begin_inset Formula $d^{4}$
+\end_inset
+
+处有一最大值这一现象。
+\end_layout
+
+\begin_layout Standard
+晶体场理论在解释络合物的颜色, 磁性和立体构型方面取得了很大成功, 但在解释光谱化学顺序、有机烯络合物的形成、羰基络合物的稳定性方面还显得无能为力。为了说明这些
+现象, 络台物的分子轨道理论产生了。
+\end_layout
+
+\begin_layout Section
+络合物的分子轨道理论
+\end_layout
+
+\begin_layout Subsection
+配位体群轨道
+\end_layout
+
+\begin_layout Standard
+按照分子轨道理论, 络合物的单电子波函数(分子轨道)是中央原子的原子轨道和配位体的原子轨道(或分子轨道)的线性组合, 它属于络合物所属点群的不可约表示。于是络合
+物的分子轨道必须由属于同一不可约表示的中心原子(或离子)的轨道和配位体的轨道线性组合而成, 正八面体络合物是属于
+\begin_inset Formula $O_{2}$
+\end_inset
+
+点群, 由
+\begin_inset Formula $O_{h}$
+\end_inset
+
+群的特征标表可知, 中央原子的
+\begin_inset Formula $ns$
+\end_inset
+
+轨道属于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+不可约表示, 
+\begin_inset Formula $np_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $np_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $np_{z}$
+\end_inset
+
+属于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $t_{1u}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+不可约表示, 
+\begin_inset Formula $(n-1)d_{z^{2}}$
+\end_inset
+
+和
+\begin_inset Formula $(n-1)d_{x^{2}-y^{2}}$
+\end_inset
+
+属于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $e_{g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+可约表示, 
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+属于
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+不可约表示, 将配位体轨道线性组合成属于
+\begin_inset Formula $O_{h}$
+\end_inset
+
+群不可约表示的群轨道, 最后将属于同一不可约表示的中心原子的原子轨道和配位体群轨道线性组合成络合物的分子轨道, 下面讨论正八面体络合物的
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+轨道。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-7.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{AB6}$
+\end_inset
+
+(
+\begin_inset Formula $O_{h}$
+\end_inset
+
+)型分子坐标
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-7"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+坐标系如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示, 现说明如下: 
+\end_layout
+
+\begin_layout Standard
+(1) 中心原子
+\begin_inset Formula $M$
+\end_inset
+
+的坐标系
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+采用右手定则。
+\end_layout
+
+\begin_layout Standard
+(2) 六个配位体位于中心离子坐标系的坐标轴上, 并将
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+轴正方向上的配位体编号为
+\begin_inset Formula $L_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+和
+\begin_inset Formula $L_{3}$
+\end_inset
+
+负方向上的配位体编号为
+\begin_inset Formula $L_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{5}$
+\end_inset
+
+和
+\begin_inset Formula $L_{6}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+(3) 配位体坐标系采用左手定则, 并规定所有配位体的
+\begin_inset Formula $z$
+\end_inset
+
+轴都指向中心离子, 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+和
+\begin_inset Formula $L_{3}$
+\end_inset
+
+的
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+轴的正方向与中心离子
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+轴的正方向一致, 而
+\begin_inset Formula $L_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{5}$
+\end_inset
+
+和
+\begin_inset Formula $L_{6}$
+\end_inset
+
+的
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+轴的正方向和中心离子的x, y, z轴负方向一致。
+\end_layout
+
+\begin_layout Standard
+六个配位体共有六个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+轨道, 以这六个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+轨道为基时有
+\begin_inset Formula 
+\begin{equation}
+{\hat{C}}_{4}\left(\begin{array}{c}
+\sigma_{1}\\
+\sigma_{2}\\
+\sigma_{3}\\
+\sigma_{4}\\
+\sigma_{5}\\
+\sigma_{6}
+\end{array}\right)=\left(\begin{array}{cc}
+\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 0\\
+0 & 0 & 1
+\end{array} & \begin{array}{ccc}
+0 & 0 & 0\\
+1 & 1 & 0\\
+0 & 0 & 0
+\end{array}\\
+\begin{array}{ccc}
+0 & 0 & 0\\
+1 & 0 & 0\\
+0 & 0 & 0
+\end{array} & \begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 1
+\end{array}
+\end{array}\right)\left(\begin{array}{c}
+\sigma_{1}\\
+\sigma_{2}\\
+\sigma_{3}\\
+\sigma_{4}\\
+\sigma_{5}\\
+\sigma_{6}
+\end{array}\right)\label{eq:6-59}
+\end{equation}
+
+\end_inset
+
+这表示
+\begin_inset Formula $C_{4}$
+\end_inset
+
+作用于6个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+轨道,只有
+\begin_inset Formula $z$
+\end_inset
+
+轴上的
+\begin_inset Formula $L_{3}$
+\end_inset
+
+和
+\begin_inset Formula $L_{4}$
+\end_inset
+
+配位体的
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+不动, 故其特征标
+\begin_inset Formula $χ$
+\end_inset
+
+等于2。同理可得
+\begin_inset Formula $C_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{4}$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sigma_{h}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+等的特征标, 即
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="11">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8C_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3C_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6C_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6C_{2}'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8S_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3\sigma_{h}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6S_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{d}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\varGamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+应用(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:6-21"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)式可得
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\varGamma=a_{1g}+e_{g}+t_{1u}\label{eq:6-60}
+\end{equation}
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+把投影算子
+\begin_inset Formula $p^{a_{1}}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{e}$
+\end_inset
+
+和
+\begin_inset Formula $p^{t_{1}}$
+\end_inset
+
+作用于这些
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+轨道就可以得到属于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $e_{g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $t_{1u}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+的配位体群轨道。也可以直接从轨道的对称性匹配原理得到各不可约表示的群轨道。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-8.pdf
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+正八面体络合物的群轨道
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-8"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 看出, 和中央离子
+\begin_inset Formula $s$
+\end_inset
+
+轨道(
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)对称性匹配的
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+配位体群轨道为
+\begin_inset Formula 
+\begin{equation}
+\phi_{a_{1g}}=\frac{1}{\sqrt{6}}(\sigma_{1}+\sigma_{2}+\sigma_{3}+\sigma_{4}+\sigma_{5}+\sigma_{6})\label{eq:6-61}
+\end{equation}
+
+\end_inset
+
+同理可得
+\begin_inset Formula $\phi_{t_{1u}^{x}}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{t_{1u}^{y}}$
+\end_inset
+
+和
+\begin_inset Formula $\phi_{t_{1u}^{z}}$
+\end_inset
+
+。
+\begin_inset Formula 
+\begin{align}
+\phi_{t_{1u}^{x}} & =\frac{1}{\sqrt{2}}(\sigma_{1}-\sigma_{4})\label{eq:6-62}\\
+\phi_{t_{1u}^{y}} & =\frac{1}{\sqrt{2}}(\sigma_{2}-\sigma_{5})\label{eq:6-63}\\
+\phi_{t_{1u}^{z}} & =\frac{1}{\sqrt{2}}(\sigma_{3}-\sigma_{6})\label{eq:6-64}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为
+\begin_inset Formula $d_{z^{2}}$
+\end_inset
+
+轨道具有如下形式
+\begin_inset Formula 
+\begin{equation}
+3z^{2}-r^{2}=3z^{2}-x^{2}-y^{2}-z^{2}=2z^{2}-x^{2}-y^{2}\label{eq:6-65}
+\end{equation}
+
+\end_inset
+
+相应前配位体群轨道为
+\begin_inset Formula 
+\begin{align}
+\phi_{e_{g}^{z^{2}}} & =\frac{1}{3\sqrt{2}}(2\sigma_{3}+2\sigma_{6}-\sigma_{1}-\sigma_{2}-\sigma_{4}-\sigma_{5})\label{eq:6-66}\\
+\phi_{e_{g}^{x^{2}-y^{2}}} & =\frac{1}{2}(\sigma_{1}-\sigma_{2}+\sigma_{4}-\sigma_{5})\label{eq:6-67}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+络合物的分子轨道
+\end_layout
+
+\begin_layout Standard
+属于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+的络合物的分子轨道为
+\begin_inset Formula 
+\begin{equation}
+\psi_{a_{1g}}=c_{1}ϕ_{s}+c_{2}\phi_{a_{1g}}\label{eq:6-68}
+\end{equation}
+
+\end_inset
+
+应用变分法, 可得络合物属于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+不可约表示的能量较低的成键分子轨道
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和能量较高的反键分子轨道
+\begin_inset Formula $a_{1g}^{*}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+同理可得属于
+\begin_inset Formula $t_{1u}^{x}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{1u}^{y}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{1u}^{z}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{g}^{z^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{g}^{x^{2}-y^{2}}$
+\end_inset
+
+的分子轨道分别为
+\begin_inset Formula 
+\begin{align}
+\psi_{t_{1u}^{x}} & =c_{3}\phi_{p_{x}}+c_{4}\phi_{t_{1u}^{x}}\label{eq:6-69}\\
+\psi_{t_{1u}^{y}} & =c_{5}\phi_{p_{y}}+c_{6}\phi_{t_{1u}^{y}}\label{eq:6-70}\\
+\psi_{t_{1u}^{z}} & =c_{7}\phi_{p_{z}}+c_{8}\phi_{t_{1u}^{z}}\label{eq:6-71}\\
+\psi_{e_{g}^{z^{2}}} & =c_{9}\phi_{d_{z^{2}}}+c_{10}\phi_{e_{g}^{z^{2}}}\label{eq:6-72}\\
+\psi_{e_{g}^{x^{2}-y^{2}}} & =c_{11}\phi_{d_{x^{2}-y^{2}}}+c_{12}\phi_{e_{g}^{x^{2}-y^{2}}}\label{eq:6-73}
+\end{align}
+
+\end_inset
+
+它们组成成键的分子轨道
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $t_{1u}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $e_{g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和反键分子轨道
+\begin_inset Formula $t_{1u}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $e_{g}^{*}$
+\end_inset
+
+, 其中
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $t_{1u}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+是三度简并, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $e_{g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+是二度简并。中央离子的
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+轨道具有面对称性而属于
+\begin_inset Formula $π$
+\end_inset
+
+型轨道, 它无法和具有轴对称性的
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+轨道组成络合物的分子轨道, 而是作为非键轨道存在, 进一步还可以计算这些分子轨道的能量, 我们在此从略, 根据以上所述, 可得络合物的能级图如图
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ 所示。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-9.pdf
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ce{AB6}$
+\end_inset
+
+(
+\begin_inset Formula $O_{h}$
+\end_inset
+
+)型分子能级图
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+确定了络合物的分子轨道之后, 就可以讨论络合物电子的排布, 六个配位体提供的12个电子正好填满一个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 三个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $t_{1u}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和两个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $e_{g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+分子轨道, 来自中央离子
+\begin_inset Formula $d$
+\end_inset
+
+轨道上的电子填充在分裂的
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+和
+\begin_inset Formula $e_{g}^{*}$
+\end_inset
+
+轨道上。我们看到, 分子轨道理论的结论和晶体场理论大致相同。
+\end_layout
+
+\begin_layout Subsection
+络合物中的
+\begin_inset Formula $π$
+\end_inset
+
+键
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-10.pdf
+	width 30text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+络合物中
+\begin_inset Formula $π$
+\end_inset
+
+(
+\begin_inset Formula $pd_{xy}$
+\end_inset
+
+)键的形成
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-10"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+中央离子的
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+(
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{yz}$
+\end_inset
+
+,, 
+\begin_inset Formula $d_{xz}$
+\end_inset
+
+)虽然不能和配位体的
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $σ$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+轨道组成有效的分子轨道, 但可以和配位体的
+\begin_inset Formula $π$
+\end_inset
+
+轨道(
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $d$
+\end_inset
+
+原子轨道或配位基团的
+\begin_inset Formula $π$
+\end_inset
+
+分子轨道)组成
+\begin_inset Formula $π$
+\end_inset
+
+型分子轨道, 图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+是中央离子的
+\begin_inset Formula $d_{xy}$
+\end_inset
+
+轨道和配位体的
+\begin_inset Formula $p_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{y}$
+\end_inset
+
+轨道对称性匹配组成
+\begin_inset Formula $π$
+\end_inset
+
+(
+\begin_inset Formula $pd_{xy}$
+\end_inset
+
+)键的情形。
+\end_layout
+
+\begin_layout Standard
+中央离子的
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+轨道和配位体
+\begin_inset Formula $π$
+\end_inset
+
+轨道在形成
+\begin_inset Formula $π$
+\end_inset
+
+键时, 配位体
+\begin_inset Formula $π$
+\end_inset
+
+轨道的能级的高低和占有情况对分裂能将产生较大的影响。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement tbph
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename chap6/6-11.pdf
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+八面体络合物中
+\begin_inset Formula $π$
+\end_inset
+
+键的形成
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:6-11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当配位体
+\begin_inset Formula $π$
+\end_inset
+
+轨道能量高于中央离子的
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+轨道能量, 且
+\begin_inset Formula $π$
+\end_inset
+
+轨道处于未占状态时, 它们组成的分子轨道如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+(a)所示, 这时中央离子的
+\begin_inset Formula $d(t_{2g})$
+\end_inset
+
+电子进入能量降低了的络合物的
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+分子轨道, 这就扩大了
+\begin_inset Formula $e_{g}^{*}$
+\end_inset
+
+和
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+轨道间的能级间隔, 增加了分裂能, 因此这类络合物大部分采取低自旋构型, 这种由中央离子提供电子的共价键叫做反配位键。
+\begin_inset Formula $\ce{CN-}$
+\end_inset
+
+等就属于这类配位体。 
+\end_layout
+
+\begin_layout Standard
+当配位体的
+\begin_inset Formula $π$
+\end_inset
+
+轨道能量低于中央离子
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+轨道能量, 而且处于占据状态时, 这时中央离子的
+\begin_inset Formula $d(t_{2g})$
+\end_inset
+
+电子, 进入能量升高了的络合物的
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+分子轨道, 这就缩小
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+了
+\begin_inset Formula $e_{g}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和
+\begin_inset Formula $t_{2g}$
+\end_inset
+
+轨道间的能级问隔, 减小了分裂能, 因此这类络合物多属于高自旋构型, 过渡金属离子和氟离子所形成的络离子就属于这种类型。结果如图 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:6-11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+(b)所示。
+\end_layout
+
+\begin_layout Section*
+习题
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{习题}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+分别求出正四面体场强场和弱场中
+\begin_inset Formula $d^{5}$
+\end_inset
+
+ , 
+\begin_inset Formula $d^{6}$
+\end_inset
+
+和
+\begin_inset Formula $d^{7}$
+\end_inset
+
+组态的稳定化能。
+\end_layout
+
+\begin_layout Enumerate
+解释五个
+\begin_inset Formula $d$
+\end_inset
+
+轨道在平面正方形场中能量的相对高低。
+\end_layout
+
+\begin_layout Enumerate
+为什么正八面体络合物弱场的
+\begin_inset Formula $d^{4}$
+\end_inset
+
+组态，强场的
+\begin_inset Formula $d^{7}$
+\end_inset
+
+组态有Jahn-Teller效应。按配位场理论，在正四面体场中，
+\begin_inset Formula $d$
+\end_inset
+
+轨道的哪些组态没有高低自旋络合物之分。 
+\end_layout
+
+\end_body
+\end_document
